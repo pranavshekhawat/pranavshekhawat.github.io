@@ -1,0 +1,23 @@
+.imagetop_box {
+  width: 100%;
+  height: 50vw;
+  overflow: hidden;
+}
+
+.imagebottom_box {
+  width: 100%;
+  height: 40vw;
+  overflow: hidden;
+}
+
+.imagetop {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.imagebottom {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

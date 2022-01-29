@@ -1,0 +1,16 @@
+.desc_main {
+  margin-top: -4vw;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-column-start: 3;
+  grid-column-end: 24;
+}
+
+.des_text {
+  display: block;
+  grid-column: 2;
+  grid-column-end: 21;
+  padding: 3rem 0 3rem 0;
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 2.2rem;
+}

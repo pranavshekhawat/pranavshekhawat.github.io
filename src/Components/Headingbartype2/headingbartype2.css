@@ -1,0 +1,24 @@
+.heading_bar_type2 {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.heading_type2 {
+  font-family: "Helvetica Neue LT Pro Bd";
+  /* color: #ffffff; */
+  font-size: 3rem;
+  grid-column: 1;
+  grid-column-end: 25;
+  display: block;
+  padding-left: 4vw;
+}
+
+.heading_cate {
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 2rem;
+  color: #3b3b3b;
+  padding-left: 4vw;
+  grid-column: 1;
+  grid-column-end: 25;
+  display: block;
+}

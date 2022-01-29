@@ -1,0 +1,47 @@
+.breadcrumb {
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  height: 55px;
+}
+
+.breadmain {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 25;
+}
+
+.breaditem {
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 0.85rem;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+}
+
+.breaditem ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.breaditem li::after {
+  content: ">";
+  margin: 0 8px 0 8px;
+}
+
+.breaditem li:last-child:after {
+  content: "";
+}
+
+.link1,
+.link2 {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.link1:hover,
+.link2:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ff5000;
+}
