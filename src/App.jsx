@@ -7,7 +7,7 @@ import Error from './Error';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Workpage from './Workpage';
-import LoadingBar from 'react-top-loading-bar';
+// import LoadingBar from 'react-top-loading-bar';
 
 
 function App (){
