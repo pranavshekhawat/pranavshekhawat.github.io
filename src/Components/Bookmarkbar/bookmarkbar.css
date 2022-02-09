@@ -1,0 +1,44 @@
+.bookmarkbar {
+  position: sticky;
+  top: 55px;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  height: 55px;
+  background-color: #fff;
+}
+
+.bookmarkmain {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 25;
+}
+
+.bookmarkitem {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+}
+
+.bookmarkitem a {
+  color: #0a0a0a;
+  margin-right: 40px;
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 0.9rem;
+}
+
+.bookmarkitem a:hover {
+  color: #ff5000;
+  padding: 18px 0px 15px 0px !important;
+  border-bottom: 4.6px solid #ff5000;
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 0.9rem;
+}
+
+/* .bookmarkitem .isActive {
+  color: #0a0a0a;
+  padding: 18px 0px 15px 0px !important;
+  border-bottom: 4.6px solid #0a0a0a;
+  font-family: "Helvetica Neue LT Pro Bd";
+  font-size: 0.9rem;
+} */

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+* a {
+  color: #f6f6f6;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #f6f6f6;
+  background-color: #171717;
+}
+
+/* //////////////////////// */
+
+.worklist {
+  background-color: aquamarine;
+  padding: 10rem;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .worklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.work {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.work h1 {
+  margin-top: 0.5rem;
+}
+
+.work h4 {
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.work p {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.work img {
+  width: 20rem;
+}
+
+/* ////////////////////// */
+
+.grid_container_25 {
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+}
+
+.grid_container_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.light {
+  background-color: #fff;
+  color: #0a0a0a;
+}
+
+.dark {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.grey {
+  background-color: #f6f6f6;
+  color: #0a0a0a;
+}
+
+.colstart3 {
+  grid-column: 3;
+}
+
+.colend24 {
+  grid-column-end: 24;
+}
+
+.overflowhidden {
+  overflow: hidden;
+}
+
+.displayflex {
+  display: flex;
+}
+
+/* text block */
+.text {
+  width: 100%;
+}
+/* btn block */
+.btn:hover {
+  cursor: pointer;
+  color: orangered;
+}
+
+/* font 1 classes */
+.blk {
+  font-family: "Helvetica Neue LT Pro Blk";
+}
+.hv {
+  font-family: "Helvetica Neue LT Pro Hv";
+}
+.bd {
+  font-family: "Helvetica Neue LT Pro Bd";
+}
+.md {
+  font-family: "Helvetica Neue LT Pro Md";
+}
+.roman {
+  font-family: "Helvetica Neue LT Pro Roman";
+}
+.lt {
+  font-family: "Helvetica Neue LT Pro Lt";
+}
+.th {
+  font-family: "Helvetica Neue LT Pro Th";
+}
+.ultlt {
+  font-family: "Helvetica Neue LT Pro UltLt";
+}

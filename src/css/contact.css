@@ -1,0 +1,64 @@
+.contact_main {
+  background-color: #0a0a0a;
+}
+
+.contact_items {
+  grid-column-start: 2;
+  grid-column-end: 25;
+  display: inline-block;
+}
+
+.contact_title {
+  float: left;
+  margin-top: 4vw;
+  font-family: "Helvetica Neue LT Pro Roman";
+  color: #f6f6f6;
+  font-size: 2rem;
+}
+
+.contact_text {
+  float: left;
+  padding: 4vw 4vw 4vw 4vw;
+}
+
+.contact_text div {
+  padding-bottom: 2vw;
+  transform: translateY(12px);
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 1rem;
+  /* letter-spacing: 0.01rem; */
+}
+
+.changecolor {
+  color: #ff5000;
+}
+
+.makewhite {
+  color: #f6f6f6;
+}
+
+.arrow_right {
+  fill: #f6f6f6;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.fillcolor {
+  fill: #ff5000;
+}
+
+.fillwhite {
+  fill: #f6f6f6;
+}
+
+.emailbtnafter {
+  color: #ff5000;
+  text-decoration: underline;
+}
+
+.emailbtnbefore {
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 1rem;
+  color: #f6f6f6;
+}

@@ -1,0 +1,9 @@
+.grid_div {
+  width: 100%;
+}
+
+.grid_img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
