@@ -4,7 +4,7 @@ import Mark from './Components/Bookmarkbar/mark';
 
 export const data = [
     { 
-        id:1,
+        id:4,
         img:"/images/work1/workimage1.jpg",
         title:"Cardolly",
         category:"weave design",
@@ -18,9 +18,9 @@ export const data = [
         </>
     },
     {
-        id:2,
+        id:3,
         img:"/images/work1/workimage2.jpg",
-        title:"Car dolly",
+        title:"Colours from the core",
         category:"Print design",
         topimg:"/images/work1/workimage2.jpg",
         bottomimg:"/images/work1/workimage1.jpg",
@@ -32,11 +32,11 @@ export const data = [
         </>
     },
     {
-        id:3,
-        img:"/images/work1/workimage2.jpg",
-        title:"Caolly",
-        category:"Print design",
-        topimg:"/images/work1/workimage2.jpg",
+        id:2,
+        img:"/images/works/naturaldyes/natural_dyes_poster.webp",
+        title:"Colours from the core of Nature",
+        category:"Sustainability",
+        topimg:"/images/works/naturaldyes/natural_dyes_poster.webp",
         bottomimg:"/images/work1/workimage1.jpg",
         description:"Proin est libero, lobortis sit amet lectus vitae, hendrerit laoreet magna. Praesent posuere enim sit amet interdum laoreet. Nullam feugiat commodo dui, eu dapibus leo rhoncus sit amet. Quisque quis metus finibus, fermentum lorem eget, tempus turpis. Nulla vel tellus in metus convallis pharetra. Vivamus quis scelerisque ligula, et accumsan lectus. Vestibulum egestas facilisis nisl eget semper. Quisque eu nisi id nunc euismod vulputate.",
         body:<Work2/>,
@@ -46,7 +46,7 @@ export const data = [
          </>
     },
     {
-        id:2,
+        id:1,
         img:"/images/work1/workimage2.jpg",
         title:"Car dolly",
         category:"Print design",
