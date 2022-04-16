@@ -1,0 +1,14 @@
+
+.carousel_img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/* specify the carousel height here */
+.carousel_image_container{
+    width: 100%;
+    overflow: hidden;
+    height: 92vh;
+    text-align: center;
+}

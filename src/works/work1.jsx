@@ -10,7 +10,7 @@ function Work1(){
         <>
         
 
-        <p>vsaadsvdsvhbv
+        <p id="markks"> vsaadsvdsvhbv
             vddsjvsjvsjksdkjvbkjdsbmvyua djajsshyvchddsvVsdvsdvj
         </p>
         <Gallerygrid images={<>
@@ -20,7 +20,8 @@ function Work1(){
 
         <Gallerygrid images={<>
         <Img height="35vw" src='/images/work1/workimage1.jpg' alt="test image"/>
-        <Img height="35vw" src='/images/work1/workimage2.jpg' alt="test image"/>
+        <Img  height="35vw" src='/images/work1/workimage2.jpg' alt="test image"/>
+        <p id="marks"></p>
         </>}/>
         
         </>

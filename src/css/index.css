@@ -1,137 +1,205 @@
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    color-scheme: dark;
 }
 
 * a {
-  color: #f6f6f6;
+    color: #f6f6f6;
 }
 
 html {
-  -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-  color: #f6f6f6;
-  background-color: #171717;
+    color: #f6f6f6;
+    background-color: #171717;
 }
+
 
 /* //////////////////////// */
 
 .worklist {
-  background-color: aquamarine;
-  padding: 10rem;
-  display: grid;
-  gap: 2rem;
+    /* background-color: rgb(17, 17, 17); */
+    /* padding: 10rem; */
+    display: grid;
+    gap: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 768px) {
-  .worklist {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .worklist {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.work {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
+.plate {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.work h1 {
-  margin-top: 0.5rem;
+.title {
+    float: left;
 }
 
-.work h4 {
-  color: #617d98;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+.category {
+  float: right;
 }
 
-.work p {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
+.work_img_div{
+ text-align: center;
 }
 
 .work img {
-  width: 20rem;
+    width: 100%;
+    object-fit: cover;
+    /* height: 25rem; */
+    height: 20rem;
+    /* height: 100%; */
 }
 
 /* ////////////////////// */
 
 .grid_container_25 {
-  display: grid;
-  grid-template-columns: repeat(25, 1fr);
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
 }
 
 .grid_container_2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_container_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .light {
-  background-color: #fff;
-  color: #0a0a0a;
+    background-color: #fff;
+    color: #0a0a0a;
 }
 
 .dark {
-  background-color: #0a0a0a;
-  color: #fff;
+    background-color: #0a0a0a;
+    color: #fff;
 }
 
 .grey {
-  background-color: #f6f6f6;
-  color: #0a0a0a;
+    background-color: #f6f6f6;
+    color: #0a0a0a;
 }
 
 .colstart3 {
-  grid-column: 3;
+    grid-column: 3;
+}
+
+.colstart2 {
+    grid-column: 2;
+}
+
+
+.colstart1 {
+    grid-column: 1;
+}
+
+.colend2 {
+    grid-column-end: 2;
+}
+
+.colend3 {
+    grid-column-end: 3;
+}
+
+.colend4 {
+    grid-column-end: 4;
 }
 
 .colend24 {
-  grid-column-end: 24;
+    grid-column-end: 24;
+}
+
+.colend25 {
+    grid-column-end: 25;
 }
 
 .overflowhidden {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .displayflex {
-  display: flex;
+    display: flex;
 }
+
 
 /* text block */
+
 .text {
-  width: 100%;
-}
-/* btn block */
-.btn:hover {
-  cursor: pointer;
-  color: orangered;
+    width: 100%;
 }
 
+
+/* btn block */
+
+.btn:hover {
+    cursor: pointer;
+    color: orangered;
+}
+
+
 /* font 1 classes */
+
 .blk {
-  font-family: "Helvetica Neue LT Pro Blk";
+    font-family: "Helvetica Neue LT Pro Blk";
 }
+
 .hv {
-  font-family: "Helvetica Neue LT Pro Hv";
+    font-family: "Helvetica Neue LT Pro Hv";
 }
+
 .bd {
-  font-family: "Helvetica Neue LT Pro Bd";
+    font-family: "Helvetica Neue LT Pro Bd";
 }
+
 .md {
-  font-family: "Helvetica Neue LT Pro Md";
+    font-family: "Helvetica Neue LT Pro Md";
 }
+
 .roman {
-  font-family: "Helvetica Neue LT Pro Roman";
+    font-family: "Helvetica Neue LT Pro Roman";
 }
+
 .lt {
-  font-family: "Helvetica Neue LT Pro Lt";
+    font-family: "Helvetica Neue LT Pro Lt";
 }
+
 .th {
-  font-family: "Helvetica Neue LT Pro Th";
+    font-family: "Helvetica Neue LT Pro Th";
 }
+
 .ultlt {
-  font-family: "Helvetica Neue LT Pro UltLt";
+    font-family: "Helvetica Neue LT Pro UltLt";
+}
+
+.no_padding{
+    padding: 0;
+   
+}
+
+.no_margin{
+    margin: 0;
+}
+
+.no_width{
+    width: 0;
+}
+
+.width_fitcontent{
+    width: fit-content;
 }

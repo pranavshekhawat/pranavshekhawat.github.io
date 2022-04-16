@@ -22,23 +22,18 @@
 
 .bookmarkitem a {
   color: #0a0a0a;
+  padding: 18px 0px 15px 0px;
   margin-right: 40px;
   font-family: "Helvetica Neue LT Pro Roman";
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .bookmarkitem a:hover {
   color: #ff5000;
-  padding: 18px 0px 15px 0px !important;
-  border-bottom: 4.6px solid #ff5000;
+  padding: 18px 0px 15px 0px;
+  border-bottom: 3.5px solid #ff5000;
   font-family: "Helvetica Neue LT Pro Roman";
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-decoration: none;
 }
-
-/* .bookmarkitem .isActive {
-  color: #0a0a0a;
-  padding: 18px 0px 15px 0px !important;
-  border-bottom: 4.6px solid #0a0a0a;
-  font-family: "Helvetica Neue LT Pro Bd";
-  font-size: 0.9rem;
-} */

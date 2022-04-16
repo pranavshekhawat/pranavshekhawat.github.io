@@ -44,6 +44,7 @@
 .socials {
   display: inline-block;
   list-style-type: none;
+  padding-left: 0;
 }
 
 .socials li {
@@ -60,17 +61,15 @@
 .socials li:nth-child(2) {
   width: 19px;
   height: 19px;
-  transform: translateY(3px);
 }
 .socials li:nth-child(3) {
   width: 19px;
   height: 19px;
-  transform: translateY(2px);
+  transform: translateY(-1px);
 }
 .socials li:last-child {
-  width: 21px;
-  height: 21px;
-  transform: translateY(2.4px);
+  width: 20px;
+  height: 20px;
 }
 
 .socials li svg {

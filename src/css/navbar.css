@@ -5,7 +5,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   height: 55px;
   background-color: #0a0a0a;
 }
@@ -18,19 +18,18 @@
 .nav_items {
   position: relative;
   top: 50%;
-  transform: translate(0, -50%);
+  /* transform: translate(0, -50%); */
   display: block;
 }
 
-/* .nav_items a {
-  color: #f6f6f6;
-} */
+.nav_items a {
+  text-decoration: none;
+}
 
 .nav_item_1 {
   float: left;
   font-family: "Helvetica Neue LT Pro Roman";
   font-size: 1rem;
-  /* font-size: 1.8rem; */
   /* color: #f6f6f6; */
 }
 
@@ -45,10 +44,8 @@
 .nav_item_2 a {
   padding-left: 16px;
   padding-right: 16px;
+  text-decoration: none;
 }
-/* #project_link {
-  padding-right: 16px;
-} */
 
 .line {
   content: "";

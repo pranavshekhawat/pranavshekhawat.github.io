@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(25, 1fr);
   height: 55px;
+  margin-bottom: 0;
 }
 
 .breadmain {
@@ -22,6 +23,7 @@
 .breaditem ul {
   list-style-type: none;
   display: flex;
+  padding-left: 0;
 }
 
 .breaditem li::after {

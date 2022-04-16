@@ -15,8 +15,14 @@ function Navbar() {
           </NavLink>
         </div> 
         <div className='nav_items nav_item_2'>
-          <NavLink to="/projects"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
-              Projects
+          <NavLink to="/works"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
+              Works
+          </NavLink>
+      
+          <span className='line'></span>
+
+          <NavLink to="/activity"  id='activity_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
+              Activity
           </NavLink>
       
           <span className='line'></span>

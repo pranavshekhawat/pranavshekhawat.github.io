@@ -6,17 +6,17 @@ function Headingbar({heading, category, theme}){
     return(
         <>
 
-        <div class={`heading_bar_type2 ${theme}`}>
+        <div className={`heading_bar_type2 ${theme}`}>
             <div className='margin_container'>
 				<div className="heading_container grid_container_25">
 	    	         
 			        
-				         <div class={`heading_cate ${theme}`}>
+				         <div className={`heading_cate ${theme}`}>
 			     		    <p>{category}</p>
 			     	    </div>
 					
-				         <div class={`heading_type2 ${theme}`}>
-				     	    <h1>{heading}</h1>
+				         <div className={`heading_type2 ${theme}`}>
+				     	    {heading}
 				         </div>
 			        
 				</div>

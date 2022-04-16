@@ -1,8 +1,16 @@
 import React from 'react';
 import "./css/error.css";
+import Navbar from './Navbar';
+import {TabTitle} from './utils/GeneralFunctions';
 
 function Error() {
+   
+    TabTitle('Pranav Shekhawat - Error');
+
+
     return (
+        <>
+        <Navbar/>
         <div className='error_main'>
             <div className='error_container'>
                 <div className='bd error404 '>
@@ -13,6 +21,7 @@ function Error() {
                 </div> 
             </div>
         </div>
+        </>
     )
 }
 
