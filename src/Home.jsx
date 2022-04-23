@@ -1,11 +1,11 @@
 import React from 'react';
-import Contact from './Contact';
+// import Contact from './Contact';
 import Navbar from './Navbar';
 import Carousel from 'react-bootstrap/Carousel';
 import "./css/carousel.css";
-import {Works} from "./Projects";
+// import {Works} from "./Projects";
 import { TabTitle } from './utils/GeneralFunctions';
-import {AboutCard} from './About'
+// import {AboutCard} from './About'
 
 function Home() {
 
@@ -18,41 +18,45 @@ function Home() {
                 <Carousel.Item>
                     <div className="carousel_image_container"> <img
                         className="carousel_img"
-                        src="/images/work1/workimage2.jpg"
+                        src="/images/works/weave_design/weavedesign.webp"
                         alt="First slide"
                     />
                     </div>
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>Checks and Stripes</h3>
+                        {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
+
                 <Carousel.Item>
                     <div className="carousel_image_container">
                         <img
                             className="carousel_img"
-                            src="/images/work1/workimage1.jpg"
+                            src="/images/works/naturaldyes/natural_dyes_poster.webp"
                             alt="Second slide"
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Natural Dyes</h3>
+                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
+
                 <Carousel.Item>
                     <div className="carousel_image_container">
                         <img
                             className="carousel_img"
-                            src="/images/work1/workimage2.jpg"
+                            src="/images/works/digital_nature/digital_nature2.webp"
                             alt="Third slide"
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>Digital Nature</h3>
+                        {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
+               
+               
             </Carousel>
             {/* <br/><br/> */}
             {/* <Works/><hr/><br/><br/>

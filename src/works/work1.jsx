@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "../Components/gallerygrid/Img";
 import Gallerygrid from "../Components/gallerygrid/Gallerygrid";
-// import Text from "../Components/pageblocks/Text";
+import Text from "../Components/pageblocks/Text";
 import Btn from "../Components/pageblocks/Btn";
 
 function Work1(){
@@ -17,6 +17,8 @@ function Work1(){
         <Img height="40vw" src='/images/work1/workimage1.jpg' alt="test image"/>
          </>}/>
          <Btn content={<div>vghgcgcgchgc</div>} to='/about' targetblank={true} />
+
+         <Text content="jbhbasvcajsvcjasvcvjvv"></Text>
 
         <Gallerygrid images={<>
         <Img height="35vw" src='/images/work1/workimage1.jpg' alt="test image"/>

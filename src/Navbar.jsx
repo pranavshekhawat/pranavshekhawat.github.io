@@ -21,11 +21,11 @@ function Navbar() {
       
           <span className='line'></span>
 
-          <NavLink to="/activity"  id='activity_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
+          {/* <NavLink to="/activity"  id='activity_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
               Activity
           </NavLink>
       
-          <span className='line'></span>
+          <span className='line'></span> */}
 
           <NavLink to="/about" id='about_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
               About

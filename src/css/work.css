@@ -1,0 +1,56 @@
+
+.worklist {
+    /* background-color: rgb(17, 17, 17); */
+    /* padding: 10rem; */
+    display: grid;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .worklist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.plate {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+.title {
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 1.5rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.category {
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 0.86rem;
+    margin: 0;
+    text-decoration: none;
+
+
+}
+
+.work_img_div{
+ text-align: center;
+}
+
+.work img {
+    width: 100%;
+    object-fit: cover;
+    /* height: 25rem; */
+    height: 16rem;
+    /* height: 100%; */
+}
+
+
+.arrow_right {
+    fill: #f6f6f6;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+  }

@@ -10,6 +10,12 @@
 
 * a {
     color: #f6f6f6;
+    text-decoration: none;
+}
+
+* a:hover{
+    color:#ff5000 ;
+    text-decoration: none;
 }
 
 html {
@@ -24,47 +30,6 @@ body {
 
 /* //////////////////////// */
 
-.worklist {
-    /* background-color: rgb(17, 17, 17); */
-    /* padding: 10rem; */
-    display: grid;
-    gap: 2.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-@media screen and (min-width: 768px) {
-    .worklist {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.plate {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.title {
-    float: left;
-}
-
-.category {
-  float: right;
-}
-
-.work_img_div{
- text-align: center;
-}
-
-.work img {
-    width: 100%;
-    object-fit: cover;
-    /* height: 25rem; */
-    height: 20rem;
-    /* height: 100%; */
-}
-
-/* ////////////////////// */
 
 .grid_container_25 {
     display: grid;
@@ -142,6 +107,8 @@ body {
 
 .text {
     width: 100%;
+    /* background-color: #ffffff; */
+    font-size: 1rem;
 }
 
 
@@ -149,7 +116,7 @@ body {
 
 .btn:hover {
     cursor: pointer;
-    color: orangered;
+    color: #ff5000;
 }
 
 
