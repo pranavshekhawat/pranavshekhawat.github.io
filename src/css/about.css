@@ -140,6 +140,19 @@
     background-color: #ff5000;
 }
 
+.contact_download_cv {
+    color: #f6f6f6;
+    background-color: #0A0A0A;
+    border: 0;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+}
+
+.contact_download_cv:hover {
+    background-color: #ff5000;
+    color: #f6f6f6;
+
+}
+
 @media screen and (min-width: 768px) {
     .contact_message {
         width: 50%;

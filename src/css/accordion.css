@@ -1,0 +1,22 @@
+.accordion-button:not(.collapsed){
+    background-color: #ffffff;
+    color: #ff5000;
+}
+
+.accordion-button:active{
+    background-color: #ffffff;
+}
+
+
+.accordion-button:focus{
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("/public/data/react/orange_down_arrow.svg");
+    transform: rotate(-180deg);
+}
+
+.accordion{
+    z-index: 0;
+}

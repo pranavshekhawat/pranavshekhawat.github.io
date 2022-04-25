@@ -170,3 +170,30 @@ body {
 .width_fitcontent{
     width: fit-content;
 }
+
+
+/* /////////////// */
+
+.bookmark_positioner_2{
+    transform: translateY(-16rem);
+}
+
+.bookmark_positioner{
+    transform: translateY(-10rem);
+    position: absolute;
+}
+
+/* //////////////// */
+
+h1{
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 1.8rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+.body_hyperlink{
+    color: #0a0a0a;
+    text-decoration: underline;
+}

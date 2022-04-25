@@ -5,6 +5,7 @@
   grid-template-columns: repeat(25, 1fr);
   height: 55px;
   background-color: #fff;
+  z-index: 999;
 }
 
 .bookmarkmain {

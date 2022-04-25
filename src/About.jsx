@@ -106,6 +106,11 @@ function AboutCard(){
                             Feel free to contact me if you need any further information. I would love to hear from you.
                             <br />
                             <br />
+                            <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>
+                            <br />
+                            <br />
+                            <br />
+
                             <form ref={form} onSubmit={sendEmail} id="myform">
                                 <label>Name:</label><br />
                                 <input className="contact_name" type="text" name="from_name" placeholder="Enter your name." /><br />
