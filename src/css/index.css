@@ -197,3 +197,11 @@ h1{
     color: #0a0a0a;
     text-decoration: underline;
 }
+
+
+.download_button {
+    color: #f6f6f6;
+    background-color: #0A0A0A;
+    border: 0;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+}

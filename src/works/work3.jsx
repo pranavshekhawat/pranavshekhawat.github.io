@@ -41,7 +41,7 @@ function Work1(){
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
                                 <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet1.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 1 | Specification Sheet" />
+                                    <Img height="auto" src='/images/works/colour_and_weave_effect/swatch_1_specification_sheet.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 1 | Specification Sheet" />
 
                                 </>} />
                             </Accordion.Body>
@@ -73,7 +73,7 @@ function Work1(){
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
                                 <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet2.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 2 | Specification Sheet" />
+                                    <Img height="auto" src='/images/works/colour_and_weave_effect/swatch_2_specification_sheet.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 2 | Specification Sheet" />
 
                                 </>} />
                             </Accordion.Body>
@@ -110,7 +110,7 @@ function Work1(){
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
                                 <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet3.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 3 | Specification Sheet" />
+                                    <Img height="auto" src='/images/works/colour_and_weave_effect/swatch_3_specification_sheet.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 3 | Specification Sheet" />
 
                                 </>} />
                             </Accordion.Body>
@@ -142,7 +142,7 @@ function Work1(){
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
                                 <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet4.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 4 | Specification Sheet" />
+                                    <Img height="auto" src='/images/works/colour_and_weave_effect/swatch_4_specification_sheet.jpg' alt="Pranav Shekhawat | Colour and Weave Effects | Swatch 4 | Specification Sheet" />
 
                                 </>} />
                             </Accordion.Body>
