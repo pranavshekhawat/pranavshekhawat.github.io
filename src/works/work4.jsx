@@ -18,7 +18,7 @@ function Work4() {
                     <span id=" " className="bookmark_positioner">
                     </span>
                     <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/crd/bandhej(1).png' alt="Pranav Shekhawat | Craft Research and Documentation | Bandhej-Knots of Love" />
+                        <Img height="auto" src='/images/works/crd/front.jpg' alt="Pranav Shekhawat | Craft Research and Documentation | Bandhej-Knots of Love" />
                     </>} />
                     <br />
                     <span id=" " className="bookmark_positioner">
@@ -305,7 +305,7 @@ function Work4() {
 
                     <span id=" " className="bookmark_positioner">
                     </span><Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/crd/bandhej(54).png' alt="Pranav Shekhawat | Craft Research and Documentation | Bandhej-Knots of Love" />
+                        <Img height="auto" src='/images/works/crd/back.jpg' alt="Pranav Shekhawat | Craft Research and Documentation | Bandhej-Knots of Love" />
                     </>} />
                     <br />
                     <br />
@@ -315,7 +315,7 @@ function Work4() {
 
                     <span id="download_document" className="bookmark_positioner"></span>
                     <div>
-                        <center><a className='download_button' href='/data/works/crd/Bandhej_Knots_of_love.pdf' target="_blank">View full document</a></center>
+                        <center><a className='download_button' href='/data/works/crd/Bandhej_Knots_of_love.pdf' target="_blank">Download document</a></center>
                     </div> <br />
                     <br />
                     <br />
