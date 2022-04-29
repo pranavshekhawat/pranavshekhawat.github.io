@@ -2,163 +2,90 @@ import React from 'react';
 import Img from "../Components/gallerygrid/Img";
 import Gallerygrid from "../Components/gallerygrid/Gallerygrid";
 // import Text from "../Components/pageblocks/Text";
-import Accordion from 'react-bootstrap/Accordion';
+// import Accordion from 'react-bootstrap/Accordion';
 
-function Work1(){
-    return(
+function Work2() {
+    return (
         <>
-        <div className='grid_container_25'>
+            <div className='grid_container_25'>
                 <div className='colstart3 colend24'>
 
                     <br />
-                    <br />               
+                    <br />
+                    <br />
+                    <br />
 
-                    {/*/////////////////// swatch 1/////////////// */}
-                    <span id="swatch_1" className="bookmark_positioner"></span>
-                    <h1>Swatch 1</h1>
+                    <span id="marigold" className="bookmark_positioner"></span>
+                    <h1>Marigold</h1>
                     <br></br>
+                    Used Alum treated fabrics and boiled them with the petals of Marigold (<em>Tagetes Erecta</em>). Marigold dye shows good wash and lightfastness.
+                    <br /><br />
                     <Gallerygrid images={<>
-                        <Img height="85vw" src='/images/works/weave_design/swatch1.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 " />
-                    </>} />
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(2).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
 
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Weave Unit on CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/weave_unit1.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 | Weave Unit on CAD" />
-
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Specification Sheet</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet1.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 | Specification Sheet" />
-
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                    <br />
-                    <br />
-                    <br />
-
-                    {/*/////////////////// swatch 2 /////////////// */}
-                    <span id="swatch_2" className="bookmark_positioner"></span>
-                    <h1>Swatch 2</h1>
+                    <span id="turmeric" className="bookmark_positioner"></span>
+                    <h1>Turmeric</h1>
                     <br></br>
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/weave_design/swatch2.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 " />
-                    </>} />
 
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Weave Unit on CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/weave_unit2.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 | Weave Unit on CAD" />
+                    Used Harde treated fabrics and boiled them with Turmeric powder. One should only wash fabrics dyed using turmeric with ph neutral detergents. Turmeric has antibacterial and antiseptic properties.
 
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Specification Sheet</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet2.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 | Specification Sheet" />
+                    <br /><br /> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(3).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
 
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                    <br />
-                    <br />
-                    <br />
-
-                    {/*/////////////////// swatch 3 /////////////// */}
-                    <span id="swatch_3" className="bookmark_positioner"></span>
-                    <h1>Swatch 3</h1>
+                    <span id="onion_skin" className="bookmark_positioner"></span>
+                    <h1>Onion Skin</h1>
                     <br></br>
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/weave_design/swatch3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 " />
-                    </>} />
+                    Used Alum treated fabrics and boiled them with Onionskin. For the right one, I used Vinegar to shift the colour.
+                    <br/><br/> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(4).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
 
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Weave Unit on CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/weave_unit3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Weave Unit on CAD" />
-
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Specification Sheet</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Specification Sheet" />
-
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                    <br />
-                    <br />
-                    <br />
-
-                    {/*/////////////////// swatch 4 /////////////// */}
-                    <span id="swatch_4" className="bookmark_positioner"></span>
-                    <h1>Swatch 4</h1>
+                    <span id="indigo" className="bookmark_positioner"></span>
+                    <h1>Indigo</h1>
                     <br></br>
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/weave_design/swatch4.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 4 " />
-                    </>} />
+                    Prepared Indigo dye bath using limestone and jaggery and then dyed the fabric.I obtained this light blue tint because of the tiny amount of dye.
+                    <br/><br/> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(5).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
 
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Weave Unit on CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/weave_unit4.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 4 | Weave Unit on CAD" />
+                    <span id="catechu" className="bookmark_positioner"></span>
+                    <h1>Catechu</h1>
+                    Used <em>Harde</em> treated fabrics and dipped them in Cutch (Catechu) solution. Cutch gives us beautiful earthy tones.
+                    <br></br> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(7).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
 
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Specification Sheet</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='/images/works/weave_design/specification_sheet4.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 4 | Specification Sheet" />
-
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                    <br />
-                    <br />
-                    <br />
-
-                    
-                    <span id="altogether" className="bookmark_positioner"></span>
-                    <h1>Altogether</h1>
+                    <span id="tea" className="bookmark_positioner"></span>
+                    <h1>Tea</h1>
                     <br></br>
-                    <Gallerygrid images={<>
-                        <Img height="40vw" src='/images/works/weave_design/all_weaves.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 4 " />
-                    </>} />
-                    <br />
-                    <br />
-                    <br />
-                    <Gallerygrid images={<>
-                        <Img height="26vw" src='/images/works/weave_design/process_img1.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 1" />
-                        <Img height="26vw" src='/images/works/weave_design/process_img2.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
-                        <Img height="26vw" src='/images/works/weave_design/process_img3.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
-                    </>} />
-                    <br />
-                    <br />
-                    <br />
+                    Used Alum treated fabric and boiled it with tea, which gave the material a lovely uneven brown tint.
+                    <br/><br/> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(8).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
+
+                    <span id="iron_rust_jaggery" className="bookmark_positioner"></span>
+                    <h1>Iron rust & jaggery</h1>
+                    <br></br>
+                    Used <em>Harde</em> ( tannin ) treated fabrics swatches, dipped them into the prepared iron rust and jaggery solution and used acidic mediums (lemon juice and Vinegar) to shift the colour to grey. Fabric dyed with iron mordants show good light fastness.
+
+                    <br /><br /> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(1).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br /> <br /><br />
+
+                    <span id="multicolour_prints" className="bookmark_positioner"></span>
+                    <h1>Multicoloured Prints</h1>
+                    <br></br> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(9).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br />
+
+                    <br></br> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(10).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br />
+                    <br></br> <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(11).jpg' alt="Pranav Shekhawat | Natural Dyes" />
+                    </>} /> <br />
 
 
 
@@ -170,4 +97,4 @@ function Work1(){
     )
 }
 
-export default Work1
+export default Work2

@@ -60,7 +60,39 @@ export const data = [
     ),
   },
 
-  
+  {
+    id: 2,
+    img: "/images/works/naturaldyes/natural_dyes_poster.webp",
+    title: "Natural Dyes",
+    category: "Sustainability",
+    topimg: "/images/works/naturaldyes/natural_dyes_poster.webp",
+    bottomimg: "/images/works/naturaldyes/bottom_img.jpg",
+    description:
+      <>{"Replacing synthetic dyes with non-hazardous natural dyes is more a need than a trend. One must start appreciating the limited palette, weak colour fastness and high costs of naturally dyed products. "}<br></br>{"As a part of the \"Application of Natural Dyes.\" module I,"}<br></br>{<ul>
+        <li>Explored various plant-based colourant materials and obtained a spectrum of colours on cotton fabrics. 
+        </li>
+        <li>Experimented with different mordants and observed how different mordants alter the shade or hue of the colourants. 
+        </li>
+        <li>
+        Studied the dyes' colour fastness properties to diverse physical conditions such as washing, sunlight, rubbing and bleaching.
+        </li>
+        </ul>}
+      </>,
+    body: <Work2 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#marigold" title="Marigold" />
+        <Mark to="#turmeric" title="Turmeric" />
+        <Mark to="#onion_skin" title="Onion Skin" />
+        <Mark to="#indigo" title="Indigo" />
+        <Mark to="#catechu" title="Catechu" />
+        <Mark to="#tea" title="Tea" />
+        <Mark to="#iron_rust_jaggery" title="Iron rust & jaggery" />
+        <Mark to="#multicolour_prints" title="Multicolour Prints" />
+      </>
+    ),
+  },
 
   {
     id: 4,
@@ -87,23 +119,7 @@ export const data = [
     ),
   },
 
-  // {
-  //   id: 2,
-  //   img: "/images/works/naturaldyes/natural_dyes_poster.webp",
-  //   title: "Natural Dyes",
-  //   category: "Sustainability",
-  //   topimg: "/images/works/naturaldyes/natural_dyes_poster.webp",
-  //   bottomimg: "/images/work1/workimage1.jpg",
-  //   description:
-  //     "Proin est libero, lobortis sit amet lectus vitae, hendrerit laoreet magna. Praesent posuere enim sit amet interdum laoreet. Nullam feugiat commodo dui, eu dapibus leo rhoncus sit amet. Quisque quis metus finibus, fermentum lorem eget, tempus turpis. Nulla vel tellus in metus convallis pharetra. Vivamus quis scelerisque ligula, et accumsan lectus. Vestibulum egestas facilisis nisl eget semper. Quisque eu nisi id nunc euismod vulputate.",
-  //   body: <Work2 />,
-  //   bookmarks: (
-  //     <>
-  //       <Mark to="#marks" title="Link" />
-  //       <Mark to="#markks" title="Link" />
-  //     </>
-  //   ),
-  // },
+  
 
   // {
   //   id: 5,
