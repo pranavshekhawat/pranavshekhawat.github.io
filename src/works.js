@@ -2,6 +2,8 @@ import Work1 from "./works/work1";
 import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
+import Work7 from "./works/work7";
+
 
 
 import Mark from "./Components/Bookmarkbar/mark";
@@ -117,7 +119,27 @@ export const data = [
         <Mark to="#download_document" title="Download Document" />
       </>
     ),
-  },
+  }, 
+
+  {
+      id: 7,
+      img: "/images/works/digital_nature/digital_nature0.webp",
+      title: "Digital Nature",
+      category: "Print design",
+      topimg: "/images/works/digital_nature/digital_nature.webp",
+      bottomimg: "/images/works/digital_nature/digital_nature2.webp",
+      description:
+        "Selected a clothing brand of choice and designed prints for their apparel collection, referred to WGSN Fashion Forecast for the colour palette and design direction. For the final collection, selected silhouettes according to the brand and placed the prints over them.",
+      body: <Work7 />,
+      bookmarks: (
+        <>
+        <Mark to="#overview" title="Overview" />
+          <Mark to="#brand" title="Brand" />
+          <Mark to="#markks" title="Course summary" />
+        </>
+      ),
+    },
+  
 
   
 
@@ -156,24 +178,7 @@ export const data = [
   //     </>
   //   ),
   // },
-  // {
-  //   id: 7,
-  //   img: "/images/works/digital_nature/digital_nature0.webp",
-  //   title: "Digital Nature",
-  //   category: "Print design",
-  //   topimg: "/images/works/digital_nature/digital_nature.webp",
-  //   bottomimg: "/images/works/digital_nature/digital_nature2.webp",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar metus quis bibendum cursus. Sed lectus dui, scelerisque viverra arcu eu, rhoncus rhoncus odio. Maecenas nec convallis sapien. Nullam volutpat feugiat eros. Phasellus imperdiet ut augue quis pellentesque. Duis tincidunt, arcu vestibulum convallis egestas, nisl sem aliquet lorem, eu lacinia nibh lacus non justo. Duis sagittis lobortis magna a dignissim. Sed posuere suscipit velit, a rhoncus justo ornare in. Etiam faucibus vel arcu viverra sodales. Quisque mattis condimentum est, in luctus metus suscipit fringilla. Donec malesuada urna ac sapien congue dapibus.",
-  //   body: <Work1 />,
-  //   bookmarks: (
-  //     <>
-  //       <Mark to="#marks" title="Course overview" />
-  //       <Mark to="#markks" title="Course summary" />
-  //     </>
-  //   ),
-  // },
-
+  // 
   // {
   //   id: 8,
   //   img: "/images/works/ecoprinting/ecoprint.webp",
