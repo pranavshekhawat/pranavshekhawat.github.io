@@ -129,13 +129,13 @@ export const data = [
       topimg: "/images/works/digital_nature/digital_nature.webp",
       bottomimg: "/images/works/digital_nature/digital_nature2.webp",
       description:
-        "Selected a clothing brand of choice and designed prints for their apparel collection, referred to WGSN Fashion Forecast for the colour palette and design direction. For the final collection, selected silhouettes according to the brand and placed the prints over them.",
+        <>{"Selected a clothing brand of choice and designed prints for their apparel collection, referred to WGSN Fashion Forecast for the colour palette and design direction. For the final collection, selected silhouettes according to the brand and placed the prints over them."} <br></br>{"Got two of the final prints digitally printed on a fabric and then stitched garments out of it. "}</>,
       body: <Work7 />,
       bookmarks: (
         <>
         <Mark to="#overview" title="Overview" />
           <Mark to="#brand" title="Brand" />
-          <Mark to="#markks" title="Course summary" />
+         
         </>
       ),
     },

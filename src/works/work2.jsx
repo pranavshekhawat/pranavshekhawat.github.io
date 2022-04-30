@@ -52,8 +52,9 @@ function Work2() {
 
                     <span id="catechu" className="bookmark_positioner"></span>
                     <h1>Catechu</h1>
+                    <br></br>
                     Used <em>Harde</em> treated fabrics and dipped them in Cutch (Catechu) solution. Cutch gives us beautiful earthy tones.
-                    <br></br> <Gallerygrid images={<>
+                    <br/><br/>  <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/naturaldyes/natural_dyes%20(7).jpg' alt="Pranav Shekhawat | Natural Dyes" />
                     </>} /> <br /> <br /><br />
 
