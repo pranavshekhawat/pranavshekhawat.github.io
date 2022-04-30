@@ -43,6 +43,12 @@ function Work7() {
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+
+                    <br/><br/>
+                    <br/><br/>
+                    <span id="initial_concepts" className="bookmark_positioner"></span>
+                    <h1>Initial Concepts</h1>
+                    <br></br>
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/7.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
