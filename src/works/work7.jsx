@@ -73,20 +73,24 @@ function Work7() {
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/18.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/19.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/20.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
 
+<br/><br/>
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/21.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/22.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/24.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/25.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -96,6 +100,7 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/27.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/28.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
 
 
                     <Gallerygrid images={<>
@@ -107,6 +112,8 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/33.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
 
+                    <br/><br/>
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/35.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
@@ -115,6 +122,8 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/36.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/37.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+<br/><br/>
+
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/39.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -144,6 +153,9 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/49.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
 
+<br/><br/>
+
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/52.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/53.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -152,6 +164,8 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/54.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/55.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+<br/><br/>
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/57.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
@@ -160,15 +174,23 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/58.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/59.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+
+                    <br/><br/>
+
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/60.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
 
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/61.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/62.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+
+<br/><br/>
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/64.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/65.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -178,10 +200,14 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/66.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/67.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+<br/><br/>
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/68.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/69.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+                    <br/><br/>
+                    <br/><br/>
 
 
 
