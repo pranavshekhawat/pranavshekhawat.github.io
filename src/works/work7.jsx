@@ -15,17 +15,17 @@ function Work7() {
 
 
 
-                    
 
-                    <br/><br/>
-                    <br/><br/>
+
+                    <br /><br />
+                    <br /><br />
                     <span id="brand" className="bookmark_positioner"></span>
                     <h1>Brand</h1>
                     <br></br>
                     <div className="text">
-                    Selected "Givenchy" and studied the brand and their last two years' print collections.
+                        Selected "Givenchy" and studied the brand and their last two years' print collections.
                     </div>
-                    <br/><br/>
+                    <br /><br />
 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/2.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -33,6 +33,13 @@ function Work7() {
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/3.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
+
+                    <br/><br/>
+                    <br/><br/>
+                    <span id="inspiration" className="bookmark_positioner"></span>
+                    <h1>Inspiration</h1>
+                    <br></br>
+                 
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
@@ -84,7 +91,7 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/28.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
 
-                    
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/30.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/31.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -106,9 +113,9 @@ function Work7() {
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/39.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
-                     <Gallerygrid images={<>
+                    <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/40.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                    </>} /> 
+                    </>} />
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/41.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
@@ -117,7 +124,7 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/42.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/43.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
-                    
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/44.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
@@ -130,7 +137,7 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/48.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/49.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
-                    
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/52.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/53.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
@@ -160,7 +167,7 @@ function Work7() {
                         <Img height="auto" src='/images/works/digital_nature/64.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/65.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
-                    
+
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/66.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/67.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />

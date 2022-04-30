@@ -135,6 +135,9 @@ export const data = [
         <>
         <Mark to="#overview" title="Overview" />
           <Mark to="#brand" title="Brand" />
+          <Mark to="#inspiration" title="Inspiration" />
+
+
          
         </>
       ),
