@@ -137,9 +137,14 @@ export const data = [
           <Mark to="#brand" title="Brand" />
           <Mark to="#inspiration" title="Inspiration" />
           <Mark to="#initial_concepts" title="Initial Concepts" />
-
-
-
+          <Mark to="#print1" title="Print 1" />
+          <Mark to="#print2" title="Print 2" />
+          <Mark to="#print3" title="Print 3" />
+          <Mark to="#print4" title="Print 4" />
+          <Mark to="#print5" title="Print 5" />
+          <Mark to="#print6" title="Print 6" />
+          <Mark to="#print7" title="Print 7" />
+          <Mark to="#final_collection" title="Fianl Collection" />
          
         </>
       ),
