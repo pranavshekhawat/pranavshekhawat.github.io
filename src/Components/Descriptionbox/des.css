@@ -15,3 +15,15 @@
   font-size: 2rem;
 }
 
+@media (max-width: 500px) {
+
+
+  .des_text {
+    display: block;
+    grid-column: 2;
+    grid-column-end: 21;
+    padding: 2rem 0 2rem 0;
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 1.6rem;
+  }
+}
