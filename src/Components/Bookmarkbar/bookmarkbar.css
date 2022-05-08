@@ -12,7 +12,18 @@
   display: block;
   grid-column-start: 2;
   grid-column-end: 25;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
 }
+
+.bookmarkmain::-webkit-scrollbar{
+  width: 0;
+  display: none;
+}
+
 
 .bookmarkitem {
   position: relative;

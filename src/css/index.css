@@ -8,6 +8,11 @@
     color-scheme: dark;
 }
 
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 * a {
     color: #f6f6f6;
     text-decoration: none;
@@ -205,3 +210,4 @@ h1{
     border: 0;
     padding: 0.8rem 2rem 0.8rem 2rem;
 }
+
