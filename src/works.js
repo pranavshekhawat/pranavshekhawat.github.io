@@ -2,6 +2,7 @@ import Work1 from "./works/work1";
 import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
+import Work5 from "./works/work5";
 import Work7 from "./works/work7";
 
 
@@ -153,23 +154,34 @@ export const data = [
 
   
 
-  // {
-  //   id: 5,
-  //   img: "/images/works/lounge_prints/lounge_print.webp",
-  //   title: "Creamy Skies",
-  //   category: "Print Design",
-  //   topimg: "/images/works/lounge_prints/lounge_print.webp",
-  //   bottomimg: "/images/works/digital_nature/digital_nature2.webp",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar metus quis bibendum cursus. Sed lectus dui, scelerisque viverra arcu eu, rhoncus rhoncus odio. Maecenas nec convallis sapien. Nullam volutpat feugiat eros. Phasellus imperdiet ut augue quis pellentesque. Duis tincidunt, arcu vestibulum convallis egestas, nisl sem aliquet lorem, eu lacinia nibh lacus non justo. Duis sagittis lobortis magna a dignissim. Sed posuere suscipit velit, a rhoncus justo ornare in. Etiam faucibus vel arcu viverra sodales. Quisque mattis condimentum est, in luctus metus suscipit fringilla. Donec malesuada urna ac sapien congue dapibus.",
-  //   body: <Work1 />,
-  //   bookmarks: (
-  //     <>
-  //       <Mark to="#marks" title="Course overview" />
-  //       <Mark to="#markks" title="Course summary" />
-  //     </>
-  //   ),
-  // },
+  {
+    id: 5,
+    img: "/images/works/lounge_prints/lounge_print.webp",
+    title: "Dreamy Skies",
+    category: "Print Design",
+    topimg: "/images/works/lounge_prints/lounge_print.webp",
+    bottomimg: "/images/works/lounge_prints/bottom_image.jpg",
+    description:
+      "Created this print design collection under an export house, RGC Inc., for a Chilean brand, Lounge, as a classroom project. Designed prints for their spring-summer 2023 beachwear collection." ,
+    body: <Work5 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#inspiration" title="Inspiration" />
+        <Mark to="#print1" title="Print 1" />
+        <Mark to="#print2" title="Print 2" />
+        <Mark to="#print3" title="Print 3" />
+        <Mark to="#print4" title="Print 4" />
+        <Mark to="#print5" title="Print 5" />
+        <Mark to="#print6" title="Print 6" />
+        <Mark to="#print7" title="Print 7" />
+        <Mark to="#collection" title="Collection" />
+
+
+
+      </>
+    ),
+  },
 
   // {
   //   id: 6,

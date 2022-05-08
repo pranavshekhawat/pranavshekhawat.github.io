@@ -230,14 +230,18 @@ function Work7() {
                     {/* <br/><br/> */}
 
                     <Gallerygrid images={<>
+                        <Img height="auto" src='/images/works/digital_nature/1651489124673-Recovered-222222222.jpg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
+                        <Img height="auto" src='/images/works/digital_nature/1651489124h683.jpg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
+                    </>} />
+                    <br /><br />
+                    <br /><br />
+
+                    <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/digital_nature/68.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                         <Img height="auto" src='/images/works/digital_nature/69.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
                     </>} />
                     <br /><br />
                     <br /><br />
-
-
-
 
 
                 </div>
