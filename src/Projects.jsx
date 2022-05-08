@@ -30,8 +30,8 @@ function Projects(){
         <>
         <Navbar/>
         <BasicBreadcrumbs text="Works" theme="dark"></BasicBreadcrumbs>
-        <Headingbar heading="Works" description="Here are my few selected projects that show my woking process" />
-        
+        <Headingbar heading="Works" description="" />
+        {/* Here are my few selected projects that show my woking process */}
         <Works />
         </>
         
