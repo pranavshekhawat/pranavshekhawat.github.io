@@ -1,12 +1,12 @@
 .heading_bar {
-  background-color: #0a0a0a;
+  background-color: var(--colour3);
   padding-top: 4vw;
   padding-bottom: 4vw;
 }
 
 .heading {
   font-family: "Helvetica Neue LT Pro Bd";
-  /* color: #ffffff; */
+  /* color: var(--colour2); */
   font-size: 5.8rem;
   grid-column: 1;
   grid-column-end: 11;
@@ -17,7 +17,7 @@
 .heading_des {
   font-family: "Helvetica Neue LT Pro Roman";
   font-size: 1rem;
-  color: #f6f6f6;
+  color: var(--colour2);
   padding-left: 4vw;
   grid-column: 13;
   grid-column-end: 25;

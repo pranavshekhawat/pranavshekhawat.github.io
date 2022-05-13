@@ -3,6 +3,8 @@ import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
 import Work5 from "./works/work5";
+import Work6 from "./works/work6";
+
 import Work7 from "./works/work7";
 
 
@@ -183,6 +185,24 @@ export const data = [
     ),
   },
 
+  //   {
+  //   id: 10,
+  //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+  //   title: "Fabric Dyeing Techniques",
+  //   category: "Dyeing",
+  //   topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+  //   bottomimg: "/images/work1/workimage1.jpg",
+  //   description:
+  //     "Explored various dyeing techniques like Tie-dye, Resist Dyeing (Wax, Stitch and Mud) and Synthetic Dyestuff like Acid, VAT, Direct, Reactive and Sulphur dyes. ",
+  //   body: <Work6 />,
+  //   bookmarks: (
+  //     <>
+  //       <Mark to="#marks" title="Link" />
+  //       <Mark to="#markks" title="Link" />
+  //     </>
+  //   ),
+  // },
+
   // {
   //   id: 6,
   //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
@@ -191,8 +211,8 @@ export const data = [
   //   topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
   //   bottomimg: "/images/work1/workimage1.jpg",
   //   description:
-  //     "Vestibulum odio tellus, pretium non velit sed, blandit ultricies eros. Cras et ex efficitur, efficitur lorem eu, fringilla purus. In sed sapien volutpat, fermentum tellus sit amet, ultrices nibh. Nunc viverra scelerisque luctus. Aliquam pharetra ex et mattis porta. Donec ut pulvinar mauris, in iaculis augue. Integer et turpis convallis, ultricies tortor nec, egestas felis. Donec porta hendrerit nisi, sit amet rhoncus turpis volutpat sit amet. Praesent ut dictum nisi, in hendrerit orci. Morbi tempor purus at nisl fermentum, vel vehicula mi feugiat. Aliquam porttitor magna sed auctor auctor. In hac habitasse platea dictumst.",
-  //   body: <Work2 />,
+  //     "Explored various dyeing techniques like Tie-dye, Resist Dyeing (Wax, Stitch and Mud) and Synthetic Dyestuff like Acid, VAT, Direct, Reactive and Sulphur dyes. ",
+  //   body: <Work6 />,
   //   bookmarks: (
   //     <>
   //       <Mark to="#marks" title="Link" />
@@ -200,7 +220,7 @@ export const data = [
   //     </>
   //   ),
   // },
-  // 
+  
   // {
   //   id: 8,
   //   img: "/images/works/ecoprinting/ecoprint.webp",

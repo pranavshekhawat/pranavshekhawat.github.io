@@ -1,10 +1,10 @@
 .accordion-button:not(.collapsed){
-    background-color: #ffffff;
-    color: #ff5000;
+    background-color: var(--colour2);
+    color: var(--colour1);
 }
 
 .accordion-button:active{
-    background-color: #ffffff;
+    background-color: var(--colour2);
 }
 
 

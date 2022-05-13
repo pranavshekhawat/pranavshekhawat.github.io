@@ -5,7 +5,7 @@
 
 .heading_type2 {
   font-family: "Helvetica Neue LT Pro Bd";
-  /* color: #ffffff; */
+  /* color: var(--colour2); */
   font-size: 5.8rem;
   grid-column: 1;
   grid-column-end: 25;
@@ -27,7 +27,7 @@
 
   .heading_type2 {
     font-family: "Helvetica Neue LT Pro Bd";
-    /* color: #ffffff; */
+    /* color: var(--colour2); */
     font-size: 2.5rem;
     grid-column: 1;
     grid-column-end: 25;

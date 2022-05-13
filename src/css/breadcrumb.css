@@ -45,5 +45,5 @@
 .link2:hover {
   text-decoration: none;
   cursor: pointer;
-  color: #ff5000;
+  color: var(--colour1);
 }

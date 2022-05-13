@@ -1,7 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: repeat(25, 1fr);
-  background-color: #0a0a0a;
+  background-color: var(--colour3);
 }
 
 .footer_main {
@@ -37,7 +37,7 @@
 
 .footer_item div p {
   font-family: "Helvetica Neue LT Pro Roman";
-  color: #f6f6f6;
+  color: var(--colour2);
   font-size: 0.86rem;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .socials li {
-  color: #f6f6f6;
+  color: var(--colour2);
   float: left;
   display: list-item;
   margin-right: 32px;
@@ -74,13 +74,13 @@
 
 .socials li svg {
   cursor: pointer;
-  fill: #f6f6f6;
+  fill: var(--colour2);
   width: 110%;
   height: 110%;
 }
 
 .socials li svg:hover {
-  fill: #ff5000;
+  fill: var(--colour1);
 }
 
 

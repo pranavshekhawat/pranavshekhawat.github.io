@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(25, 1fr);
   height: 55px;
-  background-color: #fff;
+  background-color: var(--colour2);
   z-index: 999;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .bookmarkitem a {
-  color: #0a0a0a;
+  color: var(--colour3);
   padding: 18px 0px 15px 0px;
   margin-right: 40px;
   font-family: "Helvetica Neue LT Pro Roman";
@@ -42,9 +42,9 @@
 }
 
 .bookmarkitem a:hover {
-  color: #ff5000;
+  color: var(--colour1);
   padding: 18px 0px 15px 0px;
-  border-bottom: 3.5px solid #ff5000;
+  border-bottom: 3.5px solid var(--colour1);
   font-family: "Helvetica Neue LT Pro Roman";
   font-size: 1rem;
   text-decoration: none;

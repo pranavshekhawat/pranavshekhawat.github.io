@@ -10,7 +10,7 @@ function Navbar() {
     <nav className='navbar grid_container_25'>
       <div className='navbar_container'>
         <div className=' nav_items nav_item_1' title='Home'>
-          <NavLink style={{color:'#f6f6f6'}} to="/" className={({ isActive }) => isActive ? activeClassName : undefined }>
+          <NavLink style={{color:'var(--colour2)'}} to="/" className={({ isActive }) => isActive ? activeClassName : undefined }>
               Pranav Shekhawat
           </NavLink>
         </div> 

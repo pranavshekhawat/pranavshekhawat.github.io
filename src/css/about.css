@@ -9,12 +9,12 @@
 }
 
 .about_span:hover img {
-    border: 4px solid #ff5000;
+    border: 4px solid var(--colour1);
 }
 
 .about_span:hover .about_img_btn {
 
-    background-color: #ff5000;
+    background-color: var(--colour1);
 
 }
 
@@ -70,7 +70,7 @@
 .about_img_btn {
     padding: 10px;
     position: absolute;
-    background-color: #0A0A0A;
+    background-color: var(--colour3);
     border: none;
     bottom: 0px;
 }
@@ -87,9 +87,9 @@
 .modal-body,
 .modal-header,
 .modal-content {
-    /* background-color: #0A0A0A; */
-    background-color: #f6f6f6;
-    color: #0A0A0A;
+    /* background-color: var(--colour3); */
+    background-color: var(--colour2);
+    color: var(--colour3);
 
 }
 
@@ -130,26 +130,26 @@
 }
 
 .contact_submit_button {
-    color: #f6f6f6;
-    background-color: #0A0A0A;
+    color: var(--colour2);
+    background-color: var(--colour3);
     border: 0;
     padding: 0.8rem 2rem 0.8rem 2rem;
 }
 
 .contact_submit_button:hover {
-    background-color: #ff5000;
+    background-color: var(--colour1);
 }
 
 .contact_download_cv {
-    color: #f6f6f6;
-    background-color: #0A0A0A;
+    color: var(--colour2);
+    background-color: var(--colour3);
     border: 0;
     padding: 0.8rem 2rem 0.8rem 2rem;
 }
 
 .contact_download_cv:hover {
-    background-color: #ff5000;
-    color: #f6f6f6;
+    background-color: var(--colour1);
+    color: var(--colour2);
 
 }
 

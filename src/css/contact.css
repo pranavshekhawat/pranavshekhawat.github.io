@@ -1,5 +1,5 @@
 .contact_main {
-  background-color: #0a0a0a;
+  background-color: var(--colour3);
 }
 
 .contact_items {
@@ -12,7 +12,7 @@
   float: left;
   margin-top: 4vw;
   font-family: "Helvetica Neue LT Pro Roman";
-  color: #f6f6f6;
+  color: var(--colour2);
   font-size: 2rem;
 }
 
@@ -30,35 +30,35 @@
 }
 
 .changecolor {
-  color: #ff5000;
+  color: var(--colour1);
 }
 
 .makewhite {
-  color: #f6f6f6;
+  color: var(--colour2);
 }
 
 .arrow_right {
-  fill: #f6f6f6;
+  fill: var(--colour2);
   display: block;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .fillcolor {
-  fill: #ff5000;
+  fill: var(--colour1);
 }
 
 .fillwhite {
-  fill: #f6f6f6;
+  fill: var(--colour2);
 }
 
 .emailbtnafter {
-  color: #ff5000;
+  color: var(--colour1);
   text-decoration: underline;
 }
 
 .emailbtnbefore {
   font-family: "Helvetica Neue LT Pro Roman";
   font-size: 1rem;
-  color: #f6f6f6;
+  color: var(--colour2);
 }

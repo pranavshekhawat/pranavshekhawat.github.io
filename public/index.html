@@ -26,6 +26,15 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Pranav Shekhawat</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z18T1FYYYD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z18T1FYYYD');
+  </script>
 </head>
 
 <body>
@@ -40,18 +49,18 @@
     // When the single page app is loaded further down in this file,
     // the correct url will be waiting in the browser's history for
     // the single page app to route accordingly.
-    (function(l) {
-      if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) { 
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
           return s.replace(/~and~/g, '&')
         }).join('?');
         window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+          l.pathname.slice(0, -1) + decoded + l.hash
         );
       }
     }(window.location))
   </script>
-  
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--

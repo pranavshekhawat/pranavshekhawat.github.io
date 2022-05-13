@@ -10,7 +10,7 @@ function Mark({to, title}){
   
 return(
     <>
-    <NavHashLink to={to}  style={ isActive(to) ? {color: "#0a0a0a", padding: "18px 0px 15px 0px", borderBottom: "3.5px solid #0a0a0a", fontFamily: "Helvetica Neue LT Pro Bd", fontSize: "1rem", textDecoration:"none"}: {}} >{title}</NavHashLink>
+    <NavHashLink to={to}  style={ isActive(to) ? {color: "var(--colour3)", padding: "18px 0px 15px 0px", borderBottom: "3.5px solid var(--colour3)", fontFamily: "Helvetica Neue LT Pro Bd", fontSize: "1rem", textDecoration:"none"}: {}} >{title}</NavHashLink>
     </>
 )
 }
