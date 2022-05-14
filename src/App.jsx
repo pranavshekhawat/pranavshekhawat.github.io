@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Route, Routes} from 'react-router-dom';
 import Home from './Home';
 import Projects from './Projects';
@@ -8,10 +8,16 @@ import Error from './Error';
 import Footer from './Footer';
 import Workpage from './Workpage';
 
+import ReactGA from 'react-ga';
+
+  const TRACKING_ID = "G-Z18T1FYYYD"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
 
 function App (){
   
-  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
     return(
       <>
