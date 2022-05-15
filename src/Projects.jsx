@@ -42,18 +42,18 @@ function Projects() {
       {/* Here are my few selected projects that show my woking process */}
 
       <Works />
-      <hr></hr>
+      {/* <hr></hr>
 
       <div className='grid_container_25'>
                 <div className='colstart2 colend25'>
                   <span>Views</span> &nbsp;
       <a href="https://www.hitwebcounter.com" target="_blank" rel="noreferrer">
-        <img src="https://hitwebcounter.com/counter/counter.php?page=7988864&style=0024&nbdigits=1&type=ip&initCount=0" title="Free Counter" Alt="web counter" border="0" /></a>
+        <img src="https://hitwebcounter.com/counter/counter.php?page=7988864&style=0024&nbdigits=1&type=ip&initCount=22" title="Free Counter" Alt="web counter" border="0" /></a>
     
 
         </div>
             </div>
-            <br></br>
+            <br></br> */}
 
     </>
 
