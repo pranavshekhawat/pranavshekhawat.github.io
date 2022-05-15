@@ -24,6 +24,7 @@ const Active = ({ img, name }) => {
     return (
         <>
             <article className="about">
+                
                 <span onClick={() => setModalShow(true)} className="about_span">
 
                     {img?.length > 1 && <button className='about_img_btn'>+{img.length - 1}</button>}
