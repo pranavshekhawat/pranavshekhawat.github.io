@@ -6,12 +6,19 @@ import {data} from './works.js';
 import Headingbar from './Components/Headingbar/Headingbar';
 import Navbar from './Navbar';
 import { TabTitle } from './utils/GeneralFunctions';
+import ReactGA from 'react-ga';
+
+  const TRACKING_ID = "G-Z18T1FYYYD"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
+
+var number=ReactGA.pageview();
 
 
 function Works(){
     return (
       <div className='grid_container_25'>
         <div className='colstart2 colend25'>
+          <div>{number}</div>
       <section className="worklist">
       {data.map((list)=>{
         return <Work key={list.id} {...list}></Work>
