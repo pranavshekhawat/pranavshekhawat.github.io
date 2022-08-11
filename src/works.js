@@ -3,13 +3,14 @@ import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
 import Work5 from "./works/work5";
-import Work6 from "./works/work6";
+// import Work6 from "./works/work6";
 
 import Work7 from "./works/work7";
 
 
 
 import Mark from "./Components/Bookmarkbar/mark";
+
 
 export const data = [
   {
