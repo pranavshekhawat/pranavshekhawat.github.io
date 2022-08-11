@@ -21,7 +21,7 @@ function Workpage() {
 
 
     useEffect(() => {
-        let list = data.find((list) => list.title.toLowerCase().replace(" ", "_") === (url))
+        let list = data.find((list) => list.title.toLowerCase().replace(/ /g, "_") === (url))
         TabTitle(`Pranav Shekhawat - ${list.title}`);
 
         if (list) {
