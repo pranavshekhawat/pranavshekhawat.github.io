@@ -12,18 +12,27 @@
     --colour3: #0a0a0a ;
     --colour4: #171717;
 
-    /* light */
-    /* --colour3: #f6f6f6 ; */
-    /* --colour2:  #838383; */
-    /* --colour4: #0a0a0a; */
-    
-    /* --colour1: #ff5000;
-    --colour2:  #f6f6f6;
-    --colour3: #59738E   ;
-    --colour4: #171717; */
-
-      
+/* 
+    --light-colour1: #ff5000;
+    --light-colour2:  #f6f6f6;
+    --light-colour3: #59738E;
+    --light-colour4: #171717;
+  */
 }
+
+/* .light-theme {
+    --colour1: var(--light-colour1);
+    --colour2: var(--light-colour2);
+    --colour3: var(--light-colour3);
+    --colour4: var(--light-colour4);
+} */
+
+/* .dark-theme {
+    --colour1: var(--dark-colour1);
+    --colour2: var(--dark-colour2);
+    --colour3: var(--dark-colour3);
+    --colour4: var(--dark-colour4);
+} */
 
 dl, ol, ul {
     margin-top: 0;
