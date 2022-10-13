@@ -1,6 +1,6 @@
 .bookmarkbar {
   position: sticky;
-  top: 55px;
+  top: 100px;
   display: grid;
   grid-template-columns: repeat(25, 1fr);
   height: 55px;

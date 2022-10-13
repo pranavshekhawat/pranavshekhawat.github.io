@@ -3,17 +3,25 @@ import React from 'react';
 import Navbar from './Navbar';
 import Carousel from 'react-bootstrap/Carousel';
 import "./css/carousel.css";
-// import {Works} from "./Projects";
+import { Works } from "./Projects";
 import { TabTitle } from './utils/GeneralFunctions';
-// import {AboutCard} from './About'
+// import {AboutCard} from './About';
+import Headingbar from './Components/Headingbar/Headingbar';
+import { AboutCard } from "./About";
+import Contact from './Contact';
+
+
+
+
+
 
 function Home() {
 
-    TabTitle('Pranav Shekhawat - Home');
+    TabTitle('Pranav Shekhawat - Portfolio');
 
     return (
-        <> 
-        <Navbar/>
+        <>
+            <Navbar />
             <Carousel>
                 <Carousel.Item>
                     <div className="carousel_image_container"> <img
@@ -23,7 +31,7 @@ function Home() {
                     />
                     </div>
                     <Carousel.Caption>
-                        <h3>Checks and Stripes</h3>
+                        {/* <h3>Checks and Stripes</h3> */}
                         {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -37,7 +45,7 @@ function Home() {
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Natural Dyes</h3>
+                        {/* <h3>Natural Dyes</h3> */}
                         {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -51,17 +59,32 @@ function Home() {
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Digital Nature</h3>
+                        {/* <h3>Digital Nature</h3> */}
                         {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
                     </Carousel.Caption>
                 </Carousel.Item>
-               
-               
+
+
             </Carousel>
             {/* <br/><br/> */}
             {/* <Works/><hr/><br/><br/>
             <AboutCard/><br/><br/>
             <Contact /> */}
+
+            <span id="works" className="bookmark_positioner_nav"></span>
+
+            <Headingbar heading="Works" description="" />
+            {/* Here are my few selected projects that show my woking process */}
+
+            <Works />
+
+            <span id="about" className="bookmark_positioner_nav"></span>
+
+            <Headingbar heading="About"></Headingbar>
+
+            <AboutCard />
+
+            <Contact />
 
         </>
     )

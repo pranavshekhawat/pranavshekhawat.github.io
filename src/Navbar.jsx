@@ -2,6 +2,21 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './css/navbar.css';
 
+import { NavHashLink } from 'react-router-hash-link';
+import { useLocation } from "react-router-dom";
+
+function Markkk({to, title}){
+
+  const { hash } = useLocation();
+  const isActive = (iHash) => hash === iHash;
+
+return(
+  <>
+  <NavHashLink to={to}  style={ isActive(to) ? {color: "var(--colour1)", fontFamily: "Helvetica Neue LT Pro UltLt", fontSize: "1.2rem", textDecoration:"none"}: {}} >{title}</NavHashLink>
+  </>
+)
+}
+
 function Navbar() {
   
     let activeClassName = "active"
@@ -15,9 +30,12 @@ function Navbar() {
           </NavLink>
         </div> 
         <div className='nav_items nav_item_2'>
-          <NavLink to="/works"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
-              Works
-          </NavLink>
+          {/* <NavLink to="/works"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
+    
+          {/* <a id='project_link' href='#works'  className={({ isActive }) => isActive ? activeClassName : undefined }>Works</a> */}
+          <Markkk to="/#works" title="Works" />
+
+          {/* </NavLink> */}
       
           <span className='line'></span>
 
@@ -27,9 +45,20 @@ function Navbar() {
       
           <span className='line'></span> */}
 
-          <NavLink to="/about" id='about_link' className={({ isActive }) => isActive ? activeClassName : undefined }>
-              About
-          </NavLink>
+          {/* <NavLink to="#about" id='about_link' > */}
+              
+          {/* <a id='about_link' href='#about' className={({ isActive }) => isActive ? activeClassName : undefined }>About</a> */}
+          
+          <Markkk to="/#about" title="About" />
+
+
+          {/* </NavLink> */}
+
+          <span className='line'></span>
+
+          {/* <NavLink to='/data/cv/PranavShekhawat_CV.pdf' id='cv_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
+          <a className='download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">CV</a>
+          {/* </NavLink> */}
            
         </div>
       </div> 
