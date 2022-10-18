@@ -3,16 +3,32 @@ import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
 import Work5 from "./works/work5";
-// import Work6 from "./works/work6";
-
 import Work7 from "./works/work7";
-
+import Work10 from "./works/work10";
+// import Work6 from "./works/work6";
 
 
 import Mark from "./Components/Bookmarkbar/mark";
 
-
 export const data = [
+  {
+    id: 10,
+    img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+    title: "Internship Experience at Raymond Limited",
+    category: "Weave Design",
+    topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+    bottomimg: "/images/work1/workimage1.jpg",
+    description:
+      "dhhd kad whawfba wfajwfjhabfaj fjawbf ahwf havfwa",
+    body: <Work10 />,
+    bookmarks: (
+      <>
+        <Mark to="#marks" title="Link" />
+        <Mark to="#markks" title="Link" />
+      </>
+    ),
+  },
+
   {
     id: 1,
     img: "/images/works/weave_design/weavedesign.webp",
@@ -20,13 +36,18 @@ export const data = [
     category: "Weave design",
     topimg: "/images/works/weave_design/weavedesign.webp",
     bottomimg: "/images/works/weave_design/bottom_img.jpg",
-    description: <>{`Woven swatches inspired by Amrita Shergill's painting "Group of Three
+    description: (
+      <>
+        {`Woven swatches inspired by Amrita Shergill's painting "Group of Three
     Girls". Her artwork won her a gold medal from the Bombay Art Society.
     National Gallery of Modern Art (NGMA), New Delhi. She mainly painted
-    rural women powerfully and almost succeeded in capturing some neglected areas of women's life in dull colour schemes.`} <br /> {`Explored between different weaves and different stripes and checked
+    rural women powerfully and almost succeeded in capturing some neglected areas of women's life in dull colour schemes.`}{" "}
+        <br />{" "}
+        {`Explored between different weaves and different stripes and checked
     patterns, and tried to capture the emotions of the painting using
-    threads.`}</>
-    ,
+    threads.`}
+      </>
+    ),
     body: <Work1 />,
     bookmarks: (
       <>
@@ -41,8 +62,6 @@ export const data = [
       </>
     ),
   },
-
-  
 
   {
     id: 3,
@@ -73,17 +92,32 @@ export const data = [
     category: "Sustainability",
     topimg: "/images/works/naturaldyes/natural_dyes_poster.webp",
     bottomimg: "/images/works/naturaldyes/bottom_img.jpg",
-    description:
-      <>{"Replacing synthetic dyes with non-hazardous natural dyes is more a need than a trend. One must start appreciating the limited palette, weak colour fastness and high costs of naturally dyed products. "}<br></br>{"As a part of the \"Application of Natural Dyes.\" module I,"}<br></br>{<ul>
-        <li>Explored various plant-based colourant materials and obtained a spectrum of colours on cotton fabrics. 
-        </li>
-        <li>Experimented with different mordants and observed how different mordants alter the shade or hue of the colourants. 
-        </li>
-        <li>
-        Studied the dyes' colour fastness properties to diverse physical conditions such as washing, sunlight, rubbing and bleaching.
-        </li>
-        </ul>}
-      </>,
+    description: (
+      <>
+        {
+          "Replacing synthetic dyes with non-hazardous natural dyes is more a need than a trend. One must start appreciating the limited palette, weak colour fastness and high costs of naturally dyed products. "
+        }
+        <br></br>
+        {'As a part of the "Application of Natural Dyes." module I,'}
+        <br></br>
+        {
+          <ul>
+            <li>
+              Explored various plant-based colourant materials and obtained a
+              spectrum of colours on cotton fabrics.
+            </li>
+            <li>
+              Experimented with different mordants and observed how different
+              mordants alter the shade or hue of the colourants.
+            </li>
+            <li>
+              Studied the dyes' colour fastness properties to diverse physical
+              conditions such as washing, sunlight, rubbing and bleaching.
+            </li>
+          </ul>
+        }
+      </>
+    ),
     body: <Work2 />,
     bookmarks: (
       <>
@@ -123,39 +157,44 @@ export const data = [
         <Mark to="#download_document" title="Download Document" />
       </>
     ),
-  }, 
+  },
 
   {
-      id: 7,
-      img: "/images/works/digital_nature/digital_nature0.webp",
-      title: "Digital Nature",
-      category: "Print design",
-      topimg: "/images/works/digital_nature/digital_nature.webp",
-      bottomimg: "/images/works/digital_nature/digital_nature2.webp",
-      description:
-        <>{"Selected a clothing brand of choice and designed prints for their apparel collection, referred to WGSN Fashion Forecast for the colour palette and design direction. For the final collection, selected silhouettes according to the brand and placed the prints over them."} <br></br>{"Got two of the final prints digitally printed on a fabric and then stitched garments out of it. "}</>,
-      body: <Work7 />,
-      bookmarks: (
-        <>
+    id: 7,
+    img: "/images/works/digital_nature/digital_nature0.webp",
+    title: "Digital Nature",
+    category: "Print design",
+    topimg: "/images/works/digital_nature/digital_nature.webp",
+    bottomimg: "/images/works/digital_nature/digital_nature2.webp",
+    description: (
+      <>
+        {
+          "Selected a clothing brand of choice and designed prints for their apparel collection, referred to WGSN Fashion Forecast for the colour palette and design direction. For the final collection, selected silhouettes according to the brand and placed the prints over them."
+        }{" "}
+        <br></br>
+        {
+          "Got two of the final prints digitally printed on a fabric and then stitched garments out of it. "
+        }
+      </>
+    ),
+    body: <Work7 />,
+    bookmarks: (
+      <>
         <Mark to="#overview" title="Overview" />
-          <Mark to="#brand" title="Brand" />
-          <Mark to="#inspiration" title="Inspiration" />
-          <Mark to="#initial_concepts" title="Initial Concepts" />
-          <Mark to="#print1" title="Print 1" />
-          <Mark to="#print2" title="Print 2" />
-          <Mark to="#print3" title="Print 3" />
-          <Mark to="#print4" title="Print 4" />
-          <Mark to="#print5" title="Print 5" />
-          <Mark to="#print6" title="Print 6" />
-          <Mark to="#print7" title="Print 7" />
-          <Mark to="#final_collection" title="Fianl Collection" />
-         
-        </>
-      ),
-    },
-  
-
-  
+        <Mark to="#brand" title="Brand" />
+        <Mark to="#inspiration" title="Inspiration" />
+        <Mark to="#initial_concepts" title="Initial Concepts" />
+        <Mark to="#print1" title="Print 1" />
+        <Mark to="#print2" title="Print 2" />
+        <Mark to="#print3" title="Print 3" />
+        <Mark to="#print4" title="Print 4" />
+        <Mark to="#print5" title="Print 5" />
+        <Mark to="#print6" title="Print 6" />
+        <Mark to="#print7" title="Print 7" />
+        <Mark to="#final_collection" title="Fianl Collection" />
+      </>
+    ),
+  },
 
   {
     id: 5,
@@ -165,7 +204,7 @@ export const data = [
     topimg: "/images/works/lounge_prints/lounge_print.webp",
     bottomimg: "/images/works/lounge_prints/bottom_image.jpg",
     description:
-      "Created this print design collection under an export house, RGC Inc., for a Chilean brand, Lounge, as a classroom project. Designed prints for their spring-summer 2023 beachwear collection." ,
+      "Created this print design collection under an export house, RGC Inc., for a Chilean brand, Lounge, as a classroom project. Designed prints for their spring-summer 2023 beachwear collection.",
     body: <Work5 />,
     bookmarks: (
       <>
@@ -179,15 +218,12 @@ export const data = [
         <Mark to="#print6" title="Print 6" />
         <Mark to="#print7" title="Print 7" />
         <Mark to="#collection" title="Collection" />
-
-
-
       </>
     ),
   },
 
   //   {
-  //   id: 10,
+  //   id: 11,
   //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
   //   title: "Fabric Dyeing Techniques",
   //   category: "Dyeing",
@@ -221,7 +257,7 @@ export const data = [
   //     </>
   //   ),
   // },
-  
+
   // {
   //   id: 8,
   //   img: "/images/works/ecoprinting/ecoprint.webp",

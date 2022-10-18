@@ -1,5 +1,4 @@
 git add --all
 git commit -m "Cha cha changes"
 npm run deploy
-git push -u origin master
 git push -u origin Head:main
