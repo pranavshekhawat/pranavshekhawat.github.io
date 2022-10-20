@@ -11,6 +11,8 @@
     --colour2:  #f6f6f6;
     --colour3: #0a0a0a ;
     --colour4: #171717;
+    --colour5: #ffffff;
+
 
 
     /* --colour1: #2b2b2b; */
@@ -216,7 +218,7 @@ body {
 }
 
 .bookmark_positioner{
-    transform: translateY(-10rem);
+    transform: translateY(-12rem);
     position: absolute;
 }
 

@@ -19,17 +19,14 @@ function Work7() {
 
                     <br /><br />
                     <br /><br />
-                    <span id="brand" className="bookmark_positioner"></span>
-                    <h1>Brand</h1>
+                    <span id="certificate" className="bookmark_positioner"></span>
+                    <h1>Certificate</h1>
                     <br></br>
-                    <div className="text">
-                        Selected "Givenchy" and studied the brand and their last two years' print collections.
-                    </div>
-                    <br /><br />
-                
-
+                    
                     <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/digital_nature/60.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
+                        <Img height="auto" src='/images/works/internship/Pranav Shekhawat_Certificate for completion of Internship at Raymond Ltd.png' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited " />
+                        <Img height="auto" src='/images/works/internship/noimg.png' alt="" />
+
                     </>} />
                     <br /><br />
                     <br /><br />

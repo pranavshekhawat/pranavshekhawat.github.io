@@ -13,18 +13,46 @@ import Mark from "./Components/Bookmarkbar/mark";
 export const data = [
   {
     id: 10,
-    img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+    img: "/images/works/internship/topimg.webp",
     title: "Internship Experience at Raymond Limited",
-    category: "Weave Design",
-    topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
-    bottomimg: "/images/work1/workimage1.jpg",
+    category: "Internship",
+    topimg: "/images/works/internship/topimg.webp",
+    bottomimg: "/images/works/internship/bottomimg.webp",
     description:
-      "dhhd kad whawfba wfajwfjhabfaj fjawbf ahwf havfwa",
+    ( 
+    <> 
+    {`I completed my two-month summer internship at Raymond Limited, Thane. I worked on the Suiting Design Development project for the SS-23 Collection, for which I did trend research, created a mood board and a colour board, and created suiting designs. A few of my designs were selected by the Head of design for Raymond's subsidiary brand, Champion's spring/summer 2023 collection.`}
+      <br/><br/> {`Learnings from the internship⁚`} <br/> 
+      {
+        <ul>
+        <li>
+        Learned about the working of the department and the design process followed in the brand.
+        </li>
+        <li>
+        Got to do fabric analysis and learned to do fabric calculations and fabric costing.
+        </li>
+        <li>
+        Worked on Textronics-Design Dobby software, the best tool for creating realistic fabric simulations.
+        </li>
+        <li>
+        Learned about Jacquard and compound weave structures.
+        </li>
+        <li>
+        Got to work with different materials, weave structures, and patterns.
+        </li>
+        <li>
+        And got a brief overview of various other departments like the Fabric Testing Lab, Quality Assurance, Shirting and Lifestyle Product Department.
+        </li>
+      </ul>
+     } 
+      </> 
+      )
+     ,
     body: <Work10 />,
     bookmarks: (
       <>
-        <Mark to="#marks" title="Link" />
-        <Mark to="#markks" title="Link" />
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#certificate" title="Certificate" />
       </>
     ),
   },
