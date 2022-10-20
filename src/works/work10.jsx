@@ -25,7 +25,7 @@ function Work7() {
                     
                     <Gallerygrid images={<>
                         <Img height="auto" src='/images/works/internship/Pranav Shekhawat_Certificate for completion of Internship at Raymond Ltd.png' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited " />
-                        <Img height="auto" src='/images/works/internship/noimg.png' alt="" />
+                        {/* <Img height="auto" src='/images/works/internship/noimg.png' alt="" /> */}
 
                     </>} />
                     <br /><br />
