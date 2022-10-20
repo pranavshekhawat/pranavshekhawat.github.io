@@ -28,16 +28,7 @@ function Work7() {
                         {/* <Img height="auto" src='/images/works/internship/noimg.png' alt="" /> */}
 
                     </>} />
-                    <br /><br />
-                    <br /><br />
-                    <span id="final_collection" className="bookmark_positioner"></span>
-                    <h1>Final Collection</h1>
-                    <br></br>
-
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/digital_nature/68.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                        <Img height="auto" src='/images/works/digital_nature/69.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                    </>} />
+          
                     <br /><br />
                     <br /><br />
 
