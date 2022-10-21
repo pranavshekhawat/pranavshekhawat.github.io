@@ -7,8 +7,8 @@ import './css/about.css'
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import { TabTitle } from './utils/GeneralFunctions';
-import emailjs from 'emailjs-com';
-import { useRef, useState, useEffect } from 'react';
+// import emailjs from 'emailjs-com';
+// import { useRef, useState, useEffect } from 'react';
 
 
 const data = [{
@@ -66,30 +66,30 @@ const Active = ({ img, name }) => {
 function AboutCard(){
 
     
-    const [sentmessagestate, setsentmessagestate] = useState(false);
+    // const [sentmessagestate, setsentmessagestate] = useState(false);
 
-    const form = useRef();
+    // const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
 
-        emailjs.sendForm('service_7dxprkh', 'template_oa96v9w', form.current, 'JMJtFiGuZ1PHXNXp0')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
+    //     emailjs.sendForm('service_7dxprkh', 'template_oa96v9w', form.current, 'JMJtFiGuZ1PHXNXp0')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    // };
 
-    useEffect(() => {
-        if(sentmessagestate){
-            document.getElementById("myform").reset();
-        setTimeout(function () {
-            setsentmessagestate(false);
+    // useEffect(() => {
+    //     if(sentmessagestate){
+    //         document.getElementById("myform").reset();
+    //     setTimeout(function () {
+    //         setsentmessagestate(false);
             
-        }, 3000);}
-    },
-        [sentmessagestate])
+    //     }, 3000);}
+    // },
+    //     [sentmessagestate])
 
    return(
 

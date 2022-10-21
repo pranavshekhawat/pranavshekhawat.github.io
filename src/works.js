@@ -15,7 +15,7 @@ export const data = [
     id: 10,
     img: "/images/works/internship/topimg.webp",
     title: "Internship Experience at Raymond Limited",
-    category: "Internship",
+    category: "Weave Design",
     topimg: "/images/works/internship/topimg.webp",
     bottomimg: "/images/works/internship/bottomimg.webp",
     description:
