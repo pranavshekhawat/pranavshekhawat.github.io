@@ -95,24 +95,24 @@ function AboutCard(){
 
     <div className='grid_container_25'>
                 <div className='colstart2 colend25'>
-                    <div className='grid_container_3 main_about_container'>
+                    <div className='grid_container_2 main_about_container'>
 
                         <div className="">
                             {data.map((list) => {
                                 return <Active key={list.name}{...data[0].img}{...list}></Active>
                             })}
                         </div>
-                        <div className="colstart2 colend4">
-                            Hello! I'm Pranav Shekhawat, a designer specialising in Textiles from the National Institute of Fashion Technology, Gandhinagar. My interest leans towards weaves and patterns. I take inspiration from both; nature and this digital world and incorporate them into my designs.<br/>
+                        <div className="colstart2 colend4 abouttext">
+                        Hello! I am Pranav Shekhawat, a design student at the National Institute of Fashion Technology, Gandhinagar, specialising in textiles. The wonders of nature and the advances in the digital world inspire me. My ability to understand the technical aspects of production processes is swift, and my skill with CAD tools helps me to execute my design ideas effectively.<br/>
                             Feel free to contact me if you need any further information. I would love to hear from you.
                             <br />
                             <br />
-                            <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>
+                            {/* <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>
                             <br />
                             <br />
-                            <br />
+                            <br /> */}
 
-                            <form ref={form} onSubmit={sendEmail} id="myform">
+                            {/* <form ref={form} onSubmit={sendEmail} id="myform">
                                 <label>Name:</label><br />
                                 <input className="contact_name" type="text" name="from_name" placeholder="Enter your name." /><br />
                                 <label>Email:</label><br />
@@ -123,7 +123,7 @@ function AboutCard(){
                                 &nbsp;&nbsp;&nbsp;
                                 {sentmessagestate ? <span> Your message has been successfully sent.</span> : <></>}
 
-                            </form>
+                            </form> */}
 
 
                         </div>
