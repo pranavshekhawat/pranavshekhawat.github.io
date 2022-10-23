@@ -15,7 +15,7 @@ export const data = [
     id: 10,
     img: "/images/works/internship/topimg.webp",
     title: "Internship Experience at Raymond Limited",
-    category: "Weave Design",
+    category: "Suiting Design",
     topimg: "/images/works/internship/topimg.webp",
     bottomimg: "/images/works/internship/bottomimg.webp",
     description:
@@ -53,6 +53,8 @@ export const data = [
       <>
         <Mark to="#overview" title="Overview" />
         <Mark to="#certificate" title="Certificate" />
+        <Mark to="#jacquard" title="Jacquard" />
+
       </>
     ),
   },
