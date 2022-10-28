@@ -43,7 +43,7 @@ function Work7() {
                     <span id="moodboard" className="bookmark_positioner"></span>
                     <h1>Mood Board</h1>
                     <br></br>
-                    <div className="text">
+                    <div className="text halffull">
                     By broadening the ideal definition of masculinity, this theme makes one consider a man's vulnerable and sensitive side. It takes forward the WGSN's "soft masculinity" trend and creates space for softer aesthetics and elegant details in men's clothing.
                     </div>
                     <br />
@@ -59,7 +59,7 @@ function Work7() {
                     <span id="colourboard" className="bookmark_positioner"></span>
                     <h1>Colour Palette</h1>
                     <br></br>
-                    <div className="text">
+                    <div className="text halffull">
                     Referred to WGSN's SS-23 Men's colour forecast and made the colour palette which includes colours from Raymond's classic colour palette. Due to the production feasibility and availability constraints, we made a few changes later. 
                     </div>
                     <br />
