@@ -27,7 +27,7 @@ function Work1() {
                     <span id="colour_palette" className="bookmark_positioner"></span>
                     <h1>Colour Palette</h1>
                     <br></br>
-                    <div className="text">
+                    <div className="text halffull">
                         Extracted colours from the painting using <a className="body_hyperlink" href="https://color.adobe.com/" target="_blank" rel="noreferrer">Adobe Color</a> and then matched them with the colours of the WGSN's Global colour forecast A/W 23/24.
                     </div>
                     <Gallerygrid images={<>

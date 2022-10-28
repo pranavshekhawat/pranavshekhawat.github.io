@@ -53,6 +53,11 @@ export const data = [
       <>
         <Mark to="#overview" title="Overview" />
         <Mark to="#certificate" title="Certificate" />
+        <Mark to="#brief" title="Brief" />
+
+        <Mark to="#moodboard" title="Mood Board" />
+        <Mark to="#colourboard" title="Colour Palette" />
+
         <Mark to="#jacquard" title="Jacquard" />
 
       </>

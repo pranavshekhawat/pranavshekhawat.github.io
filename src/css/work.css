@@ -179,3 +179,19 @@
 }
 
 /* end of picture modal carosel */
+
+
+
+
+
+.halffull{
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .halffull{
+        width: 100%;
+    }
+
+}
