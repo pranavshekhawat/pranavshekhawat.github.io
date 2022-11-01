@@ -195,10 +195,13 @@ function Work1() {
                     <br />
                     <br />
 
-                    <Img height="26vw" src='/images/works/weave_design/process_img1.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 1" />
-                    <Img height="26vw" src='/images/works/weave_design/process_img2.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
-                    <Img height="26vw" src='/images/works/weave_design/process_img3.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
-
+                    <div className='overflowhidden'>
+                        <div className='displayflex gridgap'>
+                            <Img height="26vw" src='/images/works/weave_design/process_img1.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 1" />
+                            <Img height="26vw" src='/images/works/weave_design/process_img2.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
+                            <Img height="26vw" src='/images/works/weave_design/process_img3.webp' alt="Pranav Shekhawat | Checks and Stripes | Process Image 2" />
+                        </div>
+                    </div>
                     <br />
                     <br />
                     <br />

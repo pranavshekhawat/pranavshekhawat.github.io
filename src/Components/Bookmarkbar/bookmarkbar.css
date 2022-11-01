@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(25, 1fr);
   height: 55px;
-  background-color: var(--colour2);
+  background-color: var(--colour5);
   z-index: 999;
 }
 
