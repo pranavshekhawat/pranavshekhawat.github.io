@@ -101,7 +101,7 @@ function Work7() {
                     One has to fill out NC cards in order to get swatches developed. NC cards are like specification sheets which a weaver needs to set the loom and develop the swatch. Below is an example of a filled NC card.
                     </div>
                     <br />
-                    <Img height="auto" src="\images\works\internship\cad.jpg" alt="Pranav Shekhawat | NC Card" />
+                    <Img height="auto" src="\images\works\internship\nccard.jpg" alt="Pranav Shekhawat | NC Card" />
                     <br />
 
                     <br /><br />
@@ -117,19 +117,19 @@ function Work7() {
 
                     <h6>Design 1</h6>
                     
-                    <div className="overflowhidden displayflex gridgap noflexinphone">
-                    <img style={{ width: '58%', objectFit: 'contain'}} src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Jacquard Design 1" />
+                    <div className="overflowhidden gridgap noflexinphone">
+                    <img className="work10jacquard noflexinphone" src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    <img style={{ width: '40%', objectFit: 'contain'}} src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    <img className="work10jacquard2 noflexinphone" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
                     </div>
                         
                     <br />
                     <br />
                     <h6>Design 2</h6>
-                    <div className="overflowhidden displayflex gridgap noflexinphone" >
-                    <img style={{ width: '58%', objectFit: 'contain'}}  src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Jacquard Design 1" />
+                    <div className="overflowhidden gridgap noflexinphone" >
+                    <img className="work10jacquard noflexinphone"  src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    <img style={{ width: '40%', objectFit: 'contain'}} src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    <img className="work10jacquard2 noflexinphone" src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
                     </div>
 
                     <br /><br />

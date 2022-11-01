@@ -141,10 +141,15 @@ body {
     display: flex;
 }
 
+
+.noflexinphone {
+    display: flex;
+}
+
 @media (max-width:500px) {
 
     .noflexinphone {
-      display:block;
+      display: block;
     }
   
   }
@@ -258,3 +263,34 @@ h1{
 .gridgap{
     gap: 2% 2%;
    }
+
+
+
+
+   
+
+/* work 10 */
+
+.work10jacquard{
+    width: 58%;
+    object-fit: 'contain';
+}
+
+.work10jacquard2{
+    width: 40%;
+    object-fit: 'contain';
+}
+
+@media (max-width:500px) {
+
+    .work10jacquard{
+        width: 100%;
+        object-fit: 'contain';
+    }
+    
+    .work10jacquard2{
+        width: 100%;
+        object-fit: 'contain';
+    }
+  
+  }
