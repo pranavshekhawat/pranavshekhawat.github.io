@@ -54,7 +54,7 @@
   margin-right: 32px;
 }
 
-.socials li:first-child {
+/* .socials li:first-child {
   width: 24px;
   height: 24px;
 }
@@ -70,7 +70,23 @@
 .socials li:last-child {
   width: 20px;
   height: 20px;
+} */
+
+
+.socials li:first-child {
+  width: 19px;
+  height: 19px;
 }
+.socials li:nth-child(2) {
+  width: 19px;
+  height: 19px;
+  transform: translateY(-1px);
+}
+.socials li:last-child {
+  width: 20px;
+  height: 20px;
+}
+
 
 .socials li svg {
   cursor: pointer;

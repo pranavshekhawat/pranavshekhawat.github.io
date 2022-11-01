@@ -1,6 +1,5 @@
 import React from "react";
 import Img from "../Components/gallerygrid/Img";
-import Gallerygrid from "../Components/gallerygrid/Gallerygrid";
 // import Text from "../Components/pageblocks/Text";
 // import Accordion from 'react-bootstrap/Accordion';
 // import Modal from 'react-bootstrap/Modal';
@@ -9,7 +8,7 @@ import Gallerygrid from "../Components/gallerygrid/Gallerygrid";
 
 // import Btn from "../Components/pageblocks/Btn";
 
-function Work7() {
+function Work6() {
 
     // const [modalShow, setModalShow] = React.useState(false);
 
@@ -41,12 +40,12 @@ function Work7() {
                     </div>
                     <br /><br />
 
-                    <Gallerygrid images={<>
+                    
                         <Img height="auto" src='/images/works/digital_nature/2.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                    </>} />
-                    <Gallerygrid images={<>
+                  
+                    
                         <Img height="auto" src='/images/works/digital_nature/3.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                    </>} />
+                  
 
                     <br /><br />
                     <br /><br />
@@ -54,15 +53,16 @@ function Work7() {
                     <h1>Inspiration</h1>
                     <br></br>
 
-                    <Gallerygrid images={<>
+                    
                         <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                    </>} />
+                  
                     <br /><br />
                     <br /><br />
 
 
 
-                    {/* <Gallerygrid images={<>
+                    {/*  <div className='overflowhidden'>
+                        <div className='displayflex gridgap'>
                         <span onClick={() => setModalShow(true)} className="picture_span">
                             <div className='picture_img_div'>
                                 <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Dyeing Techniques | Tie and Dye " />
@@ -78,7 +78,8 @@ function Work7() {
                                 <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Dyeing Techniques | Tie and Dye " />
                             </div>
                         </span>
-                    </>} />
+                    </div>
+                    </div>
                     <br /><br />
                     <br /><br /> */}
 
@@ -136,4 +137,4 @@ function Work7() {
     )
 }
 
-export default Work7;
+export default Work6;

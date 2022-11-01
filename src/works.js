@@ -57,6 +57,8 @@ export const data = [
 
         <Mark to="#moodboard" title="Mood Board" />
         <Mark to="#colourboard" title="Colour Palette" />
+        <Mark to="#cad" title="CAD" />
+        <Mark to="#nccard" title="NC Card" />
 
         <Mark to="#jacquard" title="Jacquard" />
 

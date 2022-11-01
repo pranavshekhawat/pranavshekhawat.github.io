@@ -141,6 +141,14 @@ body {
     display: flex;
 }
 
+@media (max-width:500px) {
+
+    .noflexinphone {
+      display:block;
+    }
+  
+  }
+
 
 /* text block */
 
@@ -247,3 +255,6 @@ h1{
 
 
 
+.gridgap{
+    gap: 2% 2%;
+   }

@@ -1,7 +1,5 @@
 import React from "react";
 import Img from "../Components/gallerygrid/Img";
-import Gallerygrid from "../Components/gallerygrid/Gallerygrid";
-import Accordion from 'react-bootstrap/Accordion';
 
 // import Text from "../Components/pageblocks/Text";
 // import Accordion from 'react-bootstrap/Accordion';
@@ -21,11 +19,9 @@ function Work7() {
                     <h1>Certificate</h1>
                     <br></br>
 
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='/images/works/internship/Pranav Shekhawat_Certificate for completion of Internship at Raymond Ltd.png' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited " />
-                        {/* <Img height="auto" src='/images/works/internship/noimg.png' alt="" /> */}
 
-                    </>} />
+                    <Img height="auto" src='/images/works/internship/Pranav Shekhawat_Certificate for completion of Internship at Raymond Ltd.png' alt="Pranav Shekhawat | Internship completion certificate" />
+
                     <br /><br />
                     <br /><br />
 
@@ -44,13 +40,12 @@ function Work7() {
                     <h1>Mood Board</h1>
                     <br></br>
                     <div className="text halffull">
-                    By broadening the ideal definition of masculinity, this theme makes one consider a man's vulnerable and sensitive side. It takes forward the WGSN's "soft masculinity" trend and creates space for softer aesthetics and elegant details in men's clothing.
+                        By broadening the ideal definition of masculinity, this theme makes one consider a man's vulnerable and sensitive side. It takes forward the WGSN's "soft masculinity" trend and creates space for softer aesthetics and elegant details in men's clothing.
                     </div>
                     <br />
 
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='\images\works\internship\aa (1).jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Mood Board" />
-                    </>} />
+
+                    <Img height="auto" src='\images\works\internship\aa (1).jpg' alt="Pranav Shekhawat | Mood Board" />
 
 
 
@@ -60,16 +55,54 @@ function Work7() {
                     <h1>Colour Palette</h1>
                     <br></br>
                     <div className="text halffull">
-                    Referred to WGSN's SS-23 Men's colour forecast and made the colour palette which includes colours from Raymond's classic colour palette. Due to the production feasibility and availability constraints, we made a few changes later. 
+                        Referred to WGSN's SS-23 Men's colour forecast and made the colour palette which includes colours from Raymond's classic colour palette. Due to the production feasibility and availability constraints, we made a few changes later.
                     </div>
                     <br />
 
-                    <Gallerygrid images={<>
-                        <Img height="auto" src='\images\works\internship\aa (2).jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Colour Palette" />
-                    </>} />
+
+                    <Img height="auto" src='\images\works\internship\aa (2).jpg' alt="Pranav Shekhawat | Colour Palette" />
 
 
 
+                    <br /><br />
+                    <br /><br />
+                    <span id="cad" className="bookmark_positioner"></span>
+                    <h1>CAD</h1>
+                    <br></br>
+                    <div className="text halffull">
+                        Made designs on textronics-Design Dobby and learned to do the following things on the software.
+                        <ul>
+                            <li>Swatch Development</li>
+                            <li>Yarn creation and management</li>
+                            <li>Blanket creation and management</li>
+                            <li>Compound weave</li>
+                        </ul>
+                    </div>
+                    <br />
+                    <Img height="auto" src="\images\works\internship\cad.jpg" alt="Pranav Shekhawat | CAD" />
+                    <br />
+                    <div className='overflowhidden'>
+                        <div className='displayflex gridgap'>
+                            <Img height="auto" src="\images\works\internship\a.jpg" alt="Pranav Shekhawat | CAD Designs" />
+                            <Img height="auto" src="\images\works\internship\b.jpg" alt="Pranav Shekhawat | CAD Designs" />
+                            <Img height="auto" src="\images\works\internship\c.jpg" alt="Pranav Shekhawat | CAD Designs" />
+                        </div>
+                    </div>
+                    <br /> <Img height="auto" src="\images\works\internship\cad2.PNG" alt="Pranav Shekhawat | CAD" />
+
+
+
+                    <br /><br />
+                    <br /><br />
+                    <span id="nccard" className="bookmark_positioner"></span>
+                    <h1>New Cloth Card</h1>
+                    <br></br>
+                    <div className="text halffull">
+                    One has to fill out NC cards in order to get swatches developed. NC cards are like specification sheets which a weaver needs to set the loom and develop the swatch. Below is an example of a filled NC card.
+                    </div>
+                    <br />
+                    <Img height="auto" src="\images\works\internship\cad.jpg" alt="Pranav Shekhawat | NC Card" />
+                    <br />
 
                     <br /><br />
                     <br /><br />
@@ -83,39 +116,21 @@ function Work7() {
                     <br />
 
                     <h6>Design 1</h6>
+                    
+                    <div className="overflowhidden displayflex gridgap noflexinphone">
+                    <img style={{ width: '58%', objectFit: 'contain'}} src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    <Gallerygrid images={<>
-                        <img style={{ width: '50%' }} height="auto" src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1" />
-                        {/* <Img height="100" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1 CAD" /> */}
-
-                    </>} />
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1 CAD" />
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
+                    <img style={{ width: '40%', objectFit: 'contain'}} src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    </div>
+                        
+                    <br />
                     <br />
                     <h6>Design 2</h6>
-                    <Gallerygrid images={<>
-                        <img style={{ width: '50%' }} height="auto" src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1" />
-                        {/* <Img height="100" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1 CAD" /> */}
+                    <div className="overflowhidden displayflex gridgap noflexinphone" >
+                    <img style={{ width: '58%', objectFit: 'contain'}}  src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    </>} />
-                    <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>CAD</Accordion.Header>
-                            <Accordion.Body>
-                                <Gallerygrid images={<>
-                                    <Img height="auto" src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Internship | Internship Experience at Raymond Limited | Jacquard Design 1 CAD" />
-                                </>} />
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
+                    <img style={{ width: '40%', objectFit: 'contain'}} src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    </div>
 
                     <br /><br />
                     <br /><br />
