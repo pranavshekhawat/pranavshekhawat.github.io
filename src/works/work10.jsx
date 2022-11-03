@@ -127,9 +127,9 @@ function Work7() {
                     <br />
                     <h6>Design 2</h6>
                     <div className="overflowhidden gridgap noflexinphone" >
-                    <img className="work10jacquard noflexinphone"  src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Jacquard Design 1" />
+                    <img className="work10jacquard noflexinphone paddinginphone"  src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    <img className="work10jacquard2 noflexinphone" src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    <img className="work10jacquard2 noflexinphone paddinginphone" src='\images\works\internship\PR-1_1.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
                     </div>
 
                     <br /><br />

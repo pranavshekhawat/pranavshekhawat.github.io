@@ -148,7 +148,6 @@ function About() {
             <Headingbar heading="About"></Headingbar>
 
             <AboutCard/>
-
             <Contact />
         </>
     )

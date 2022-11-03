@@ -292,5 +292,12 @@ h1{
         width: 100%;
         object-fit: 'contain';
     }
+
+    .paddinginphone{
+        padding-bottom: 2rem;
+    }
+
   
   }
+
+

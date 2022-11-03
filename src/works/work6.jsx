@@ -15,7 +15,7 @@ function Work6() {
     // const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     // const [fullscreen, setFullscreen] = useState(true);
     // const [show, setShow] = useState(false);
-  
+
     // function handleShow(breakpoint) {
     //     setFullscreen(breakpoint);
     //     setShow(true);
@@ -32,101 +32,121 @@ function Work6() {
 
                     <br /><br />
                     <br /><br />
-                    <span id="brand" className="bookmark_positioner"></span>
-                    <h1>Brand</h1>
+                    <span id="tiedye" className="bookmark_positioner"></span>
+                    <h1>Tie-Dye</h1>
                     <br></br>
-                    <div className="text">
+                    {/* <div className="text">
                         Selected "Givenchy" and studied the brand and their last two years' print collections.
+                    </div> */}
+                    {/* <br /><br /> */}
+
+                    {/* <Img height="auto" src='\images\works\dyeing_techniques\one (2).png' alt="Pranav Shekhawat | Checks and Stripes | Process Image 1" /> */}
+
+                    <h6>Bandhej</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\one.jpg' alt="Pranav Shekhawat | Bandhej" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\one (1).jpg' alt="Pranav Shekhawat | Bandhej" />
+                    </div>
+                    <br />
+
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\one (2).png' alt="Pranav Shekhawat | Bandhej" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\one (1).jpeg' alt="Pranav Shekhawat | Bandhej" />
                     </div>
                     <br /><br />
+                    <br /><br />
 
-                    
-                        <Img height="auto" src='/images/works/digital_nature/2.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                  
-                    
-                        <Img height="auto" src='/images/works/digital_nature/3.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                  
+                    <h6>Leheria</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\two (1).jpg' alt="Pranav Shekhawat | Leheria" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\two (2).jpg' alt="Pranav Shekhawat | Leheria" />
+
+                    </div>
+                    <br />
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\five.jpg' alt="Pranav Shekhawat | Leheria" />
+
+                        <Img height="auto" src='\images\works\dyeing_techniques\two (3).jpg' alt="Pranav Shekhawat | Leheria" />
+
+                    </div>
+                    <br /><br />
+                    <br /><br />
+
+                    <h6>Folding Techniques</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\two (5).jpg' alt="Pranav Shekhawat | Folding Techniques" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\two (6).jpg' alt="Pranav Shekhawat | Folding Techniques" />
+                        {/* <Img height="auto" src='\images\works\dyeing_techniques\two (6).jpg' alt="Pranav Shekhawat | Folding Techniques" /> */}
+                    </div>
 
                     <br /><br />
                     <br /><br />
-                    <span id="inspiration" className="bookmark_positioner"></span>
-                    <h1>Inspiration</h1>
+
+                    <h6>Clamping Techniques</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\three.jpg' alt="Pranav Shekhawat | Clamping Techniques" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\three2.jpg' alt="Pranav Shekhawat | Clamping Techniques" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\three3.jpg' alt="Pranav Shekhawat | Clamping Techniques" />
+
+                    </div>
+                    <br /><br />
+                    <br /><br />
+
+                    <h6>Marbling</h6>
+                    <Img height="auto" src='\images\works\dyeing_techniques\five2.jpg' alt="Pranav Shekhawat | Marbling Techniques" />
+
+
+                    <br /><br />
+                    <br /><br />
+
+                    <span id="resistdye" className="bookmark_positioner"></span>
+                    <h1>Resist Dyeing</h1>
                     <br></br>
 
-                    
-                        <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Print Design | Digital Nature " />
-                  
-                    <br /><br />
-                    <br /><br />
+                    <h6>Mud Resist</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\seven2.jpg' alt="Pranav Shekhawat | Clamping Techniques" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\seven.jpg' alt="Pranav Shekhawat | Clamping Techniques" />
 
-
-
-                    {/*  <div className='overflowhidden'>
-                        <div className='displayflex gridgap'>
-                        <span onClick={() => setModalShow(true)} className="picture_span">
-                            <div className='picture_img_div'>
-                                <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Dyeing Techniques | Tie and Dye " />
-                            </div>
-                        </span>
-                        <span onClick={() => setModalShow(true)} className="picture_span">
-                            <div className='picture_img_div'>
-                                <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Dyeing Techniques | Tie and Dye " />
-                            </div>
-                        </span>
-                        <span onClick={() => setModalShow(true)} className="picture_span">
-                            <div className='picture_img_div'>
-                                <Img height="auto" src='/images/works/digital_nature/6.jpeg' alt="Pranav Shekhawat | Dyeing Techniques | Tie and Dye " />
-                            </div>
-                        </span>
-                    </div>
                     </div>
                     <br /><br />
-                    <br /><br /> */}
+                    <br /><br />
 
-                    {/* {values.map((v, idx) => (
-                        <Button key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
-                            Full screen
-                            {typeof v === 'string' && `below ${v.split('-')[0]}`}
-                        </Button>
-                    ))}
-                    <Modal contentClassName="picture" show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                        <Modal.Header closeButton>
-                            <Modal.Title>Modal</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>Modal body content</Modal.Body>
-                    </Modal> */}
+                    <h6>Stitch Resist</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\eight (1).jpg' alt="Pranav Shekhawat | Stitch Resist" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\eight (2).jpg' alt="Pranav Shekhawat | Stitch Resist" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\eight (3).jpg' alt="Pranav Shekhawat | Stitch Resist" />
 
-                    {/* <Modal
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                        aria-labelledby="example-custom-modal-styling-title"
-                        centered
-                    >
-                        <Modal.Header closeButton closeVariant='dark'>
-                            <Modal.Title id="contained-modal-title-vcenter">
+                    </div>
+                    <br /><br />
+                    <br /><br />
 
-                            </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <Carousel variant='dark'>
+                    <h6>Wax Resist</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\nine.jpg' alt="Pranav Shekhawat | Wax Resist" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\nine (1).jpg' alt="Pranav Shekhawat | Wax Resist" />
 
-                                <Carousel.Item >
-                                    <div className="picture_carousel_image_container">
-                                        <img className="picture_carousel_img" src="/images/works/digital_nature/6.jpeg" alt="First slide" />
-                                    </div>
-                                   
-                                </Carousel.Item>
-                                <Carousel.Item >
-                                  
-                                    <div className="picture_carousel_image_container">
-                                        <img className="picture_carousel_img" src="" alt="Second slide" />
-                                    </div>
-                                </Carousel.Item>
+                    </div>
+                    <br /><br />
+                    <br /><br />
+                    <span id="bloomingbatik" className="bookmark_positioner"></span>
+                    <h6>Blooming Batik</h6>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\nine (2).jpg' alt="Pranav Shekhawat | Wax Resist" />
+                        <Img height="auto" src='\images\works\dyeing_techniques\vid.gif' alt="Pranav Shekhawat | Wax Resist" />
+                    </div>
+                    <br /><br />
+                    <br /><br />
 
-                            </Carousel>
-                        </Modal.Body>
-                    </Modal> */}
-
+                    <span id="syntheticdyes" className="bookmark_positioner"></span>
+                    <h1>Synthetic Dyes</h1>
+                    <br></br>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\dyeing_techniques\ten.jpg' alt="Pranav Shekhawat | Synthetic Dyes" />
+                    </div>
+                    <br /><br />
+                    <br /><br />
                 </div>
 
             </div>

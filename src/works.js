@@ -5,7 +5,7 @@ import Work4 from "./works/work4";
 import Work5 from "./works/work5";
 import Work7 from "./works/work7";
 import Work10 from "./works/work10";
-// import Work6 from "./works/work6";
+import Work6 from "./works/work6";
 
 
 import Mark from "./Components/Bookmarkbar/mark";
@@ -100,6 +100,8 @@ export const data = [
     ),
   },
 
+  
+
   {
     id: 3,
     img: "/images/works/colour_and_weave_effect/candweffect.webp",
@@ -121,6 +123,8 @@ export const data = [
       </>
     ),
   },
+
+ 
 
   {
     id: 2,
@@ -259,6 +263,27 @@ export const data = [
     ),
   },
 
+  {
+    id: 6,
+    img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+    title: "Fabric Dyeing Techniques",
+    category: "Dyeing",
+    topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
+    bottomimg: "/images/works/dyeing_techniques/two (5).jpg",
+    description:
+      "Explored various dyeing techniques like Tie-dye, Resist Dyeing (Wax, Stitch and Mud) and Synthetic Dyestuff like Acid, VAT, Direct, Reactive and Sulphur dyes. ",
+    body: <Work6 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#tiedye" title="Tie-Dye" />
+        <Mark to="#resistdye" title="Resist Dyeing" />
+        <Mark to="#bloomingbatik" title="Blooming Batik" />
+        <Mark to="#syntheticdyes" title="Synthetic Dyes" />
+      </>
+    ),
+  },
+
   //   {
   //   id: 11,
   //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
@@ -277,23 +302,7 @@ export const data = [
   //   ),
   // },
 
-  // {
-  //   id: 6,
-  //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
-  //   title: "Fabric Dyeing Techniques",
-  //   category: "Dyeing",
-  //   topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
-  //   bottomimg: "/images/work1/workimage1.jpg",
-  //   description:
-  //     "Explored various dyeing techniques like Tie-dye, Resist Dyeing (Wax, Stitch and Mud) and Synthetic Dyestuff like Acid, VAT, Direct, Reactive and Sulphur dyes. ",
-  //   body: <Work6 />,
-  //   bookmarks: (
-  //     <>
-  //       <Mark to="#marks" title="Link" />
-  //       <Mark to="#markks" title="Link" />
-  //     </>
-  //   ),
-  // },
+  
 
   // {
   //   id: 8,
