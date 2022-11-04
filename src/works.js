@@ -5,6 +5,7 @@ import Work4 from "./works/work4";
 import Work5 from "./works/work5";
 import Work7 from "./works/work7";
 import Work10 from "./works/work10";
+import Work11 from "./works/work11";
 import Work6 from "./works/work6";
 
 
@@ -238,6 +239,26 @@ export const data = [
   },
 
   {
+    id: 11,
+    img: "/images/works/boro/two2.webp",
+    title: "Boro-Textile from Japan",
+    category: "Patchwork",
+    topimg: "/images/works/boro/two2.webp",
+    bottomimg: "/images/works/boro/swatch1.webp",
+    description:
+      "Textile, from Japan's northernmost island, developed out of the necessity of poor farmers who wanted to protect their bodies from the extreme cold. They patched layers and layers of torn fabric together to make a thick layer. Taking inspiration from the \"Mending is the way.\" sustainability trend, I made patchwork swatches using waste fabric pieces. Explored various abstract compositions, stitched them on a sewing machine, and finally, made a tote bag using those swatches.",
+    body: <Work11 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#swatches" title="Swatches" />
+        <Mark to="#productmapping" title="Product Mapping" />
+        <Mark to="#totebag" title="Tote Bag" />
+      </>
+    ),
+  },
+
+  {
     id: 5,
     img: "/images/works/lounge_prints/lounge_print.webp",
     title: "Dreamy Skies",
@@ -263,6 +284,9 @@ export const data = [
     ),
   },
 
+  
+
+
   {
     id: 6,
     img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
@@ -284,24 +308,7 @@ export const data = [
     ),
   },
 
-  //   {
-  //   id: 11,
-  //   img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
-  //   title: "Fabric Dyeing Techniques",
-  //   category: "Dyeing",
-  //   topimg: "/images/works/dyeing_techniques/dyeing_techniques.webp",
-  //   bottomimg: "/images/work1/workimage1.jpg",
-  //   description:
-  //     "Explored various dyeing techniques like Tie-dye, Resist Dyeing (Wax, Stitch and Mud) and Synthetic Dyestuff like Acid, VAT, Direct, Reactive and Sulphur dyes. ",
-  //   body: <Work6 />,
-  //   bookmarks: (
-  //     <>
-  //       <Mark to="#marks" title="Link" />
-  //       <Mark to="#markks" title="Link" />
-  //     </>
-  //   ),
-  // },
-
+    
   
 
   // {
