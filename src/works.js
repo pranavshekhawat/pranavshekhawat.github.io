@@ -331,21 +331,21 @@ export const data = [
     ),
   },
 
-  {
-    id: 9,
-    img: "/images/works/fineart/fineart.webp",
-    title: "Portrait Artworks",
-    category: "Fine Art",
-    topimg: "/images/works/fineart/fineart.webp",
-    bottomimg: "/images/works/digital_nature/digital_nature2.webp",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar metus quis bibendum cursus. Sed lectus dui, scelerisque viverra arcu eu, rhoncus rhoncus odio. Maecenas nec convallis sapien. Nullam volutpat feugiat eros. Phasellus imperdiet ut augue quis pellentesque. Duis tincidunt, arcu vestibulum convallis egestas, nisl sem aliquet lorem, eu lacinia nibh lacus non justo. Duis sagittis lobortis magna a dignissim. Sed posuere suscipit velit, a rhoncus justo ornare in. Etiam faucibus vel arcu viverra sodales. Quisque mattis condimentum est, in luctus metus suscipit fringilla. Donec malesuada urna ac sapien congue dapibus.",
-    body: <Work1 />,
-    bookmarks: (
-      <>
-        <Mark to="#marks" title="Course overview" />
-        <Mark to="#markks" title="Course summary" />
-      </>
-    ),
-  },
+  // {
+  //   id: 9,
+  //   img: "/images/works/fineart/fineart.webp",
+  //   title: "Portrait Artworks",
+  //   category: "Fine Art",
+  //   topimg: "/images/works/fineart/fineart.webp",
+  //   bottomimg: "/images/works/digital_nature/digital_nature2.webp",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar metus quis bibendum cursus. Sed lectus dui, scelerisque viverra arcu eu, rhoncus rhoncus odio. Maecenas nec convallis sapien. Nullam volutpat feugiat eros. Phasellus imperdiet ut augue quis pellentesque. Duis tincidunt, arcu vestibulum convallis egestas, nisl sem aliquet lorem, eu lacinia nibh lacus non justo. Duis sagittis lobortis magna a dignissim. Sed posuere suscipit velit, a rhoncus justo ornare in. Etiam faucibus vel arcu viverra sodales. Quisque mattis condimentum est, in luctus metus suscipit fringilla. Donec malesuada urna ac sapien congue dapibus.",
+  //   body: <Work1 />,
+  //   bookmarks: (
+  //     <>
+  //       <Mark to="#marks" title="Course overview" />
+  //       <Mark to="#markks" title="Course summary" />
+  //     </>
+  //   ),
+  // },
 ];
