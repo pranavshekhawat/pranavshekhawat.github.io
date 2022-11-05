@@ -32,8 +32,8 @@ function Work9() {
 
                     <br /><br />
                     <br /><br />
-                    <span id="swatches" className="bookmark_positioner"></span>
-                    <h1>Swatches</h1>
+                    <span id="artworks" className="bookmark_positioner"></span>
+                    <h1>Artworks</h1>
                     <br></br>
                     {/* <div className="text">
                         Selected "Givenchy" and studied the brand and their last two years' print collections.
@@ -42,42 +42,40 @@ function Work9() {
 
                     {/* <Img height="auto" src='\images\works\dyeing_techniques\one (2).png' alt="Pranav Shekhawat | Checks and Stripes | Process Image 1" /> */}
 
-                    <div className="overflowhidden gridgap noflexinphone" >
-                        <Img height="auto" src='\images\works\boro\swatch1.webp' alt="Pranav Shekhawat | Boro Swatches" />
-                        <Img height="auto" src='\images\works\boro\swatch2.webp' alt="Pranav Shekhawat | Boro Swatches" />
-                    </div>
-                    <br />
-
-                    <div className="overflowhidden gridgap noflexinphone" >
-                        <Img height="auto" src='\images\works\boro\swatch3.webp' alt="Pranav Shekhawat | Boro Swatches" />
-                        <Img height="auto" src='\images\works\boro\swatch4.webp' alt="Pranav Shekhawat | Boro Swatches" />
-                    </div>
-                    <br /><br />
-                    <br /><br />
-                    <span id="productmapping" className="bookmark_positioner"></span>
-                    <h1>Product Mapping</h1>
-                    <br></br>
-                    <h6>Sofa Chair</h6>
-                    <div className="overflowhidden gridgap noflexinphone" >
-                        <Img height="auto" src='\images\works\boro\one.webp' alt="Pranav Shekhawat | Leheria" />
-                        <Img height="auto" src='\images\works\boro\one2.webp' alt="Pranav Shekhawat | Leheria" />
-
-                    </div>
                    
+                    <Img height="auto" src='\images\works\fineart\fineart.webp' alt="Pranav Shekhawat | Boro Swatches" />
+                    <br /><br />
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\fineart\one.jpg' alt="Pranav Shekhawat | Boro Swatches" />
+                        <Img height="auto" src='\images\works\fineart\one2.jpg' alt="Pranav Shekhawat | Boro Swatches" />
+                    </div>
                     <br /><br />
                     <br /><br />
 
-                    <span id="totebag" className="bookmark_positioner"></span>
-                    <h1>Tote Bag</h1>
+                   
+                    <span id="digital" className="bookmark_positioner"></span>
+                    <h1>Digital</h1>
+                    <br></br>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\fineart\two.jpg' alt="Pranav Shekhawat | Leheria" />
+                        <Img height="auto" src='\images\works\fineart\two2.jpg' alt="Pranav Shekhawat | Leheria" />
+                    </div>
+
+                    <br /><br />
+                    <br /><br />
+
+                    <span id="animation" className="bookmark_positioner"></span>
+                    <h1>Animation</h1>
                     <br></br>
                     {/* <h6>Sofa Chair</h6> */}
                     <div className="overflowhidden gridgap noflexinphone" >
-                        <Img height="auto" src='\images\works\boro\two.webp' alt="Pranav Shekhawat | Tote bag" />
-                        <Img height="auto" src='\images\works\boro\two2.webp' alt="Pranav Shekhawat | Tote bag" />
+                        <Img height="auto" src='\images\works\fineart\three.gif' alt="Pranav Shekhawat | Tote bag" />
+                        <Img height="auto" src='\images\works\fineart\three2.gif' alt="Pranav Shekhawat | Tote bag" />
 
                     </div>
                     <br /><br />
                     <br /><br />
+
                 </div>
 
             </div>
