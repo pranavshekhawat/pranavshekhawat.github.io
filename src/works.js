@@ -314,10 +314,10 @@ export const data = [
 
   {
     id: 11,
-    img: "/images/works/boro/two2.webp",
+    img: "/images/works/boro/topimg.jpg",
     title: "Boro-Textile from Japan",
     category: "Patchwork",
-    topimg: "/images/works/boro/two2.webp",
+    topimg: "/images/works/boro/topimg.jpg",
     bottomimg: "/images/works/boro/swatch1.webp",
     description:
       "Textile, from Japan's northernmost island, developed out of the necessity of poor farmers who wanted to protect their bodies from the extreme cold. They patched layers and layers of torn fabric together to make a thick layer. Taking inspiration from the \"Mending is the way.\" sustainability trend, I made patchwork swatches using waste fabric pieces. Explored various abstract compositions, stitched them on a sewing machine, and finally, made a tote bag using those swatches.",

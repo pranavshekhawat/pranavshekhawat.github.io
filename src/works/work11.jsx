@@ -74,8 +74,10 @@ function Work11() {
                     <div className="overflowhidden gridgap noflexinphone" >
                         <Img height="auto" src='\images\works\boro\two.webp' alt="Pranav Shekhawat | Tote bag" />
                         <Img height="auto" src='\images\works\boro\two2.webp' alt="Pranav Shekhawat | Tote bag" />
-
                     </div>
+                    <br></br>
+                    <Img height="auto" src='\images\works\boro\topimg.jpg' alt="Pranav Shekhawat | Tote bag" />
+
                     <br /><br />
                     <br /><br />
                 </div>
