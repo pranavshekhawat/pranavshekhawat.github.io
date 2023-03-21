@@ -83,7 +83,7 @@ function Activity() {
                 <div className='colstart2 colend25'>
                     <section className="activity_list">
                         {data.map((list) => {
-                            return <Active key={list.id} {...list}></Active>
+                            return <Active key={list.index} {...list}></Active>
                         })}
                     </section>
                 </div>

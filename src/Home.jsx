@@ -11,10 +11,6 @@ import { AboutCard } from "./About";
 import Contact from './Contact';
 
 
-
-
-
-
 function Home() {
 
     TabTitle('Pranav Shekhawat - Portfolio');
@@ -71,9 +67,9 @@ function Home() {
             <AboutCard/><br/><br/>
             <Contact /> */}
 
-            <span id="works" className="bookmark_positioner_nav"></span>
+            <span id="work" className="bookmark_positioner_nav"></span>
 
-            <Headingbar heading="Works" description="" />
+            <Headingbar heading="Work" description="" />
             {/* Here are my few selected projects that show my woking process */}
 
             <Works />
@@ -83,6 +79,9 @@ function Home() {
             <Headingbar heading="About"></Headingbar>
 
             <AboutCard />
+
+            <Headingbar heading="Contact"></Headingbar>
+            <span id="contact" className="bookmark_positioner_nav"></span>
 
             <Contact />
 

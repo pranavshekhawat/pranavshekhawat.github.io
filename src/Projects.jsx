@@ -31,14 +31,14 @@ function Works() {
 
 function Projects() {
 
-  TabTitle('Pranav Shekhawat - Works');
+  TabTitle('Pranav Shekhawat - Work');
 
   return (
     <>
       <Navbar />
-      <BasicBreadcrumbs text="Works" theme="dark"></BasicBreadcrumbs>
+      <BasicBreadcrumbs text="Work" theme="dark"></BasicBreadcrumbs>
 
-      <Headingbar heading="Works" description="" />
+      <Headingbar heading="Work" description="" />
       {/* Here are my few selected projects that show my woking process */}
 
       <Works />

@@ -158,6 +158,27 @@ body {
 /* text block */
 
 .text {
+
+    width: 100%;
+    /* background-color: var(--colour2); */
+    font-size: 1rem;
+}
+
+.text a {
+    
+    color:var(--colour4) ;
+    text-decoration: none;
+
+    width: 100%;
+    /* background-color: var(--colour2); */
+    font-size: 1rem;
+}
+
+.text a:hover {
+    
+    color:var(--colour4) ;
+    text-decoration: underline;
+
     width: 100%;
     /* background-color: var(--colour2); */
     font-size: 1rem;

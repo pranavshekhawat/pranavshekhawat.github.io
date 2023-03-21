@@ -1,6 +1,9 @@
+//total no of Activities == x
+const x = 2;
+
 export const data = [
   {
-    id: 2,
+    index: x-2,
     date: "August, 2019",
     title: "Started my Education at National Institute of Fashion Technology, Gandhinagar.",
     description: 
@@ -12,7 +15,7 @@ export const data = [
   },
 
   {
-    id: 1,
+    index: x-1,
     date: "April, 2019",
     title: "Completed my schooling  from KV4, Jaipur.",
     description: 

@@ -25,9 +25,9 @@ function App (){
       <Routes>
        
         <Route path='/' element={<Home />}/>
-        {/* <Route path='/works' element={<Projects />}/> */}
+        {/* <Route path='/work' element={<Projects />}/> */}
         
-       <Route path='/works/:url' element={<Workpage/>}/>
+       <Route path='/work/:url' element={<Workpage/>}/>
 
        {/* <Route path='/activity' element={<Activity/>}/> */}
 

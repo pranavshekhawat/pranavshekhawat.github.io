@@ -17,8 +17,8 @@ function BasicBreadcrumbs({text, theme}) {
           Home
         </span></li>
 
-        <li><span onClick={() => {navigate("/works");}} className="link2" to="/works">
-          Works
+        <li><span onClick={() => {navigate("/work");}} className="link2" to="/work">
+          Work
         </span></li>
         
         <li className="currentcrumb">

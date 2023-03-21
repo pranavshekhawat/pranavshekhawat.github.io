@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './css/work.css';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -6,23 +6,23 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 const Work = ({ img, title, category, description }) => {
 
-  var str= "...Read More";
+  var str = "...Read More";
   var url = title.toLowerCase().replace(/ /g, "_");
   var cate = category.charAt(0).toUpperCase() + category.slice(1);
   // var ddd= document.getElementById('ddd').innerHTML;
-  var desi=renderToStaticMarkup(description);
-  var final = desi.replace(/&quot;/g,"\"").replace(/&#x27;/g,"'").replace(/<br\/>/g,"").replace(/<\/ul>/g,"").replace(/<\/li>/g,"").replace(/<ul>/g,"").replace(/<li>/g," • ") ;
-  var descri = (final.charAt(0).toUpperCase() + final.slice(1)).slice(0, 150)+ str;
+  var desi = renderToStaticMarkup(description);
+  var final = desi.replace(/&quot;/g, "\"").replace(/&#x27;/g, "'").replace(/<br\/>/g, "").replace(/<\/ul>/g, "").replace(/<\/li>/g, "").replace(/<ul>/g, "").replace(/<li>/g, " • ");
+  var descri = (final.charAt(0).toUpperCase() + final.slice(1)).slice(0, 150) + str;
 
 
   const [isHovering, setisHovering] = useState(false);
   function fillcolour() {
     return `arrow_right ${isHovering ? "fillcolor" : "fillwhite"} `
-}
+  }
 
   return (
 
-    <Link to={`/works/${url}`}>
+    <Link to={`/work/${url}`}>
       <article className="work" onMouseEnter={() => setisHovering(true)} onMouseLeave={() => setisHovering(false)}>
         <div className="work_img_div">
           <img src={img} alt='' />

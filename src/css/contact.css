@@ -1,5 +1,5 @@
 .contact_main {
-  background-color: var(--colour3);
+  background-color: var(--colour4);
 }
 
 .contact_items {
@@ -18,7 +18,7 @@
 
 .contact_text {
   float: left;
-  padding: 4vw 4vw 4vw 4vw;
+  margin: 4vw 0vw 4vw 0vw;
 }
 
 .contact_text div {

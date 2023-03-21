@@ -3,53 +3,89 @@ import Work2 from "./works/work2";
 import Work3 from "./works/work3";
 import Work4 from "./works/work4";
 import Work5 from "./works/work5";
+import Work6 from "./works/work6";
 import Work7 from "./works/work7";
+import Work9 from "./works/work9";
 import Work10 from "./works/work10";
 import Work11 from "./works/work11";
-import Work6 from "./works/work6";
-import Work9 from "./works/work9";
-
+// import Work12 from "./works/work12";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
+//total no of Works == x
+const x = 11;
+
 export const data = [
+//   {
+//     index: x-11,
+//     img: "/images/works/illusions/frontimg.webp",
+//     title: "Maya - The Art of Deception",
+//     category: "Weave design",
+//     topimg: "/images/works/illusions/frontimg.webp",
+//     bottomimg: "/images/works/illusions/bottomimg.webp",
+//     description: (
+//       <>
+//         {`Illusions trick our senses and deceive our perception to see things, similar to how "Maya", all the shiny things around us, prevents us from understanding the true nature of life and reality. And the irony is that we can't deny our needs even after knowing that. It is important to recognize that our temporary needs and desires are a natural part of being human, and we can accept them in a dignified manner.
+// `}{" "}
+//         <br /> <br />
+//         {`This project explores the theme of illusions and features a series of fabric swatches inspired by various types of illusions. Weaving Techniques of Double Cloth and Hand Carpet Making are explored in this project.`}
+//       </>
+//     ),
+//     body: <Work12 />,
+//     bookmarks: (
+//       <>
+//         <Mark to="#overview" title="Overview" />
+//         <Mark to="#illusions" title="Illusions" />
+//         <Mark to="#colour_palette" title="Colour Palette" />
+//         <Mark to="#cutdc" title="Cut Double Cloth" />
+//         <Mark to="#stitcheddc" title="Stitched Double Cloth" />
+//         <Mark to="#waddeddc" title="Wadded Double Cloth" />
+//         <Mark to="#carpets" title="Carpet swatches" />
+//         <Mark to="#altogether" title="Altogether" />
+//       </>
+//     ),
+//   },
+
   {
-    id: 10,
+    index: x-10,
     img: "/images/works/internship/topimg.webp",
     title: "Internship Experience at Raymond Limited",
     category: "Suiting Design",
     topimg: "/images/works/internship/topimg.webp",
     bottomimg: "/images/works/internship/bottomimg.webp",
-    description:
-    ( 
-    <> 
-    {`I completed my two-month summer internship at Raymond Limited, Thane. I worked on the Suiting Design Development project for the SS-23 Collection, for which I did trend research, created a mood board and a colour board, and created suiting designs. A few of my designs were selected by the Head of design for Raymond's subsidiary brand, Champion's spring/summer 2023 collection.`}
-      <br/><br/> {`Learnings from the internship⁚`} <br/> 
-      {
-        <ul>
-        <li>
-        Learned about the working of the department and the design process followed in the brand.
-        </li>
-        <li>
-        Got to do fabric analysis and learned to do fabric calculations and fabric costing.
-        </li>
-        <li>
-        Worked on Textronics-Design Dobby software, the best tool for creating realistic fabric simulations.
-        </li>
-        <li>
-        Learned about Jacquard and compound weave structures.
-        </li>
-        <li>
-        Got to work with different materials, weave structures, and patterns.
-        </li>
-        <li>
-        And got a brief overview of various other departments like the Fabric Testing Lab, Quality Assurance, Shirting and Lifestyle Product Department.
-        </li>
-      </ul>
-     } 
-      </> 
-      )
-     ,
+    description: (
+      <>
+        {`I completed my two-month summer internship at Raymond Limited, Thane. I worked on the Suiting Design Development project for the SS-23 Collection, for which I did trend research, created a mood board and a colour board, and created suiting designs. A few of my designs were selected by the Head of design for Raymond's subsidiary brand, Champion's spring/summer 2023 collection.`}
+        <br />
+        <br /> {`Learnings from the internship⁚`} <br />
+        {
+          <ul>
+            <li>
+              Learned about the working of the department and the design process
+              followed in the brand.
+            </li>
+            <li>
+              Got to do fabric analysis and learned to do fabric calculations
+              and fabric costing.
+            </li>
+            <li>
+              Worked on Textronics-Design Dobby software, the best tool for
+              creating realistic fabric simulations.
+            </li>
+            <li>Learned about Jacquard and compound weave structures.</li>
+            <li>
+              Got to work with different materials, weave structures, and
+              patterns.
+            </li>
+            <li>
+              And got a brief overview of various other departments like the
+              Fabric Testing Lab, Quality Assurance, Shirting and Lifestyle
+              Product Department.
+            </li>
+          </ul>
+        }
+      </>
+    ),
     body: <Work10 />,
     bookmarks: (
       <>
@@ -63,13 +99,12 @@ export const data = [
         <Mark to="#nccard" title="NC Card" />
 
         <Mark to="#jacquard" title="Jacquard" />
-
       </>
     ),
   },
 
   {
-    id: 1,
+    index: x-9,
     img: "/images/works/weave_design/weavedesign.webp",
     title: "Checks and Stripes",
     category: "Weave design",
@@ -102,10 +137,8 @@ export const data = [
     ),
   },
 
-  
-
   {
-    id: 3,
+    index: x-8,
     img: "/images/works/colour_and_weave_effect/candweffect.webp",
     title: "Colour and Weave Effect",
     category: "Weave design",
@@ -126,10 +159,8 @@ export const data = [
     ),
   },
 
- 
-
   {
-    id: 2,
+    index: x-7,
     img: "/images/works/naturaldyes/natural_dyes_poster.webp",
     title: "Natural Dyes",
     category: "Sustainability",
@@ -178,7 +209,7 @@ export const data = [
   },
 
   {
-    id: 4,
+    index: x-6,
     img: "/images/works/crd/crd.webp",
     title: "Jamnagri Bandhani",
     category: "Craft Research",
@@ -203,7 +234,7 @@ export const data = [
   },
 
   {
-    id: 7,
+    index: x-5,
     img: "/images/works/digital_nature/digital_nature0.webp",
     title: "Digital Nature",
     category: "Print design",
@@ -234,15 +265,13 @@ export const data = [
         <Mark to="#print5" title="Print 5" />
         <Mark to="#print6" title="Print 6" />
         <Mark to="#print7" title="Print 7" />
-        <Mark to="#final_collection" title="Fianl Collection" />
+        <Mark to="#final_collection" title="Final Collection" />
       </>
     ),
   },
 
-  
-
   {
-    id: 5,
+    index: x-4,
     img: "/images/works/lounge_prints/lounge_print.webp",
     title: "Dreamy Skies",
     category: "Print Design",
@@ -267,11 +296,8 @@ export const data = [
     ),
   },
 
-  
-
-
   {
-    id: 6,
+    index: x-3,
     img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
     title: "Fabric Dyeing Techniques",
     category: "Dyeing",
@@ -291,11 +317,8 @@ export const data = [
     ),
   },
 
-    
-  
-
   // {
-  //   id: 8,
+  //   index: 8,
   //   img: "/images/works/ecoprinting/ecoprint.webp",
   //   title: "Eco-printing",
   //   category: "Sustainability",
@@ -313,14 +336,14 @@ export const data = [
   // },
 
   {
-    id: 11,
+    index: x-2,
     img: "/images/works/boro/topimg.jpg",
     title: "Boro-Textile from Japan",
     category: "Patchwork",
     topimg: "/images/works/boro/topimg.jpg",
     bottomimg: "/images/works/boro/swatch1.webp",
     description:
-      "Textile, from Japan's northernmost island, developed out of the necessity of poor farmers who wanted to protect their bodies from the extreme cold. They patched layers and layers of torn fabric together to make a thick layer. Taking inspiration from the \"Mending is the way.\" sustainability trend, I made patchwork swatches using waste fabric pieces. Explored various abstract compositions, stitched them on a sewing machine, and finally, made a tote bag using those swatches.",
+      'Textile, from Japan\'s northernmost island, developed out of the necessity of poor farmers who wanted to protect their bodies from the extreme cold. They patched layers and layers of torn fabric together to make a thick layer. Taking inspiration from the "Mending is the way." sustainability trend, I made patchwork swatches using waste fabric pieces. Explored various abstract compositions, stitched them on a sewing machine, and finally, made a tote bag using those swatches.',
     body: <Work11 />,
     bookmarks: (
       <>
@@ -333,7 +356,7 @@ export const data = [
   },
 
   {
-    id: 9,
+    index: x-1,
     img: "/images/works/fineart/topimg.webp",
     title: "Artworks-Hand and Digital",
     category: "Artworks",

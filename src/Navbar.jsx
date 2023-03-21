@@ -29,11 +29,12 @@ function Navbar() {
               Pranav Shekhawat
           </NavLink>
         </div> 
+        
         <div className='nav_items nav_item_2'>
-          {/* <NavLink to="/works"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
+          {/* <NavLink to="/work"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
     
-          {/* <a id='project_link' href='#works'  className={({ isActive }) => isActive ? activeClassName : undefined }>Works</a> */}
-          <Markkk to="/#works" title="Works" />
+          {/* <a id='project_link' href='#work'  className={({ isActive }) => isActive ? activeClassName : undefined }>Work</a> */}
+          <Markkk to="/#work" title="Work" />
 
           {/* </NavLink> */}
       
@@ -55,6 +56,11 @@ function Navbar() {
           {/* </NavLink> */}
 
           <span className='line'></span>
+
+          <Markkk to="/#contact" title="Contact" />
+
+          <span className='line'></span>
+
 
           {/* <NavLink to='/data/cv/PranavShekhawat_CV.pdf' id='cv_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
           <a className='download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">CV</a>
