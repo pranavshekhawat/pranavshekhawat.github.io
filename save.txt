@@ -1,3 +1,42 @@
+Process of creating a react app and deploying it through github pages:
+
+STEP1: VS terminal C:/Users/Pranav Shekhawat/
+       npm init react-app {Name of the app}
+
+STEP2: cd {Name of the app}
+
+STEP3: Github_ New repository(Name of the app)
+       >Private 
+       >Create
+
+STEP4: Vs terminal> npm install gh-pages --save-dev
+
+STEP5: vs code open folder.
+       > in package.json
+       > add 
+         "homepage":"https://pranavshekhawat.github.io/app name",
+       > in scripts add 
+         "predeploy":"npm run build",
+         "deploy":"gh-pages -d build"
+
+STEP6: vs terminal(app folder)
+       >git init
+       >git remote.... this code line is unique for every repo and could be found on github when you create a new repo.
+
+STEP7: change app.js
+       >change something in it.
+
+STEP8: vs terminal(app folder)
+       > git add --all
+       > git commit -m "write what you have changed"
+       > npm run deploy
+       > git push -u origin master
+
+NOTE: Everytime you make changes to the files follow >>STEP8<< to commit changes and update your github page.
+
+
+some code>>>>
+
 git add --all
 git commit -m "Cha cha changes"
 npm run deploy
