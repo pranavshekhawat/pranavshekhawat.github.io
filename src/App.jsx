@@ -27,7 +27,7 @@ function App (){
         <Route path='/' element={<Home />}/>
         {/* <Route path='/work' element={<Projects />}/> */}
         
-       <Route path='/work/:url' element={<Workpage/>}/>
+       <Route path='/projects/:url' element={<Workpage/>}/>
 
        {/* <Route path='/activity' element={<Activity/>}/> */}
 

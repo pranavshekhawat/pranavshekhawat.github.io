@@ -103,8 +103,17 @@ function AboutCard(){
                             })}
                         </div>
                         <div className="colstart2 colend4 abouttext">
-                        Hello! I am Pranav Shekhawat, a design student at the National Institute of Fashion Technology, Gandhinagar, specialising in textiles. The wonders of nature and the advances in the digital world inspire me. My ability to understand the technical aspects of production processes is swift, and my skill with CAD tools helps me to execute my design ideas effectively.<br/>
-                            Feel free to contact me if you need any further information. I would love to hear from you.
+                        Hello, my name is Pranav Shekhawat, and I am a 
+textile designer with a passion for weaving. I'm 
+proficient in using CAD tools to create unique and 
+innovative designs that combine traditional weaving
+techniques with modern technology.<br/>
+ 
+I'm always looking for new opportunities to challenge
+myself and expand my knowledge of textiles. I aim to
+work in a creative and collaborative environment 
+where I can contribute my skill and learn from others.<br/>
+                            
                             <br />
                             <br />
                             {/* <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>

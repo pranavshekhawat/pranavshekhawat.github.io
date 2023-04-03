@@ -79,7 +79,7 @@ function Workpage() {
                             <section className="more_worklist">
 
                                 {prevWork && (
-                                    <Link to={`/work/${prevWork.title.toLowerCase().replace(/ /g, "_")}`}>
+                                    <Link to={`/projects/${prevWork.title.toLowerCase().replace(/ /g, "_")}`}>
                                         <article className="more_work" onMouseEnter={() => setisHovering(true)} onMouseLeave={() => setisHovering(false)}>
                                             <div className="more_work_img_div">
                                                 <img src={prevWork.topimg} alt='' />
@@ -98,7 +98,7 @@ function Workpage() {
                                     </Link>
                                 )}
                                 {nextWork && (
-                                    <Link to={`/work/${nextWork.title.toLowerCase().replace(/ /g, "_")}`}>
+                                    <Link to={`/projects/${nextWork.title.toLowerCase().replace(/ /g, "_")}`}>
                                         <article className="more_work_2" onMouseEnter={() => setisHovering2(true)} onMouseLeave={() => setisHovering2(false)}>
                                             <div className="more_work_img_div">
                                                 <img src={nextWork.topimg} alt='' />

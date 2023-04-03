@@ -20,10 +20,14 @@
 
 .title {
     font-family: "Helvetica Neue LT Pro Roman";
+  /* font-family : 'Times New Roman', Times, serif; */
+
     font-size: 1.5rem;
     margin: 0;
     text-decoration: none;
 }
+
+
 
 .category {
     font-family: "Helvetica Neue LT Pro Roman";

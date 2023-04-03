@@ -63,26 +63,20 @@ function Work12() {
                         <Img height="auto" src='\images\works\illusions\cropcutback.webp' alt="Pranav Shekhawat | Cropped image of back of cut double cloth." />
 
                     </div>
-
+                    <br />
                     <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Peg Plan</Accordion.Header>
-                            <Accordion.Body>
-
-                                <Img height="auto" src='/images/works/weave_design/weave_unit1.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 | Weave Unit on CAD" />
-
-
-                            </Accordion.Body>
-                        </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
 
-                                <Img height="auto" src='/images/works/weave_design/specification_sheet1.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 | Specification Sheet" />
+                                <Img height="auto" src='/images/works/illusions/ss1.png' alt="Pranav Shekhawat | Checks and Stripes | Swatch 1 | Specification Sheet" />
 
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+                    <br />
+                    <img height="auto" width="50%" src='/images/works/illusions/munkerw.svg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Specification Sheet" />
+
                     <br /><br /><br />
 
                     {/*/////////////////// swatch 2 /////////////// */}
@@ -94,18 +88,11 @@ function Work12() {
 
 
                     <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Peg Plan</Accordion.Header>
-                            <Accordion.Body>
-
-                                <Img height="auto" src='/images/works/weave_design/weave_unit2.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 | Weave Unit on CAD" />
-                            </Accordion.Body>
-                        </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
 
-                                <Img height="auto" src='/images/works/weave_design/specification_sheet2.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 | Specification Sheet" />
+                                <Img height="auto" src='/images/works/illusions/ss2.png' alt="Pranav Shekhawat | Checks and Stripes | Swatch 2 | Specification Sheet" />
 
                             </Accordion.Body>
                         </Accordion.Item>
@@ -122,23 +109,16 @@ function Work12() {
                     <Img height="auto" src='/images/works/weave_design/swatch3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 " />
 
                     <Accordion alwaysOpen >
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Peg Plan</Accordion.Header>
-                            <Accordion.Body>
-
-                                <Img height="auto" src='/images/works/weave_design/weave_unit3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Weave Unit on CAD" />
-
-                            </Accordion.Body>
-                        </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>Specification Sheet</Accordion.Header>
                             <Accordion.Body>
 
-                                <Img height="auto" src='/images/works/weave_design/specification_sheet3.jpg' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Specification Sheet" />
+                                <Img height="auto" src='/images/works/illusions/ss3.png' alt="Pranav Shekhawat | Checks and Stripes | Swatch 3 | Specification Sheet" />
 
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+                   
                     <br /><br /><br />
 
                     {/*/////////////////// swatch 4 /////////////// */}

@@ -5,7 +5,8 @@
 }
 
 .heading {
-  font-family: "Helvetica Neue LT Pro Bd";
+  font-family : 'Times New Roman', Times, serif;
+  /* font-family: "Helvetica Neue LT Pro Bd"; */
   /* color: var(--colour2); */
   font-size: 5.8rem;
   grid-column: 1;

@@ -22,7 +22,7 @@ const Work = ({ img, title, category, description }) => {
 
   return (
 
-    <Link to={`/work/${url}`}>
+    <Link to={`/projects/${url}`}>
       <article className="work" onMouseEnter={() => setisHovering(true)} onMouseLeave={() => setisHovering(false)}>
         <div className="work_img_div">
           <img src={img} alt='' />

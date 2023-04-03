@@ -69,7 +69,7 @@ function Home() {
 
             <span id="work" className="bookmark_positioner_nav"></span>
 
-            <Headingbar heading="Work" description="" />
+            <Headingbar heading="Projects" description="" />
             {/* Here are my few selected projects that show my woking process */}
 
             <Works />

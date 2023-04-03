@@ -34,7 +34,7 @@ function Navbar() {
           {/* <NavLink to="/work"  id='project_link' className={({ isActive }) => isActive ? activeClassName : undefined }> */}
     
           {/* <a id='project_link' href='#work'  className={({ isActive }) => isActive ? activeClassName : undefined }>Work</a> */}
-          <Markkk to="/#work" title="Work" />
+          <Markkk to="/#projects" title="Projects" />
 
           {/* </NavLink> */}
       

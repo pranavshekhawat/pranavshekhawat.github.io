@@ -38,7 +38,7 @@ function Projects() {
       <Navbar />
       <BasicBreadcrumbs text="Work" theme="dark"></BasicBreadcrumbs>
 
-      <Headingbar heading="Work" description="" />
+      <Headingbar heading="Projects" description="" />
       {/* Here are my few selected projects that show my woking process */}
 
       <Works />
