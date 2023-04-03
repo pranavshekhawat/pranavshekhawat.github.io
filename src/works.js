@@ -8,7 +8,7 @@ import Work7 from "./works/work7";
 import Work9 from "./works/work9";
 import Work10 from "./works/work10";
 import Work11 from "./works/work11";
-import Work12 from "./works/work12";
+// import Work12 from "./works/work12";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
