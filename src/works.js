@@ -8,7 +8,7 @@ import Work7 from "./works/work7";
 import Work9 from "./works/work9";
 import Work10 from "./works/work10";
 import Work11 from "./works/work11";
-// import Work12 from "./works/work12";
+import Work12 from "./works/work12";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
@@ -16,35 +16,35 @@ import Mark from "./Components/Bookmarkbar/mark";
 const x = 11;
 
 export const data = [
-//   {
-//     index: x-11,
-//     img: "/images/works/illusions/frontimg.webp",
-//     title: "Maya - The Art of Deception",
-//     category: "Weave design",
-//     topimg: "/images/works/illusions/frontimg.webp",
-//     bottomimg: "/images/works/illusions/bottomimg.webp",
-//     description: (
-//       <>
-//         {`Illusions trick our senses and deceive our perception to see things, similar to how "Maya", all the shiny things around us, prevents us from understanding the true nature of life and reality. And the irony is that we can't deny our needs even after knowing that. It is important to recognize that our temporary needs and desires are a natural part of being human, and we can accept them in a dignified manner.
-// `}{" "}
-//         <br /> <br />
-//         {`This project explores the theme of illusions and features a series of fabric swatches inspired by various types of illusions. Weaving Techniques of Double Cloth and Hand Carpet Making are explored in this project.`}
-//       </>
-//     ),
-//     body: <Work12 />,
-//     bookmarks: (
-//       <>
-//         <Mark to="#overview" title="Overview" />
-//         <Mark to="#illusions" title="Illusions" />
-//         <Mark to="#colour_palette" title="Colour Palette" />
-//         <Mark to="#cutdc" title="Cut Double Cloth" />
-//         <Mark to="#stitcheddc" title="Stitched Double Cloth" />
-//         <Mark to="#waddeddc" title="Wadded Double Cloth" />
-//         <Mark to="#carpets" title="Carpet swatches" />
-//         <Mark to="#altogether" title="Altogether" />
-//       </>
-//     ),
-//   },
+  {
+    index: x-11,
+    img: "/images/works/illusions/frontimg.webp",
+    title: "Maya - The Art of Deception",
+    category: "Weave design",
+    topimg: "/images/works/illusions/frontimg.webp",
+    bottomimg: "/images/works/illusions/bottomimg.webp",
+    description: (
+      <>
+        {`Illusions trick our senses and deceive our perception to see things, similar to how "Maya", all the shiny things around us, prevents us from understanding the true nature of life and reality. And the irony is that we can't deny our needs even after knowing that. It is important to recognize that our temporary needs and desires are a natural part of being human, and we can accept them in a dignified manner.
+`}{" "}
+        <br /> <br />
+        {`This project explores the theme of illusions and features a series of fabric swatches inspired by various types of illusions. Weaving Techniques of Double Cloth and Hand Carpet Making are explored in this project.`}
+      </>
+    ),
+    body: <Work12 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#illusions" title="Illusions" />
+        <Mark to="#colour_palette" title="Colour Palette" />
+        <Mark to="#cutdc" title="Cut Double Cloth" />
+        <Mark to="#stitcheddc" title="Stitched Double Cloth" />
+        <Mark to="#waddeddc" title="Wadded Double Cloth" />
+        <Mark to="#carpets" title="Carpet swatches" />
+        <Mark to="#altogether" title="Altogether" />
+      </>
+    ),
+  },
 
   {
     index: x-10,
