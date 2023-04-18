@@ -41,6 +41,7 @@ export const data = [
         <Mark to="#stitcheddc" title="Stitched Double Cloth" />
         <Mark to="#waddeddc" title="Wadded Double Cloth" />
         <Mark to="#carpets" title="Carpet swatches" />
+        <Mark to="#jacquard" title="Jacquard Designs" />
         <Mark to="#altogether" title="Altogether" />
       </>
     ),

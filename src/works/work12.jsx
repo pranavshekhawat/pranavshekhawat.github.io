@@ -194,6 +194,22 @@ function Work12() {
 
                     <br /><br /><br /><br /><br />
 
+                    <span id="jacquard" className="bookmark_positioner"></span>
+                    <h1>Jacquard Designs</h1>
+                    <br></br>
+                    <div className="text halffull">
+                    Here are a few jacquard designs that I created, taking inspiration from autokinetic illusions. Autokinetic Illusions trick our brains into believing the existence of motion in a completely stationary object. 
+                    </div><br />
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\internship\Untitled-1.webp' alt="Pranav Shekhawat | Cropped image of front of cut double cloth." />
+                        <Img height="auto" src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Cropped image of back of cut double cloth." />
+                        <Img height="auto" src='\images\works\illusions\three.webp' alt="Pranav Shekhawat | Cropped image of back of cut double cloth." />
+
+                    </div>
+
+                    <br /><br /><br /><br /><br />
+
+
                     <span id="altogether" className="bookmark_positioner"></span>
                     <h1>Altogether</h1>
                     <br></br>
