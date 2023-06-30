@@ -9,13 +9,36 @@ import Work9 from "./works/work9";
 import Work10 from "./works/work10";
 import Work11 from "./works/work11";
 import Work12 from "./works/work12";
+import Work13 from "./works/work13";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
 //total no of Works == x
-const x = 11;
+const x = 12;
 
 export const data = [
+
+  {
+    index: x-12,
+    img: "/images/works/jacquard/two.jpg",
+    title: "Jacquard Gallery",
+    category: "Weave Design",
+    topimg: "/images/works/jacquard/two.jpg",
+    bottomimg: "/images/works/jacquard/three.jpg",
+    description: "Here is an image gallery of all the jacquard designs I created in various internship projects. For creating and editing artwork, I used Adobe Photoshop and Illustrator. And for mapping weaves, I used CAD tools like Textronics-Design Jacquard and Pointcarre. ",
+    body: <Work13 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        {/* <Mark to="#illusions" title="Illusions" />
+        <Mark to="#colour_palette" title="Colour Palette" />
+        <Mark to="#cutdc" title="Cut Double Cloth" />
+        <Mark to="#stitcheddc" title="Stitched Double Cloth" /> */}
+      </>
+    ),
+  },
+
+
   {
     index: x-11,
     img: "/images/works/illusions/frontimg.webp",

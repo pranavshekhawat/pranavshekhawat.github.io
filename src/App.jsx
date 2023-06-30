@@ -1,45 +1,48 @@
-import React, {useEffect} from 'react';
-import { Route, Routes} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
 // import Projects from './Projects';
 // import About from './About';
 // import Activity from './Activity'
 import Error from './Error';
+import Test from './Test';
 import Footer from './Footer';
 import Workpage from './Workpage';
 
 import ReactGA from 'react-ga';
 
-  const TRACKING_ID = "G-Z18T1FYYYD"; // OUR_TRACKING_ID
-  ReactGA.initialize(TRACKING_ID);
+const TRACKING_ID = "G-Z18T1FYYYD"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
-function App (){
-  
+function App() {
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
-    return(
-      <>
+  return (
+    <>
 
       <Routes>
-       
-        <Route path='/' element={<Home />}/>
+
+        <Route path='/' element={<Home />} />
         {/* <Route path='/work' element={<Projects />}/> */}
-        
-       <Route path='/projects/:url' element={<Workpage/>}/>
 
-       {/* <Route path='/activity' element={<Activity/>}/> */}
+        <Route path='/projects/:url' element={<Workpage />} />
 
-       {/* <Route path='/about' element={<About/>}/> */}
-       <Route path="*" element={<Error/>} />
+        {/* <Route path='/activity' element={<Activity/>}/> */}
+
+        {/* <Route path='/about' element={<About/>}/> */}
+        <Route path="*" element={<Error />} />
+        <Route path="/test" element={<Test />} />
+
 
       </Routes>
 
-      <Footer/>
+      <Footer />
 
-      </>
-    );
-  };
+    </>
+  );
+};
 
-  export default App;
+export default App;
