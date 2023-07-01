@@ -7,7 +7,7 @@ import './css/about.css'
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import { TabTitle } from './utils/GeneralFunctions';
-// import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs/browser';
 // import { useRef, useState, useEffect } from 'react';
 
 
@@ -24,7 +24,7 @@ const Active = ({ img, name }) => {
     return (
         <>
             <article className="about">
-                
+
                 <span onClick={() => setModalShow(true)} className="about_span">
 
                     {img?.length > 1 && <button className='about_img_btn'>+{img.length - 1}</button>}
@@ -63,9 +63,9 @@ const Active = ({ img, name }) => {
     )
 }
 
-function AboutCard(){
+function AboutCard() {
 
-    
+
     // const [sentmessagestate, setsentmessagestate] = useState(false);
 
     // const form = useRef();
@@ -86,42 +86,42 @@ function AboutCard(){
     //         document.getElementById("myform").reset();
     //     setTimeout(function () {
     //         setsentmessagestate(false);
-            
+
     //     }, 3000);}
     // },
     //     [sentmessagestate])
 
-   return(
+    return (
 
-    <div className='grid_container_25'>
-                <div className='colstart2 colend25'>
-                    <div className='grid_container_2 main_about_container'>
+        <div className='grid_container_25'>
+            <div className='colstart2 colend25'>
+                <div className='grid_container_2 main_about_container'>
 
-                        <div className="">
-                            {data.map((list) => {
-                                return <Active key={list.name}{...data[0].img}{...list}></Active>
-                            })}
-                        </div>
-                        <div className="colstart2 colend4 abouttext">
-                        Hello, my name is Pranav Shekhawat, and I am a 
-textile designer with a passion for weaving. I'm 
-proficient in using CAD tools to create unique and 
-innovative designs that combine traditional weaving
-techniques with modern technology.<br/>
- 
-I'm always looking for new opportunities to challenge
-myself and expand my knowledge of textiles. I aim to
-work in a creative and collaborative environment 
-where I can contribute my skill and learn from others.<br/>
-                            
-                            <br />
-                            <br />
-                            {/* <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>
+                    <div className="">
+                        {data.map((list) => {
+                            return <Active key={list.name}{...data[0].img}{...list}></Active>
+                        })}
+                    </div>
+                    <div className="colstart2 colend4 abouttext">
+                        Hello, my name is Pranav Shekhawat, and I am a
+                        textile designer with a passion for weaves and prints. I'm
+                        proficient in using CAD tools to create unique and
+                        innovative designs that combine traditional
+                        techniques with modern technology.<br />
+
+                        I'm always looking for new opportunities to challenge
+                        myself and expand my knowledge of textiles. I aim to
+                        work in a creative and collaborative environment
+                        where I can contribute my skill and learn from others.<br />
+
+                        <br />
+                        <br />
+                        {/* <a className='contact_download_cv' href='/data/cv/PranavShekhawat_CV.pdf' target="_blank">View CV</a>
                             <br />
                             <br />
                             <br /> */}
 
-                            {/* <form ref={form} onSubmit={sendEmail} id="myform">
+                        {/* <form ref={form} onSubmit={sendEmail} id="myform">
                                 <label>Name:</label><br />
                                 <input className="contact_name" type="text" name="from_name" placeholder="Enter your name." /><br />
                                 <label>Email:</label><br />
@@ -135,14 +135,14 @@ where I can contribute my skill and learn from others.<br/>
                             </form> */}
 
 
-                        </div>
-
                     </div>
 
                 </div>
-            </div>
 
-   );
+            </div>
+        </div>
+
+    );
 
 }
 
@@ -156,11 +156,11 @@ function About() {
             <BasicBreadcrumbs text="About" theme="dark"></BasicBreadcrumbs>
             <Headingbar heading="About"></Headingbar>
 
-            <AboutCard/>
+            <AboutCard />
             <Contact />
         </>
     )
 }
 
 export default About;
-export {AboutCard};
+export { AboutCard };

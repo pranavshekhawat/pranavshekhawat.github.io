@@ -26,7 +26,7 @@ function Contact() {
                             <div className={isHovering ? "emailbtnafter" : "emailbtnbefore"}>E-mail
                             </div>
                         </span>
-                        Tel: +91-9460636040 &nbsp; | &nbsp;  Email: pranav.shekhawat@nift.ac.in, pranavshekhawat2@gmail.com
+                        Tel: +91-9460636040 &nbsp; | &nbsp;  Email: pranavshekhawat.nift@gmail.com, pranavshekhawat2@gmail.com
                     </div>
 
                 </div>

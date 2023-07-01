@@ -5,7 +5,6 @@ import Home from './Home';
 // import About from './About';
 // import Activity from './Activity'
 import Error from './Error';
-import Test from './Test';
 import Footer from './Footer';
 import Workpage from './Workpage';
 
@@ -34,7 +33,7 @@ function App() {
 
         {/* <Route path='/about' element={<About/>}/> */}
         <Route path="*" element={<Error />} />
-        <Route path="/test" element={<Test />} />
+    
 
 
       </Routes>
