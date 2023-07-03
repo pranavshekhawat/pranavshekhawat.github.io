@@ -27,9 +27,9 @@ function Work13() {
                     <br></br> */}
                      
                      <div className="overflowhidden gridgap noflexinphone">
-                    <img className="work10jacquard noflexinphone" src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Jacquard Design 1" />
+                    <img className="work10jacquard noflexinphone paddinginphone" src='\images\works\internship\rotatingsnake-03.svg' alt="Pranav Shekhawat | Jacquard Design 1" />
 
-                    <img className="work10jacquard2 noflexinphone" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
+                    <img className="work10jacquard2 noflexinphone paddinginphone" src='\images\works\internship\PR-2_2.jpg' alt="Pranav Shekhawat | Jacquard Design 1 CAD" />
                     </div>
                      <br />
                     <div className="overflowhidden gridgap noflexinphone" >

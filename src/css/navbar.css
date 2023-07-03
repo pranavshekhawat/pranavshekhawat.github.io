@@ -6,7 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 100px;
+  height: 80px;
   /* background: linear-gradient(0deg, rgba(34,193,195,0) 0%, var(--colour3) 100%); */
   background-color: var(--colour3);
 }
@@ -72,7 +72,7 @@
 
 .download_cv {
   color: var(--colour2);
-  background-color: var(--colour3);
+  /* background-color: var(--colour3); */
   border: 0;
   padding: 0.8rem 2rem 0.8rem 2rem;
 }

@@ -10,22 +10,55 @@ import Work10 from "./works/work10";
 import Work11 from "./works/work11";
 import Work12 from "./works/work12";
 import Work13 from "./works/work13";
+import Work14 from "./works/work14";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
 //total no of Works == x
-const x = 12;
+const x = 13;
 
 export const data = [
+  {
+    index: x - 13,
+    img: "/images/works/tarang/topimg2.jpg",
+    title: "Tarang Gatha - Bandhani Collection",
+    category: "Craft Design",
+    topimg: "/images/works/tarang/topimg2.jpg",
+    bottomimg: "/images/works/tarang/img (56).jpg",
+    description: (
+      <>
+        
+        {`"Trang Gatha" is a collaborative home collection designed by Textile Design students of NIFT Gandhinagar and crafted by skilful Bandhani Artisans of Jamnagar, Gujrat. This collection depicts the mischievous nature of waves by randomly arranging bandhani dots on a piece of fabric. 
+    `}
+        <br /><br /> 
+        {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`}
+        {/* {` Raw materials like dyes, thread for tying, and fabric; were sourced from the local market and provided to the artisans.`}  */}
+      </>
+    ),
+    body: <Work14 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#artisans" title="Artisans" />
+        <Mark to="#product_board" title="Poduct Board" />
+        <Mark to="#theme" title="Theme" />
+        <Mark to="#concepts" title="Concepts" />
+        <Mark to="#final_collection" title="Final Collection" />
+        <Mark to="#student_profiles" title="Student Profiles" />
+
+      </>
+    ),
+  },
 
   {
-    index: x-12,
+    index: x - 12,
     img: "/images/works/jacquard/two.jpg",
     title: "Jacquard Gallery",
     category: "Weave Design",
     topimg: "/images/works/jacquard/two.jpg",
     bottomimg: "/images/works/jacquard/three.jpg",
-    description: "Here is an image gallery of all the jacquard designs I created in various internship projects. For creating and editing artwork, I used Adobe Photoshop and Illustrator. And for mapping weaves, I used CAD tools like Textronics-Design Jacquard and Pointcarre. ",
+    description:
+      "Here is an image gallery of all the jacquard designs I created in various internship projects. For creating and editing artwork, I used Adobe Photoshop and Illustrator. And for mapping weaves, I used CAD tools like Textronics-Design Jacquard and Pointcarre. ",
     body: <Work13 />,
     bookmarks: (
       <>
@@ -38,9 +71,8 @@ export const data = [
     ),
   },
 
-
   {
-    index: x-11,
+    index: x - 11,
     img: "/images/works/illusions/frontimg.webp",
     title: "Maya - The Art of Deception",
     category: "Weave design",
@@ -71,7 +103,7 @@ export const data = [
   },
 
   {
-    index: x-10,
+    index: x - 10,
     img: "/images/works/internship/topimg.webp",
     title: "Internship Experience at Raymond Limited",
     category: "Suiting Design",
@@ -128,7 +160,7 @@ export const data = [
   },
 
   {
-    index: x-9,
+    index: x - 9,
     img: "/images/works/weave_design/weavedesign.webp",
     title: "Checks and Stripes",
     category: "Weave design",
@@ -162,7 +194,7 @@ export const data = [
   },
 
   {
-    index: x-8,
+    index: x - 8,
     img: "/images/works/colour_and_weave_effect/candweffect.webp",
     title: "Colour and Weave Effect",
     category: "Weave design",
@@ -184,7 +216,7 @@ export const data = [
   },
 
   {
-    index: x-7,
+    index: x - 7,
     img: "/images/works/naturaldyes/natural_dyes_poster.webp",
     title: "Natural Dyes",
     category: "Sustainability",
@@ -233,7 +265,7 @@ export const data = [
   },
 
   {
-    index: x-6,
+    index: x - 6,
     img: "/images/works/crd/crd.webp",
     title: "Jamnagri Bandhani",
     category: "Craft Research",
@@ -258,7 +290,7 @@ export const data = [
   },
 
   {
-    index: x-5,
+    index: x - 5,
     img: "/images/works/digital_nature/digital_nature0.webp",
     title: "Digital Nature",
     category: "Print design",
@@ -295,7 +327,7 @@ export const data = [
   },
 
   {
-    index: x-4,
+    index: x - 4,
     img: "/images/works/lounge_prints/lounge_print.webp",
     title: "Dreamy Skies",
     category: "Print Design",
@@ -321,7 +353,7 @@ export const data = [
   },
 
   {
-    index: x-3,
+    index: x - 3,
     img: "/images/works/dyeing_techniques/dyeing_techniques.webp",
     title: "Fabric Dyeing Techniques",
     category: "Dyeing",
@@ -360,7 +392,7 @@ export const data = [
   // },
 
   {
-    index: x-2,
+    index: x - 2,
     img: "/images/works/boro/topimg.jpg",
     title: "Boro-Textile from Japan",
     category: "Patchwork",
@@ -380,7 +412,7 @@ export const data = [
   },
 
   {
-    index: x-1,
+    index: x - 1,
     img: "/images/works/fineart/topimg.webp",
     title: "Artworks-Hand and Digital",
     category: "Artworks",
