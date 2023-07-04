@@ -21,13 +21,22 @@
 @media (max-width: 500px) {
 
 
-  .des_text {
+  /* .des_text {
     display: block;
     grid-column: 2;
     grid-column-end: 21;
     padding: 2rem 0 2rem 0;
     font-family: "Helvetica Neue LT Pro Roman";
     font-size: 1.6rem;
+  } */
+
+  .des_text {
+    display: block;
+    grid-column: 1;
+    grid-column-end: 22;
+    padding: 3rem 0 3rem 0;
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 2rem;
   }
 
   .desc_main {
@@ -42,12 +51,17 @@
       color: var(--colour3);
   }
 
+  
+}
+
+
+@media screen and (max-width: 768px) {
   .des_text {
     display: block;
     grid-column: 1;
     grid-column-end: 22;
     padding: 3rem 0 3rem 0;
     font-family: "Helvetica Neue LT Pro Roman";
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 }

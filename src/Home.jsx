@@ -67,7 +67,7 @@ function Home() {
             <AboutCard/><br/><br/>
             <Contact /> */}
 
-            <span id="work" className="bookmark_positioner_nav"></span>
+            <span id="projects" className="bookmark_positioner_nav"></span>
 
             <Headingbar heading="Projects" description="" />
             {/* Here are my few selected projects that show my woking process */}

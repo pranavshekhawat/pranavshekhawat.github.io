@@ -164,6 +164,15 @@ body {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+    .text {
+
+        width: 100%;
+        /* background-color: var(--colour2); */
+        font-size: 1.3rem;
+    }
+  }
+
 .text a {
     
     color:var(--colour4) ;

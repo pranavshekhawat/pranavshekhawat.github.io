@@ -21,14 +21,14 @@ export const data = [
   {
     index: x - 13,
     img: "/images/works/tarang/topimg2.jpg",
-    title: "Tarang Gatha - Bandhani Collection",
+    title: "Tarang - Bandhani Collection",
     category: "Craft Design",
     topimg: "/images/works/tarang/topimg2.jpg",
     bottomimg: "/images/works/tarang/img (56).jpg",
     description: (
       <>
         
-        {`"Trang Gatha" is a collaborative home collection designed by Textile Design students of NIFT Gandhinagar and crafted by skilful Bandhani Artisans of Jamnagar, Gujrat. This collection depicts the mischievous nature of waves by randomly arranging bandhani dots on a piece of fabric. 
+        {`"Tarang" is a collaborative home collection designed by Textile Design students of NIFT Gandhinagar and crafted by skilful Bandhani Artisans of Jamnagar, Gujrat. This collection depicts the mischievous nature of waves by randomly arranging bandhani dots on a piece of fabric. 
     `}
         <br /><br /> 
         {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`}
@@ -183,6 +183,7 @@ export const data = [
       <>
         <Mark to="#overview" title="Overview" />
         <Mark to="#colour_palette" title="Colour Palette" />
+        <Mark to="#explorations" title="Explorations" />
         <Mark to="#swatch_1" title="Swatch 1" />
         <Mark to="#swatch_2" title="Swatch 2" />
         <Mark to="#swatch_3" title="Swatch 3" />

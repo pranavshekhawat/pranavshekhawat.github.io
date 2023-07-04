@@ -27,7 +27,7 @@
 @media (max-width: 500px) {
 
   .heading_type2 {
-    font-family: "Helvetica Neue LT Pro Bd";
+    font-family : 'Times New Roman', Times, serif;
     /* color: var(--colour2); */
     font-size: 2.5rem;
     grid-column: 1;

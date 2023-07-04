@@ -36,6 +36,26 @@ function Work1() {
                     <br />
 
 
+                    <span id="explorations" className="bookmark_positioner"></span>
+                    <h1>Explorations</h1>
+                    <br></br>
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\weave_design\c1.png' alt="Exploration check 1" />
+                        <Img height="auto" src='\images\works\weave_design\c2.png' alt="Exploration check 2" />
+                        <Img height="auto" src='\images\works\weave_design\c3.png' alt="Exploration check 3" />
+                    </div>
+                    <br />
+                    <div className="overflowhidden gridgap noflexinphone" >
+                        <Img height="auto" src='\images\works\weave_design\s1.png' alt="Exploration stripe 1" />
+                        <Img height="auto" src='\images\works\weave_design\s2.png' alt="Exploration stripe 2" />
+                        <Img height="auto" src='\images\works\weave_design\s3.png' alt="Exploration stripe 3" />
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                   
+
                     {/*/////////////////// swatch 1/////////////// */}
                     <span id="swatch_1" className="bookmark_positioner"></span>
                     <h1>Swatch 1</h1>
