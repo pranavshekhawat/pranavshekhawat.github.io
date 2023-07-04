@@ -100,8 +100,9 @@
   overflow: hidden;
 }
 
+
 .menuspan.open {
-  display: block;
+  display: grid;
   position: fixed;
   top: 80px;
   width: 100%;
@@ -110,6 +111,30 @@
   z-index: 9999;
   background-color: var(--colour3);
  transition: max-height 5s ease-in-out;
+}
+
+.menuspan div {
+  display: block;
+  position: relative;
+  justify-content: center;
+  /* justify-self: center; */
+  /* align-items: center; */
+  font-family: "Helvetica Neue LT Pro Lt";
+  font-size: 2rem;
+  letter-spacing: 2px;
+  top: 20%;
+  text-align: center;
+}
+
+.menuspan div span {
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  /* top: 36%; */
+  text-align: center;
 }
 
 
@@ -141,10 +166,10 @@
 }
 
 .hrline {
-  content: "";
+  /* content: ""; */
   position: absolute;
   width: 70px;
-  height: 4px;
+  height: 2px;
   background-color: var(--colour2);
   opacity: 0.2;
   /* transform: translate(0, -50%); */
@@ -166,4 +191,13 @@
 .bookmark_positioner_nav {
   transform: translateY(-6rem);
   position: absolute;
+}
+
+
+@media screen and (max-width: 768px) {
+  .bookmark_positioner_nav {
+    transform: translateY(-4rem);
+    position: absolute;
+  }
+  
 }

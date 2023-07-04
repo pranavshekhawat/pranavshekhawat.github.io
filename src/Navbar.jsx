@@ -61,8 +61,8 @@ function Navbar() {
 
   return (
     <nav className='navbar grid_container_25'>
-      <div className={`menuspan ${isMenuOpen ? 'open' : ''}`}>
-        <div>
+      <div className={`menuspan grid_container_25 ${isMenuOpen ? 'open' : ''}`}>
+        <div className='colstart2 colend25'>
 
           <Markkk to="/#projects" title="Projects"  onClick={handleCloseMenu}/><br />
           <span className='hrline'></span> <br />

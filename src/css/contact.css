@@ -62,3 +62,14 @@
   font-size: 1rem;
   color: var(--colour2);
 }
+
+@media screen and (max-width: 768px) {
+  .contact_items {
+    grid-column-start: 2;
+    grid-column-end: 25;
+    display: inline-block;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+}

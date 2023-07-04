@@ -17,7 +17,7 @@ function Contact() {
                     {/* <div className='contact_title'>Contact Me</div> */}
 
                     <div className='contact_text' onMouseEnter={() => setisHovering(true)} onMouseLeave={() => setisHovering(false)}>
-                        <span href='mailto:pranav.shekhawat@nift.ac.in' style={{cursor:"pointer"}}>
+                        <span href='mailto:pranavshekhawat.nift@gmail.com' style={{cursor:"pointer"}}>
                             <div className={isHovering ? "changecolor" : "makewhite"}>Write me an email and consider visiting my social media handels.
                             </div>
                             <svg className={fillcolour()} viewBox="0 0 24 24" aria-hidden="true">
@@ -26,7 +26,9 @@ function Contact() {
                             <div className={isHovering ? "emailbtnafter" : "emailbtnbefore"}>E-mail
                             </div>
                         </span>
-                        Tel: +91-9460636040 &nbsp; | &nbsp;  Email: pranavshekhawat.nift@gmail.com, pranavshekhawat2@gmail.com
+                        <br />
+                        {window.innerWidth < 768 && <br /> }
+                        <abbr title="Telephone number"> Tel: +91-9460636040 </abbr> &nbsp; {window.innerWidth > 768 && '|' } &nbsp;  {window.innerWidth < 768 && <br /> }{window.innerWidth > 768 && 'Email:' } pranavshekhawat.nift@gmail.com, pranavshekhawat2@gmail.com
                     </div>
 
                 </div>
