@@ -10,7 +10,7 @@
 
 .about_span:hover img {
     border: 4px solid var(--colour1);
-}
+}  
 
 .about_span:hover .about_img_btn {
 
