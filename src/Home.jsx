@@ -81,8 +81,8 @@ function Home() {
 
             <AboutCard />
 
-            <Headingbar heading="Contact"></Headingbar>
             <span id="contact" className="bookmark_positioner_nav"></span>
+            <Headingbar heading="Contact"></Headingbar>
 
             <Contact />
 

@@ -189,15 +189,8 @@
 }
 
 .bookmark_positioner_nav {
-  transform: translateY(-6rem);
+  transform: translateY(-4rem);
   position: absolute;
 }
 
 
-@media screen and (max-width: 768px) {
-  .bookmark_positioner_nav {
-    transform: translateY(-4rem);
-    position: absolute;
-  }
-  
-}
