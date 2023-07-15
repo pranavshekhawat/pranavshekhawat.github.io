@@ -9,6 +9,7 @@ import { TabTitle } from './utils/GeneralFunctions';
 import Headingbar from './Components/Headingbar/Headingbar';
 import { AboutCard } from "./About";
 import Contact from './Contact';
+import  { Auth  } from './utils/auth';
 
 // jhbhdvasjv
 
@@ -85,6 +86,9 @@ function Home() {
             <Headingbar heading="Contact"></Headingbar>
 
             <Contact />
+            <span id="signin" className="bookmark_positioner_nav"></span>
+            <Headingbar heading="Sign In"></Headingbar>
+            <Auth/>
 
         </>
     )
