@@ -14,6 +14,8 @@ import { doc, getDoc, updateDoc, setDoc } from "firebase/firestore";
 import { auth, db } from "./utils/firebase-config";
 // import { getAuth } from "firebase/auth";
 import './css/likes.css';
+import { NavHashLink } from 'react-router-hash-link';
+
 
 function Workpage() {
     const { url } = useParams();
@@ -317,7 +319,7 @@ function Workpage() {
                                 : <svg className='like' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#ffffff" /><path d="M23.873 9.81c.086-.251.127-.508.127-.763 0-.77-.379-1.514-1.055-1.982-2.152-1.492-1.868-1.117-2.68-3.544-.339-1.014-1.321-1.7-2.429-1.696-2.654.008-2.193.153-4.335-1.354-.446-.314-.974-.471-1.501-.471s-1.055.157-1.502.471c-2.154 1.515-1.687 1.362-4.335 1.354-1.107-.003-2.09.683-2.429 1.696-.812 2.433-.533 2.055-2.68 3.544-.675.469-1.054 1.212-1.054 1.982 0 .255.041.512.127.763.83 2.428.827 1.963 0 4.38-.086.251-.127.509-.127.763 0 .77.379 1.514 1.055 1.982 2.147 1.489 1.869 1.114 2.68 3.544.339 1.014 1.321 1.7 2.429 1.696 2.654-.009 2.193-.152 4.335 1.354.446.314.974.471 1.501.471s1.055-.157 1.502-.471c2.141-1.506 1.681-1.362 4.335-1.354 1.107.003 2.09-.683 2.429-1.696.812-2.428.528-2.053 2.68-3.544.675-.468 1.054-1.212 1.054-1.982 0-.254-.041-.512-.127-.763-.831-2.427-.827-1.963 0-4.38zm-7.565 1.984c.418.056.63.328.63.61 0 .323-.277.66-.844.705-.348.027-.434.312-.016.406.351.08.549.326.549.591 0 .314-.279.654-.913.771-.383.07-.421.445-.016.477.344.026.479.146.479.312 0 .466-.826 1.333-2.426 1.333-2.501.001-3.407-1.499-6.751-1.499v-4.964c1.766-.271 3.484-.817 4.344-3.802.239-.831.39-1.734 1.187-1.734 1.188 0 1.297 2.562.844 4.391.656.344 1.875.468 2.489.442.886-.036 1.136.409 1.136.745 0 .505-.416.675-.677.755-.304.094-.444.404-.015.461z" /></svg>}</button>
 
                             <span>{likesCount} {likesCount > 1 || likesCount === 0 ? "Likes" : "Like"}</span>
-                            {showLoginMessageLike && <div>Please log in or sign up to like this post.</div>}
+                            {showLoginMessageLike && <div>Please <NavHashLink className={'linkbtn'} to="/#signin">log in or sign up</NavHashLink> to like this post.</div>}
                         </div>
                         <hr />
                         <div>
@@ -361,7 +363,8 @@ function Workpage() {
                             {offlineError && (
                                 <div className="error-message">Failed to get document because the client is offline. Please check your internet connection and try again.</div>
                             )}
-                            {showLoginMessageComment && <span> Please log in or sign up to comment on this post.</span>}
+                            &nbsp;  &nbsp; 
+                            {showLoginMessageComment && <span> Please <NavHashLink className={'linkbtn'} to="/#signin">log in or sign up</NavHashLink> to comment on this post.</span>}
                         </div>
                         <br />
                         <br />
