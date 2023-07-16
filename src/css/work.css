@@ -104,7 +104,7 @@
 
 .more_work a,
 .more_work_2 a {
-    color: var(--colour3);
+    color: var(--colour2);
 }
 
 .more_work a:hover,
@@ -155,7 +155,7 @@
 }
 
 .more_fillwhite {
-    fill: var(--colour3);
+    fill: var(--colour2);
 }
 
 /* css for picture modal carosel /////////////////////////////////////////////////////////////////////////////////////////*/

@@ -32,6 +32,8 @@ function Workpage() {
     const [offlineError, setOfflineError] = useState(false);
     const [showLoginMessageLike, setShowLoginMessageLike] = useState(false);
     const [showLoginMessageComment, setShowLoginMessageComment] = useState(false);
+    const [fetchError, setFetchError] = useState('');
+
 
 
     const formatDate = (dateString) => {
@@ -47,62 +49,73 @@ function Workpage() {
     }, [url]);
 
     useEffect(() => {
-        const fetchLikesAndComments = async () => {
-            try {
-                const likesDocRef = doc(db, "likes", url);
-                const likesDocSnap = await getDoc(likesDocRef);
+        try {
+            const fetchLikesAndComments = async () => {
+                try {
+                    const likesDocRef = doc(db, "likes", url);
+                    const likesDocSnap = await getDoc(likesDocRef);
 
-                if (likesDocSnap.exists()) {
-                    const likesData = likesDocSnap.data();
-                    const likedByUser = (likesData.likedby && likesData.likedby[auth.currentUser?.uid]) || false;
-                    const likesCount = likesData.totallikes || 0;
+                    if (likesDocSnap.exists()) {
+                        const likesData = likesDocSnap.data();
+                        const likedByUser = (likesData.likedby && likesData.likedby[auth.currentUser?.uid]) || false;
+                        const likesCount = likesData.totallikes || 0;
 
-                    setLikedByUser(likedByUser);
-                    setLikesCount(likesCount);
-                } else {
-                    setLikedByUser(false);
-                    setLikesCount(0);
+                        setLikedByUser(likedByUser);
+                        setLikesCount(likesCount);
+                    } else {
+                        setLikedByUser(false);
+                        setLikesCount(0);
+                    }
+
+                    const commentsDocRef = doc(db, "comments", url);
+                    const commentsDocSnap = await getDoc(commentsDocRef);
+                    if (commentsDocSnap.exists()) {
+                        const commentsData = commentsDocSnap.data();
+                        const comments = commentsData.comments || [];
+
+                        // Fetch user data for each comment
+                        const commentsWithUserDataPromises = comments.map(async (comment) => {
+                            const userDocRef = doc(db, "users", comment.user);
+                            const userDocSnap = await getDoc(userDocRef);
+                            if (userDocSnap.exists()) {
+                                const userData = userDocSnap.data();
+                                return {
+                                    ...comment,
+                                    userName: userData.userName,
+                                };
+                            }
+                            return comment;
+                        });
+
+                        const commentsWithUserData = await Promise.all(commentsWithUserDataPromises);
+
+                        setComments(commentsWithUserData);
+                    } else {
+                        setComments([]);
+                    }
+                } catch (error) {
+                    if (error.code === 'offline') {
+                        setOfflineError(true);
+                    } else {
+                        // Handle other errors
+                        console.log('Error:', error);
+                    }
                 }
-
-                const commentsDocRef = doc(db, "comments", url);
-                const commentsDocSnap = await getDoc(commentsDocRef);
-                if (commentsDocSnap.exists()) {
-                    const commentsData = commentsDocSnap.data();
-                    const comments = commentsData.comments || [];
-
-                    // Fetch user data for each comment
-                    const commentsWithUserDataPromises = comments.map(async (comment) => {
-                        const userDocRef = doc(db, "users", comment.user);
-                        const userDocSnap = await getDoc(userDocRef);
-                        if (userDocSnap.exists()) {
-                            const userData = userDocSnap.data();
-                            return {
-                                ...comment,
-                                userName: userData.userName,
-                            };
-                        }
-                        return comment;
-                    });
-
-                    const commentsWithUserData = await Promise.all(commentsWithUserDataPromises);
-
-                    setComments(commentsWithUserData);
-                } else {
-                    setComments([]);
-                }
-            } catch (error) {
-                if (error.code === 'offline') {
-                    setOfflineError(true);
-                } else {
-                    // Handle other errors
-                    console.log('Error:', error);
-                }
+            };
+            setFetchError('');
+            fetchLikesAndComments();
+            setShowLoginMessageLike(false);
+            setShowLoginMessageComment(false);
+        } catch (error) {
+            if (error.code === 'offline') {
+                setOfflineError(true);
+            } else {
+                // Handle other errors
+                console.log('Error:', error);
+                // Set the fetch error message
+                setFetchError('Failed to fetch comments. Please try again later.');
             }
-        };
-
-        fetchLikesAndComments();
-        setShowLoginMessageLike(false);
-        setShowLoginMessageComment(false);
+        }
     }, [url]);
 
     const handleLikeClick = async () => {
@@ -363,8 +376,8 @@ function Workpage() {
                             {offlineError && (
                                 <div className="error-message">Failed to get document because the client is offline. Please check your internet connection and try again.</div>
                             )}
-                            &nbsp;  &nbsp; 
-                            {showLoginMessageComment && <span> Please <NavHashLink className={'linkbtn'} to="/#signin">log in or sign up</NavHashLink> to comment on this post.</span>}
+                            &nbsp;  &nbsp;
+                            {showLoginMessageComment && <span> Please <NavHashLink className={'linkbtn'} to="/#signin">log in or sign up</NavHashLink> to comment on this post.</span>} {fetchError && <span className="error-message">{fetchError}</span>}
                         </div>
                         <br />
                         <br />
@@ -372,7 +385,7 @@ function Workpage() {
 
                 <Imagebottom src={bottomimg} />
 
-                <div className="grey grid_container_25">
+                <div className="grid_container_25">
                     <div className="colstart2 colend25">
                         <div className="more_work">
                             <section className="more_worklist">

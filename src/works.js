@@ -11,18 +11,50 @@ import Work11 from "./works/work11";
 import Work12 from "./works/work12";
 import Work13 from "./works/work13";
 import Work14 from "./works/work14";
+import Work15 from "./works/work15";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
 //total no of Works == x
-const x = 13;
+const x = 14;
 
 export const data = [
+  {
+    index: x - 14,
+    img: "/images/works/gp/topimg2.jpg",
+    title: "Gradation Project - Arvind Ltd.",
+    category: "Apparel",
+    topimg: "/images/works/gp/topimg2.jpg",
+    bottomimg: "/images/works/gp/bottomimg.jpg",
+    description: ""
+    // (
+    //   <>
+    //     {`"Tarang" is a collaborative home collection designed by Textile Design students of NIFT Gandhinagar and crafted by skilful Bandhani Artisans of Jamnagar, Gujrat. This collection depicts the mischievous nature of waves by randomly arranging bandhani dots on a piece of fabric. 
+    // `}
+    //     <br /><br /> 
+    //     {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`}
+    //   </>
+    // ),
+    ,
+    body: <Work15 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        {/* <Mark to="#artisans" title="Artisans" />
+        <Mark to="#product_board" title="Poduct Board" />
+        <Mark to="#theme" title="Theme" />
+        <Mark to="#concepts" title="Concepts" />
+        <Mark to="#final_collection" title="Final Collection" />
+        <Mark to="#student_profiles" title="Student Profiles" /> */}
+
+      </>
+    ),
+  },
   {
     index: x - 13,
     img: "/images/works/tarang/topimg2.jpg",
     title: "Tarang - Bandhani Collection",
-    category: "Craft Design",
+    category: "Home Furnishing",
     topimg: "/images/works/tarang/topimg2.jpg",
     bottomimg: "/images/works/tarang/img (56).jpg",
     description: (
