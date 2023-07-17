@@ -40,12 +40,15 @@ export const data = [
     bookmarks: (
       <>
         <Mark to="#overview" title="Overview" />
-        {/* <Mark to="#artisans" title="Artisans" />
-        <Mark to="#product_board" title="Poduct Board" />
-        <Mark to="#theme" title="Theme" />
-        <Mark to="#concepts" title="Concepts" />
-        <Mark to="#final_collection" title="Final Collection" />
-        <Mark to="#student_profiles" title="Student Profiles" /> */}
+        <Mark to="#certificate" title="Certificate" />
+        {/* <Mark to="#contents" title="Contents" /> */}
+        <Mark to="#arvind" title="Arvind" />
+        <Mark to="#collection_one" title="Collection 1" />
+        <Mark to="#swatches_one" title="Swatches" />
+        <Mark to="#collection_two" title="Collection 2" />
+        <Mark to="#swatches_two" title="Swatches" />
+        <Mark to="#shirting_cads" title="Shirting CADs" />
+
 
       </>
     ),
