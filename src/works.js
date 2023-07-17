@@ -26,16 +26,14 @@ export const data = [
     category: "Apparel",
     topimg: "/images/works/gp/topimg2.jpg",
     bottomimg: "/images/works/gp/bottomimg.jpg",
-    description: ""
-    // (
-    //   <>
-    //     {`"Tarang" is a collaborative home collection designed by Textile Design students of NIFT Gandhinagar and crafted by skilful Bandhani Artisans of Jamnagar, Gujrat. This collection depicts the mischievous nature of waves by randomly arranging bandhani dots on a piece of fabric. 
-    // `}
-    //     <br /><br /> 
-    //     {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`}
-    //   </>
-    // ),
-    ,
+    description: 
+    (
+      <>
+        {`Here is a complete report of the 4-month internship/Graduation Project sponsored by Arvind Ltd, Santej.`}
+        {/* <br /><br /> 
+        {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`} */}
+      </>
+    ),
     body: <Work15 />,
     bookmarks: (
       <>
