@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Home';
 // import Projects from './Projects';
 // import About from './About';
@@ -32,6 +32,9 @@ function App() {
         {/* <Route path='/activity' element={<Activity/>}/> */}
 
         {/* <Route path='/about' element={<About/>}/> */}
+
+        <Route path="/thetextilelibrary/*" element={<Navigate to="/thetextilelibrary" replace />} />
+
         <Route path="*" element={<Error />} />
     
 
