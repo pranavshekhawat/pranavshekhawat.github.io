@@ -19,6 +19,14 @@ function App() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  useEffect(() => {
+    // Check if the URL starts with "/thetextilelibrary"
+    if (window.location.pathname.startsWith('/thetextilelibrary')) {
+      // Redirect to the corresponding route in the textile library website
+      window.location.href = `https://pranavshekhawat.github.io${window.location.pathname}`;
+    }
+  }, []);
+
   return (
     <>
 
