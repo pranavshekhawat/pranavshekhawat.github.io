@@ -28,7 +28,8 @@ function Contact() {
                         </span>
                         <br />
                         {window.innerWidth < 768 && <br /> }
-                        <abbr title="Telephone number"> Tel: +91-9460636040 </abbr> &nbsp; {window.innerWidth > 768 && '|' } &nbsp;  {window.innerWidth < 768 && <br /> }{window.innerWidth > 768 && 'Email:' } pranavshekhawat.nift@gmail.com, pranavshekhawat2@gmail.com
+                        {/* <abbr title="Telephone number"> Tel: +91-9460636040 </abbr> &nbsp; {window.innerWidth > 768 && '|' } &nbsp;  {window.innerWidth < 768 && <br /> }{window.innerWidth > 768 && 'Email:' }  */}
+                         pranavshekhawat.nift@gmail.com, pranavshekhawat2@gmail.com
                     </div>
 
                 </div>
