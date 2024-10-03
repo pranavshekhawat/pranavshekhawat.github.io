@@ -13,7 +13,7 @@ import { TabTitle } from './utils/GeneralFunctions';
 
 const data = [{
     name: 'Pranav Shekhawat',
-    img: ["/images/about/aboutimg22.jpg", "/images/about/aboutimg3.jpg", "/images/about/aboutimg1.jpg"],
+    img: ["/images/about/newaboutimg.jpg","/images/about/aboutimg22.jpg", "/images/about/aboutimg3.jpg", "/images/about/aboutimg1.jpg"],
 }]
 
 
