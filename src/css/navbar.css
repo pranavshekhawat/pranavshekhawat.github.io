@@ -10,6 +10,9 @@
   height: 80px;
   /* background: linear-gradient(0deg, rgba(34,193,195,0) 0%, var(--colour3) 100%); */
   background-color: var(--colour3);
+  /* background-color: #000dff00; */
+
+
 }
 
 .navbar_container {

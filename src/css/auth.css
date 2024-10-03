@@ -15,19 +15,21 @@
 .inputstyle {
     width: 25%;
  border: none;
- background: none;
+ color: var(--colour2);
+    background-color: var(--colour3);
  outline: none;
- box-shadow: 0px 1px 0px var(--colour3);
+ box-shadow: 0px 1px 0px var(--colour2);
 }
 
 .inputstyle:focus {
+    /* color: var(--colour4); */
     box-shadow: 0px 1px 0px var(--colour1);
 }
 
 .bigbtn {
  padding: .5rem 1rem;
  border: none;
- background-color: var(--colour3);
+ background-color: var(--colour5);
 }
 
 
@@ -64,6 +66,8 @@
     }
 
     .newnameinput {
+        color: var(--colour2);
+    background-color: var(--colour4);
         width: 100%;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -91,6 +95,8 @@
 
 
 .newnameinput {
+    color: var(--colour2);
+    background-color: var(--colour4);
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;

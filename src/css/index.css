@@ -7,11 +7,13 @@
 :root{
     color-scheme: dark;
    
-    --colour1: #ff5000;
-    --colour2:  #f6f6f6;
-    --colour3: #0a0a0a ;
-    --colour4: #171717;
-    --colour5: #ffffff;
+    /* --colour1: #ff5000; */
+    --colour1: #000dff;
+
+    --colour4:  #f6f6f6;
+    --colour5: #0a0a0a ;
+    --colour2: #171717;
+    --colour3: #ffffff;
 
 
 
@@ -85,20 +87,20 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.light {
+/* .light {
     background-color: var(--colour5);
     color: #0a0a0a;
-}
+} */
 
 .dark {
     background-color: var(--colour3);
     color: var(--colour2);
 }
 
-.grey {
+/* .grey {
     background-color: var(--colour2);
     color: var(--colour3);
-}
+} */
 
 .colstart3 {
     grid-column: 3;
@@ -175,7 +177,7 @@ body {
 
 .text a {
     
-    color:var(--colour4) ;
+    /* color:var(--colour4) ; */
     text-decoration: none;
 
     width: 100%;
@@ -185,7 +187,8 @@ body {
 
 .text a:hover {
     
-    color:var(--colour4) ;
+    color:var(--colour1) ;
+    /* color:var(--colour4) ; */
     text-decoration: underline;
 
     width: 100%;

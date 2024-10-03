@@ -5,10 +5,10 @@
 }
 
 .heading {
-  font-family : 'Times New Roman', Times, serif;
+  font-family : 'Solare Medium','SolareItalic Medium','Times New Roman', Times, serif;
   /* font-family: "Helvetica Neue LT Pro Bd"; */
   /* color: var(--colour2); */
-  font-size: 5.8rem;
+  font-size: 8.8rem;
   grid-column: 1;
   grid-column-end: 11;
   display: block;

@@ -5,8 +5,9 @@
   grid-column-start: 3;
   grid-column-end: 24;
 
-  background-color: var(--colour5);
-    color: var(--colour3);
+  background-color: var(--colour3);
+  /* background-color: var(--colour5); */
+    /* color: var(--colour3); */
 }
 
 .des_text {

@@ -321,7 +321,7 @@ function Workpage() {
 
                 <section className="grey">{body}</section>
 
-                <div className=" grid_container_25">
+                <div className=" grid_container_25 dark">
                     <div className="colstart3 colend24">
 
                         <div className='like-panel' >

@@ -78,3 +78,113 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Solare Black';
+    src: url('../assets/fonts/Solare-Black.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Solare BlackIntense';
+    src: url('../assets/fonts/Solare-BlackIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Solare Fine';
+    src: url('../assets/fonts/Solare-Fine.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare FineIntense';
+    src: url('../assets/fonts/Solare-FineIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare Medium';
+    src: url('../assets/fonts/Solare-Medium.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare MediumIntense';
+    src: url('../assets/fonts/Solare-MediumIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare Regular';
+    src: url('../assets/fonts/Solare-Regular.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare RegularIntense';
+    src: url('../assets/fonts/Solare-RegularIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare VF';
+    src: url('../assets/fonts/SolareVF.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'SolareItalic Black';
+    src: url('../assets/fonts/SolareItalic-Black.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Fine';
+    src: url('../assets/fonts/SolareItalic-Fine.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Medium';
+    src: url('../assets/fonts/SolareItalic-Medium.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Regular';
+    src: url('../assets/fonts/SolareItalic-Regular.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
