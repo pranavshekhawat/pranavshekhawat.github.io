@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6d1b905.css",
-    "main.js": "/static/js/main.11eaa869.js",
+    "main.css": "/static/css/main.15c9f6e4.css",
+    "main.js": "/static/js/main.c819a6cb.js",
+    "static/media/SolareVF.woff2": "/static/media/SolareVF.03bff83339eec4875a71.woff2",
     "static/media/HelveticaNeueLTPro-Th.ttf": "/static/media/HelveticaNeueLTPro-Th.a90d822cdf4397914d8b.ttf",
     "static/media/HelveticaNeueLTPro-Lt.ttf": "/static/media/HelveticaNeueLTPro-Lt.3dea670a15b51846f828.ttf",
     "static/media/HelveticaNeueLTPro-Blk.ttf": "/static/media/HelveticaNeueLTPro-Blk.cd7ea3649863b484a7a4.ttf",
@@ -9,9 +10,21 @@
     "static/media/HelveticaNeueLTPro-Bd.ttf": "/static/media/HelveticaNeueLTPro-Bd.1b89f1fe5623d4c55da3.ttf",
     "static/media/HelveticaNeueLTPro-UltLt.ttf": "/static/media/HelveticaNeueLTPro-UltLt.60b888d6ef6721b5177f.ttf",
     "static/media/HelveticaNeueLTPro-Roman.ttf": "/static/media/HelveticaNeueLTPro-Roman.2e6497da911b65802ff8.ttf",
+    "static/media/Solare-MediumIntense.woff2": "/static/media/Solare-MediumIntense.a79ad55b2b1f8b035f90.woff2",
+    "static/media/Solare-RegularIntense.woff2": "/static/media/Solare-RegularIntense.35a6a87e89dd9e2c414b.woff2",
+    "static/media/Solare-BlackIntense.woff2": "/static/media/Solare-BlackIntense.769549810ab007a135aa.woff2",
+    "static/media/Solare-FineIntense.woff2": "/static/media/Solare-FineIntense.981be9b74ec1271489e8.woff2",
     "static/media/HelveticaNeueLTPro-Md.ttf": "/static/media/HelveticaNeueLTPro-Md.c3dd55de4d013cf34f3a.ttf",
+    "static/media/Solare-Medium.woff2": "/static/media/Solare-Medium.d4e573a3633d359694fb.woff2",
+    "static/media/Solare-Regular.woff2": "/static/media/Solare-Regular.dd442e4ac90938ef571a.woff2",
+    "static/media/Solare-Black.woff2": "/static/media/Solare-Black.beca8dd35b5646b376b8.woff2",
+    "static/media/Solare-Fine.woff2": "/static/media/Solare-Fine.512382c6c69af382e931.woff2",
+    "static/media/SolareItalic-Regular.woff2": "/static/media/SolareItalic-Regular.a35347e536bceb547f13.woff2",
+    "static/media/SolareItalic-Medium.woff2": "/static/media/SolareItalic-Medium.42792ac55ee81864fb62.woff2",
+    "static/media/SolareItalic-Fine.woff2": "/static/media/SolareItalic-Fine.00db76dea285e9eb0597.woff2",
     "static/media/HelveticaNeueLTPro-Th.woff": "/static/media/HelveticaNeueLTPro-Th.bb113334a4bad0ab4d14.woff",
     "static/media/HelveticaNeueLTPro-Lt.woff": "/static/media/HelveticaNeueLTPro-Lt.ae23e607eafa8c4401fc.woff",
+    "static/media/SolareItalic-Black.woff2": "/static/media/SolareItalic-Black.a4f351b57d45cdfa7922.woff2",
     "static/media/HelveticaNeueLTPro-Blk.woff": "/static/media/HelveticaNeueLTPro-Blk.ecd76b66ff4a0f16a280.woff",
     "static/media/HelveticaNeueLTPro-Hv.woff": "/static/media/HelveticaNeueLTPro-Hv.08a9904ab4bcfe970ab3.woff",
     "static/media/HelveticaNeueLTPro-Md.woff": "/static/media/HelveticaNeueLTPro-Md.d2f8387b7c3b541438f0.woff",
@@ -28,11 +41,11 @@
     "static/media/HelveticaNeueLTPro-Roman.woff2": "/static/media/HelveticaNeueLTPro-Roman.6508a7e05db07ca2598d.woff2",
     "index.html": "/index.html",
     "static/media/orange_down_arrow.svg": "/static/media/orange_down_arrow.1171ef0be123766059e7.svg",
-    "main.c6d1b905.css.map": "/static/css/main.c6d1b905.css.map",
-    "main.11eaa869.js.map": "/static/js/main.11eaa869.js.map"
+    "main.15c9f6e4.css.map": "/static/css/main.15c9f6e4.css.map",
+    "main.c819a6cb.js.map": "/static/js/main.c819a6cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d1b905.css",
-    "static/js/main.11eaa869.js"
+    "static/css/main.15c9f6e4.css",
+    "static/js/main.c819a6cb.js"
   ]
 }
