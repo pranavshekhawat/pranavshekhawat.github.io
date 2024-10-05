@@ -3,8 +3,8 @@
     /* padding: 10rem; */
     display: grid;
     gap: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -20,8 +20,8 @@
 
 .title {
     /* font-family: "Helvetica Neue LT Pro Roman"; */
-    font-family :'SolareItalic Medium','Helvetica Neue LT Pro Roman', Times, serif;
-  /* font-family : 'Times New Roman', Times, serif; */
+    font-family: 'SolareItalic Medium', 'Helvetica Neue LT Pro Roman', Times, serif;
+    /* font-family : 'Times New Roman', Times, serif; */
 
     font-size: 2.5rem;
     margin: 0;
@@ -49,6 +49,16 @@
     /* height: 100%; */
 }
 
+@media screen and (max-width: 768px) {
+    .work img {
+        width: 100%;
+        object-fit: cover;
+        /* height: 25rem; */
+        height: 22rem;
+        /* height: 100%; */
+    }
+}
+
 .arrow_right {
     fill: var(--colour2);
     display: block;
@@ -68,8 +78,8 @@
     /* padding: 10rem; */
     display: grid;
     gap: 32rem;
-    padding-top: 12rem;
-    padding-bottom: 3rem;
+    padding-top: 8rem;
+    /* padding-bottom: 3rem; */
 }
 
 @media screen and (min-width: 768px) {
@@ -77,17 +87,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-@media screen and (max-width: 768px) {
-    .more_worklist {
-        /* background-color: rgb(17, 17, 17); */
-        /* padding: 10rem; */
-        display: grid;
-        gap: 3rem;
-        padding-top: 4rem;
-        padding-bottom: 3rem;
-    }
-  }
 
 .more_work img,
 .more_work_2 img {
@@ -97,6 +96,30 @@
     height: 16rem;
     /* height: 100%; */
 }
+
+@media screen and (max-width: 768px) {
+    .more_worklist {
+        /* background-color: rgb(17, 17, 17); */
+        /* padding: 10rem; */
+        display: grid;
+        gap: 3rem;
+        padding-top: 4rem;
+        /* padding-bottom: 3rem; */
+    }
+
+    
+    .more_work img,
+    .more_work_2 img {
+        width: 100%;
+        object-fit: cover;
+        /* height: 25rem; */
+        height: 22rem;
+        /* height: 100%; */
+    }
+
+}
+
+
 
 .more_work,
 .more_work_2 {
@@ -123,8 +146,10 @@
 }
 
 .more_title {
-    font-family: "Helvetica Neue LT Pro Roman";
-    font-size: 1.5rem;
+    /* font-family: "Helvetica Neue LT Pro Roman"; */
+
+    font-family: 'SolareItalic Medium', 'Helvetica Neue LT Pro Roman', Times, serif;
+    font-size: 2.5rem;
     margin: 0;
     text-decoration: none;
 }

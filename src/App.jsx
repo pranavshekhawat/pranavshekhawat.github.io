@@ -7,6 +7,8 @@ import Home from './Home';
 import Error from './Error';
 import Footer from './Footer';
 import Workpage from './Workpage';
+import Lifestyle from './Lifestyle';
+import Aceturtle from './Aceturtle';
 
 import ReactGA from 'react-ga';
 
@@ -27,13 +29,18 @@ function App() {
         <Route path='/' element={<Home />} />
         {/* <Route path='/work' element={<Projects />}/> */}
 
-        <Route path='/projects/:url' element={<Workpage />} />
+        <Route path='/projects/:url' element={<Workpage />} />  
+
+        <Route path='/projects/lifestyle' element={<Lifestyle />} />
+        <Route path='/projects/ace_turtle' element={<Aceturtle />} />  
 
         {/* <Route path='/activity' element={<Activity/>}/> */}
 
         {/* <Route path='/about' element={<About/>}/> */}
 
         {/* <Route path="/thetextilelibrary/*" element={<Navigate to="/thetextilelibrary" replace />} /> */}
+
+
 
         <Route path="*" element={<Error />} />
     

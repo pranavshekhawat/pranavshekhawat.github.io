@@ -19,8 +19,8 @@
 }
 
 .main_about_container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     gap: 3rem;
 
 }
@@ -28,8 +28,8 @@
 
 @media screen and (max-width: 768px) {
     .main_about_container {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      /* padding-top: 2rem; */
+      /* padding-bottom: 2rem; */
       gap: 3rem;
       display: flex;
       flex-direction: column;
@@ -81,13 +81,7 @@
     align-items: center;
   }
   
-  @media screen and (max-width: 768px) {
-    .about img {
-      width: 100%;
-      object-fit: cover;
-      height: auto;
-    }
-  }
+
 
 .about_list {
     /* display: grid; */
@@ -101,6 +95,15 @@
     object-fit: cover;
     height: 28rem;
 }
+
+@media screen and (max-width: 768px) {
+    .about img {
+      width: 100%;
+      object-fit: cover;
+      /* height: auto; */
+      height: 22rem;
+    }
+  }
 
 .about_img_btn {
     padding: 10px;

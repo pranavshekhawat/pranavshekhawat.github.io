@@ -1,11 +1,13 @@
-.contact_main {
+/* .contact_main {
   background-color: var(--colour4);
-}
+} */
 
 .contact_items {
   grid-column-start: 2;
   grid-column-end: 25;
   display: inline-block;
+  /* padding-top: 1rem; */
+  /* padding-bottom: 1rem; */
 }
 
 .contact_title {
@@ -18,7 +20,7 @@
 
 .contact_text {
   float: left;
-  margin: 4vw 0vw 4vw 0vw;
+  /* margin: 4vw 0vw 4vw 0vw; */
 }
 
 .contact_text div {
@@ -68,8 +70,8 @@
     grid-column-start: 2;
     grid-column-end: 25;
     display: inline-block;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    /* padding-top: 2rem; */
+    /* padding-bottom: 3rem; */
   }
 
 }

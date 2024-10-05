@@ -48,8 +48,8 @@
     grid-column-start: 3;
     grid-column-end: 24;
   
-    background-color: var(--colour2);
-      color: var(--colour3);
+    background-color: var(--colour3);
+      /* color: var(--colour3); */
   }
 
   

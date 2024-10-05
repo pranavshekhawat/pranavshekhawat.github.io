@@ -257,7 +257,7 @@ export const Auth = () => {
     return (
       <div>
         {/* <h1>Login</h1> */}
-        <br />
+        {/* <br /> */}
         New user?{" "}
         <button
           className="linkbtn"
@@ -311,7 +311,7 @@ export const Auth = () => {
           </svg>{" "}
           Continue with Google
         </button>
-        <br />
+        {/* <br /> */}
       </div>
     );
   };
@@ -392,10 +392,10 @@ export const Auth = () => {
   return (
     <div className=" grid_container_25">
       <div className="colstart2 colend25">
-        <br />
+        {/* <br /> */}
 
         {signedIn ? (
-          <div>
+          <div className="signinitems">
             <br />
 
             <h1>Welcome, {userName || "User"}!</h1>
@@ -442,7 +442,7 @@ export const Auth = () => {
             )}
           </div>
         ) : (
-          <div>
+          <div className="signinitems">
             {authOption === "signup" && <div>{renderSignUpForm()}</div>}
             {authOption === "login" && (
               <div>
@@ -463,8 +463,8 @@ export const Auth = () => {
             )}
           </div>
         )}
-        <br />
-        <br />
+        {/* <br /> */}
+        {/* <br /> */}
       </div>
     </div>
   );

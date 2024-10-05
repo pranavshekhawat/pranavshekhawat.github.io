@@ -10,19 +10,27 @@
   /* color: var(--colour2); */
   font-size: 8.8rem;
   grid-column: 1;
-  grid-column-end: 11;
+  grid-column-end: 25;
   display: block;
   padding-left: 4vw;
 }
 
 @media screen and (max-width: 768px) {
+  .heading_bar {
+    background-color: var(--colour3);
+    margin-top: 4vw;
+    padding-top: 10vw;
+    padding-bottom:0vw;
+  }
   .heading {
-    font-family : 'Times New Roman', Times, serif;
+    /* font-family : 'Times New Roman', Times, serif; */
+  font-family : 'Solare Medium','SolareItalic Medium','Times New Roman', Times, serif;
     /* font-family: "Helvetica Neue LT Pro Bd"; */
     /* color: var(--colour2); */
-    font-size: 4rem;
+    font-size: 4.4rem;
+    /* text-align: center; */
     grid-column: 1;
-    grid-column-end: 11;
+    grid-column-end: 25;
     display: block;
     padding-left: 4vw;
   }

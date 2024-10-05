@@ -12,7 +12,7 @@ function Contact() {
 
     return (
         <>
-            <div className='contact_main grid_container_25'>
+            <div className='grid_container_25'>
                 <div className='contact_items'>
                     {/* <div className='contact_title'>Contact Me</div> */}
 
