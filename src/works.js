@@ -13,7 +13,7 @@ import Work13 from "./works/work13";
 import Work14 from "./works/work14";
 import Work15 from "./works/work15";
 import Work16 from "./works/work16";
-import Work17 from "./works/work178";
+import Work17 from "./works/work17";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
