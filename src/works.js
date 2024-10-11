@@ -12,6 +12,8 @@ import Work12 from "./works/work12";
 import Work13 from "./works/work13";
 import Work14 from "./works/work14";
 import Work15 from "./works/work15";
+import Work16 from "./works/work16";
+import Work17 from "./works/work178";
 
 import Mark from "./Components/Bookmarkbar/mark";
 
@@ -19,8 +21,41 @@ import Mark from "./Components/Bookmarkbar/mark";
 const x = 14;
 
 export const data = [
+
   {
-    index: x - 14,
+    index: x - 16,
+    img: "/images/works/lifestyle/topimg.png",
+    title: "Lifestyle International Pvt. Ltd.",
+    category: "Work Experience",
+    topimg: "/images/works/lifestyle/topimg.png",
+    bottomimg: "/images/works/lifestyle/topimg.png",
+    description: (
+      <>
+
+          {`During my one-year tenure at Lifestyle International Pvt. Ltd., I had the opportunity to design shirts for the brand’s private labels. My work focused on creating a range of shirts which included yarn-dyed shirts and all-over printed (AOPs) shirts for AW24 and SS25. 
+    `}
+          <br /><br />
+          {` For the Autumn/Winter 2024 season, I developed a collection that reflects the latest trends, combining versatile patterns with a strong emphasis on quality and style. I’m excited to see these designs come to life and eager to share more of my work soon.`}
+      </>
+  ),
+    body: <Work17 />,
+    bookmarks: (
+      <>
+          <Mark to="#overview" title="Overview" />
+          <Mark to="#fameforever" title="Fame Forever" />
+          <Mark to="#denimize" title="Denimize" />
+          <Mark to="#firstteam" title="First Team" />
+          <Mark to="#bossini" title="Bossini" />
+          <Mark to="#forca" title="Forca" />
+          <Mark to="#forcanxt" title="Forca NXT" />
+
+      </>
+  ),
+  },
+
+  
+  {
+    index: x - 15,
     img: "/images/works/gp/topimg2.jpg",
     title: "Gradation Project - Arvind Ltd.",
     category: "Apparel",
@@ -51,6 +86,35 @@ export const data = [
       </>
     ),
   },
+
+  {
+    index: x - 14,
+    img: "/images/works/ar/topimg.png",
+    title: "Enhancing Online Fabric Shopping with AR",
+    category: "Augmented Reality",
+    topimg: "/images/works/ar/topimg.png",
+    bottomimg: "/images/works/ar/topimg.png",
+    description: 
+    (
+      <>
+        {`In collaboration with Pallavi Swain, I explored how Augmented Reality (AR) can enhance the online fabric shopping experiece of customers by visualizing fabric prints and patterns in real-time. We developed an AR filter using Spark AR, which uses target tracking method to project fabric designs onto specific surfaces.`}
+        {/* <br /><br /> 
+        {`It features a range of bed linen and table linen products, including a throw, a bedsheet, pillowcases, cushion covers, a sham, curtains, placemats, a tablecloth, a table runner and napkins.`} */}
+      </>
+    ),
+    body: <Work16 />,
+    bookmarks: (
+      <>
+        <Mark to="#overview" title="Overview" />
+        <Mark to="#whatisar" title="AR" />
+        <Mark to="#howitworks" title="How It Works" />
+        <Mark to="#demoimages" title="Demo Images" />
+
+      
+      </>
+    ),
+  },
+
   {
     index: x - 13,
     img: "/images/works/tarang/topimg2.jpg",
