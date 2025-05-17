@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .like-panel {
     display: flex;
     flex-direction: column;
@@ -106,4 +107,114 @@ color: var(--colour1);
       /* font-size: '14px'; */
     }
 
+=======
+.like-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    /* margin-top: 2vw; */
+  }
+
+
+  .unlike {
+fill: var(--colour1);
+color: var(--colour1);
+  }
+
+  .like-button {
+    
+    transform: scale(3);
+    background: none;
+    border: none;
+    margin-top: -2vw;
+  } 
+
+
+
+  
+
+  .comment {
+    font-style: italic;
+  }
+
+  .commmetedit {
+    color: var(--colour1);
+    background: none;
+    border: none;
+  }
+
+  .commmetdelete {
+    color: var(--colour1);
+    background: none;
+    border: none;
+  }
+
+  .commentsave {
+    color: var(--colour1);
+    background: none;
+    border: none;
+  }
+
+  .editedcomment {
+    color: var(--colour2);
+    background-color: var(--colour4);
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* font-size: '14px'; */
+  }
+
+  .newcomment {
+    color: var(--colour2);
+    background-color: var(--colour4);
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* font-size: '14px'; */
+  }
+
+  .commentsubmit{
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    border: none;
+    background-color:var(--colour5);
+  }
+
+
+  @media screen and (min-width: 768px) {
+
+    .like-button:hover .like circle {
+      fill: var(--colour5);
+    }
+   
+    .like-button:hover .like path {
+      fill: var(--colour1);
+    }
+
+    .commentsubmit:hover {
+      /* cursor: pointer; */
+      background-color: var(--colour1);
+    }
+
+}
+
+  @media screen and (max-width: 768px) {
+
+    .editedcomment {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* font-size: '14px'; */
+    }
+
+    .newcomment {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* font-size: '14px'; */
+    }
+
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
 }

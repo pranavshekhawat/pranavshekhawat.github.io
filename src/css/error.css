@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .error_main {
   height: 80vh;
   overflow: hidden;
@@ -17,3 +18,24 @@
 .error_des {
   font-size: 1re;
 }
+=======
+.error_main {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.error_container {
+  top: 50%;
+  height: 70%;
+  text-align: center;
+  transform: translateY(50%);
+}
+
+.error404 {
+  font-size: 3rem;
+}
+
+.error_des {
+  font-size: 1re;
+}
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5

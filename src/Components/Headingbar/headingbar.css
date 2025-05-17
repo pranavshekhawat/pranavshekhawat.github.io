@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .heading_bar {
   background-color: var(--colour3);
   padding-top: 4vw;
@@ -47,3 +48,54 @@
   top: 50%;
   transform: translateY(50%);
 }
+=======
+.heading_bar {
+  background-color: var(--colour3);
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.heading {
+  font-family : 'Solare Medium','SolareItalic Medium','Times New Roman', Times, serif;
+  /* font-family: "Helvetica Neue LT Pro Bd"; */
+  /* color: var(--colour2); */
+  font-size: 8.8rem;
+  grid-column: 1;
+  grid-column-end: 25;
+  display: block;
+  padding-left: 4vw;
+}
+
+@media screen and (max-width: 768px) {
+  .heading_bar {
+    background-color: var(--colour3);
+    margin-top: 4vw;
+    padding-top: 10vw;
+    padding-bottom:0vw;
+  }
+  .heading {
+    /* font-family : 'Times New Roman', Times, serif; */
+  font-family : 'Solare Medium','SolareItalic Medium','Times New Roman', Times, serif;
+    /* font-family: "Helvetica Neue LT Pro Bd"; */
+    /* color: var(--colour2); */
+    font-size: 4.4rem;
+    /* text-align: center; */
+    grid-column: 1;
+    grid-column-end: 25;
+    display: block;
+    padding-left: 4vw;
+  }
+}
+
+.heading_des {
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 1rem;
+  color: var(--colour2);
+  padding-left: 4vw;
+  grid-column: 13;
+  grid-column-end: 25;
+  display: block;
+  top: 50%;
+  transform: translateY(50%);
+}
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5

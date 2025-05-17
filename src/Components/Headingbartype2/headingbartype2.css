@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .heading_bar_type2 {
   padding-top: 4vw;
   padding-bottom: 4vw;
@@ -38,4 +39,46 @@
 
   }
 
+=======
+.heading_bar_type2 {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.heading_type2 {
+  font-family : 'SolareItalic Regular','Times New Roman', Times, serif;
+  /* color: var(--colour2); */
+  font-size: 5.8rem;
+  grid-column: 1;
+  grid-column-end: 25;
+  display: block;
+  padding-left: 4vw;
+}
+
+.heading_cate {
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 2rem;
+  color: #3b3b3b;
+  padding-left: 4vw;
+  grid-column: 1;
+  grid-column-end: 25;
+  display: block;
+}
+
+@media (max-width: 500px) {
+
+  .heading_type2 {
+    font-size: 3rem;
+    grid-column: 1;
+    grid-column-end: 25;
+    display: block;
+    padding-left: 4vw;
+  }
+  
+  .heading_cate p {
+    font-size: 1.4rem;
+
+  }
+
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar .active {
   color: var(--colour2);
   /* color: var(--colour1); */
@@ -197,3 +198,204 @@
 }
  
 
+=======
+.navbar .active {
+  color: var(--colour2);
+  /* color: var(--colour1); */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+  /* background: linear-gradient(0deg, rgba(34,193,195,0) 0%, var(--colour3) 100%); */
+  background-color: var(--colour3);
+  /* background-color: #000dff00; */
+
+
+}
+
+.navbar_container {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 25;
+}
+
+.nav_items {
+  position: relative;
+  top: 50%;
+  /* transform: translate(0, -50%); */
+  display: block;
+}
+
+.nav_items a {
+  text-decoration: none;
+}
+
+.nav_item_1 {
+  float: left;
+  font-family: "Helvetica Neue LT Pro Lt";
+  font-size: 1.2rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  /* color: var(--colour2); */
+}
+
+.nav_item_2 {
+  float: right;
+  font-family: "Helvetica Neue LT Pro Lt";
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+
+.menu {
+  display: none;
+}
+
+.navmenu {
+  float: right;
+
+}
+
+.navmenu svg{
+  width: 2rem;
+  height: 2rem;
+  fill: var(--colour2);
+  /* transform: scale(2); */
+}
+
+.menu rect {
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.menu .open rect:first-child {
+  transform: rotate(45deg)translate(0px, 3px);
+  transform-origin: center center;
+}
+
+.menu .open rect:last-child {
+  transform: rotate(-45deg)translate(3px, 0px);
+  transform-origin: center center;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav_item_2 {
+    display: none;
+    /* float: right; */
+    /* font-family: "Helvetica Neue LT Pro Lt"; */
+    /* font-size: 1.2rem; */
+    /* letter-spacing: 2px; */
+  }
+
+  .menu {
+    display: block;
+  }
+
+}
+
+
+.menuspan {
+  display: none;
+  overflow: hidden;
+}
+
+
+.menuspan.open {
+  display: grid;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  z-index: 9999;
+  background-color: var(--colour3);
+ transition: max-height 5s ease-in-out;
+}
+
+.menuspan div {
+  display: block;
+  position: relative;
+  justify-content: center;
+  /* justify-self: center; */
+  /* align-items: center; */
+  font-family: "Helvetica Neue LT Pro Lt";
+  font-size: 2rem;
+  letter-spacing: 2px;
+  top: 20%;
+  text-align: center;
+}
+
+.menuspan div span {
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  /* top: 36%; */
+  text-align: center;
+}
+
+
+.nav_item_2 a:hover {
+  color: var(--colour1);
+
+}
+
+.nav_item_2 a {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+.nav_item_2 a:last-of-type {
+  padding-right: 0px;
+
+}
+
+.line {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 32px;
+  background-color: var(--colour2);
+  opacity: 0.2;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.hrline {
+  /* content: ""; */
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: var(--colour2);
+  opacity: 0.2;
+  /* transform: translate(0, -50%); */
+}
+
+.download_cv {
+  color: var(--colour2);
+  /* background-color: var(--colour3); */
+  border: 0;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+}
+
+.download_cv:hover {
+  /* background-color: var(--colour1); */
+  color: var(--colour2);
+
+}
+
+.bookmark_positioner_nav {
+  transform: translateY(-4rem);
+  position: absolute;
+}
+ 
+
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .linkbtn {
  background: none;
  border: none;
@@ -105,4 +106,113 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     /* font-size: '14px'; */
+=======
+.linkbtn {
+ background: none;
+ border: none;
+ color: var(--colour1);
+}
+
+.linkbtn:hover {
+ text-decoration: underline;
+}
+
+.inputtag {
+ font-size: small;
+}
+
+.inputstyle {
+    width: 25%;
+ border: none;
+ color: var(--colour2);
+    background-color: var(--colour3);
+ outline: none;
+ box-shadow: 0px 1px 0px var(--colour2);
+}
+
+.inputstyle:focus {
+    /* color: var(--colour4); */
+    box-shadow: 0px 1px 0px var(--colour1);
+}
+
+.bigbtn {
+ padding: .5rem 1rem;
+ border: none;
+ background-color: var(--colour5);
+}
+
+.signinitems {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+   }
+
+
+@media screen and (min-width: 768px) {
+
+    .bigbtn:hover {
+      /* cursor: pointer; */
+      background-color: var(--colour1);
+    }
+
+} 
+
+@media screen and (max-width: 768px) {
+
+    .linkbtn{
+        text-decoration: underline;
+       }
+
+       .linkbtn:hover {
+        text-decoration: underline;
+       }
+
+    .resetpasswordbtn{
+        text-decoration: underline;
+       }
+
+       .linkbtn:hover {
+        text-decoration: underline;
+       }
+       .inputstyle {
+        width: 100%;
+
+    }
+
+    .newnameinput {
+        color: var(--colour2);
+    background-color: var(--colour4);
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /* font-size: '14px'; */
+      }
+    
+}
+
+
+.googlelogo {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: .5rem;
+}
+
+.resetpasswordbtn {
+    background: none;
+    border: none;
+    color: var(--colour1);
+}
+
+.resetpasswordbtn:hover {
+    text-decoration: underline;
+}
+
+
+.newnameinput {
+    color: var(--colour2);
+    background-color: var(--colour4);
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* font-size: '14px'; */
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
   }

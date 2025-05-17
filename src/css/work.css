@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .worklist {
     /* background-color: rgb(17, 17, 17); */
     /* padding: 10rem; */
@@ -302,4 +303,310 @@
     .halffull {
         width: 100%;
     }
+=======
+.worklist {
+    /* background-color: rgb(17, 17, 17); */
+    /* padding: 10rem; */
+    display: grid;
+    gap: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .worklist {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.plate {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+.title {
+    /* font-family: "Helvetica Neue LT Pro Roman"; */
+    font-family: 'SolareItalic Medium', 'Helvetica Neue LT Pro Roman', Times, serif;
+    /* font-family : 'Times New Roman', Times, serif; */
+
+    font-size: 2.5rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+
+.category {
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 0.86rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.work_img_div {
+    text-align: center;
+}
+
+.work img {
+    width: 100%;
+    object-fit: cover;
+    /* height: 25rem; */
+    height: 24rem;
+    /* height: 100%; */
+}
+
+@media screen and (max-width: 768px) {
+    .work img {
+        width: 100%;
+        object-fit: cover;
+        /* height: 25rem; */
+        height: 22rem;
+        /* height: 100%; */
+    }
+}
+
+.arrow_right {
+    fill: var(--colour2);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.work {
+    height: 100%;
+}
+
+
+/* more css ////////////////////////////////////////////////////////////////////////// */
+
+.more_worklist {
+    /* background-color: rgb(17, 17, 17); */
+    /* padding: 10rem; */
+    display: grid;
+    gap: 32rem;
+    padding-top: 8rem;
+    /* padding-bottom: 3rem; */
+}
+
+@media screen and (min-width: 768px) {
+    .more_worklist {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.more_work img,
+.more_work_2 img {
+    width: 100%;
+    object-fit: cover;
+    /* height: 25rem; */
+    height: 16rem;
+    /* height: 100%; */
+}
+
+@media screen and (max-width: 768px) {
+    .more_worklist {
+        /* background-color: rgb(17, 17, 17); */
+        /* padding: 10rem; */
+        display: grid;
+        gap: 3rem;
+        padding-top: 4rem;
+        /* padding-bottom: 3rem; */
+    }
+
+    
+    .more_work img,
+    .more_work_2 img {
+        width: 100%;
+        object-fit: cover;
+        /* height: 25rem; */
+        height: 22rem;
+        /* height: 100%; */
+    }
+
+}
+
+
+
+.more_work,
+.more_work_2 {
+    height: 100%;
+}
+
+.more_work a,
+.more_work_2 a {
+    color: var(--colour2);
+}
+
+.more_work a:hover,
+.more_work_2 a:hover {
+    color: var(--colour1);
+}
+
+.more_work_img_div {
+    text-align: center;
+}
+
+.more_plate {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+.more_title {
+    /* font-family: "Helvetica Neue LT Pro Roman"; */
+
+    font-family: 'SolareItalic Medium', 'Helvetica Neue LT Pro Roman', Times, serif;
+    font-size: 2.5rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.more_category {
+    font-family: "Helvetica Neue LT Pro Roman";
+    font-size: 0.86rem;
+    margin: 0;
+    text-decoration: none;
+
+}
+
+.more_arrow_right {
+    fill: var(--colour2);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.more_arrow_right_2 {
+    fill: var(--colour2);
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.more_fillcolor {
+    fill: var(--colour1);
+}
+
+.more_fillwhite {
+    fill: var(--colour2);
+}
+
+/* css for picture modal carosel /////////////////////////////////////////////////////////////////////////////////////////*/
+
+.picture_span {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}
+
+.picture_span:hover {
+    cursor: pointer;
+}
+
+.picture_span:hover img {
+    border: 4px solid var(--colour1);
+}
+
+.picture_span:hover .about_img_btn {
+
+    background-color: var(--colour1);
+}
+
+.main_picture_container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 3rem;
+
+}
+
+.row {
+    row-gap: 3rem;
+    /* column-gap: 3rem; */
+}
+
+.picture {
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .picture img {
+        width: 100%;
+        object-fit: cover;
+        /* height: 25rem; */
+        height: 15rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .picture img {
+        width: 100%;
+    }
+}
+
+.picture_list {
+    /* display: grid; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.picture img {
+    object-fit: cover;
+    height: 28rem;
+}
+
+.modal-90w {
+    width: 90%;
+}
+
+.modal-100w {
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 85%;
+    margin: 1.75rem auto;
+}
+
+.modal-body,
+.modal-header,
+.modal-content {
+    /* background-color: var(--colour3); */
+    background-color: var(--colour2);
+    color: var(--colour3);
+}
+
+.picture_carousel_img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+/* specify the carousel height here */
+.picture_carousel_image_container {
+    width: 100%;
+    overflow: hidden;
+    height: 30rem;
+    text-align: center;
+}
+
+.picture_img_div img {
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+}
+
+/* end of picture modal carosel */
+
+.halffull {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .halffull {
+        width: 100%;
+    }
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
 }

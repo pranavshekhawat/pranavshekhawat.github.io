@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .bookmarkbar {
   position: sticky;
   top: 80px;
@@ -48,4 +49,56 @@
   font-family: "Helvetica Neue LT Pro Roman";
   font-size: 1rem;
   text-decoration: none;
+=======
+.bookmarkbar {
+  position: sticky;
+  top: 80px;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  height: 55px;
+  background-color: var(--colour5);
+  z-index: 998;
+}
+
+.bookmarkmain {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 25;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+}
+
+.bookmarkmain::-webkit-scrollbar{
+  width: 0;
+  display: none;
+}
+
+
+.bookmarkitem {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+}
+
+.bookmarkitem a {
+  color: var(--colour3);
+  padding: 18px 0px 15px 0px;
+  margin-right: 40px;
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.bookmarkitem a:hover {
+  color: var(--colour1);
+  padding: 18px 0px 15px 0px;
+  border-bottom: 3.5px solid var(--colour1);
+  font-family: "Helvetica Neue LT Pro Roman";
+  font-size: 1rem;
+  text-decoration: none;
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
 }

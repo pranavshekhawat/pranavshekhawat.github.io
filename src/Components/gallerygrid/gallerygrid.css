@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .grid_div {
   width: 100%;
 }
@@ -8,3 +9,15 @@
   height: 100%;
 }
 
+=======
+.grid_div {
+  width: 100%;
+}
+
+.grid_img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+>>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
