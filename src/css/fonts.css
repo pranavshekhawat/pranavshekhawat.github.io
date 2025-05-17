@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Blk';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Blk.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Blk.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Blk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Md';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Md.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Md.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Bd';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Bd.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Bd.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Lt';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Lt.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Lt.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Lt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Hv';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Hv.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Hv.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Hv.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Roman';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Roman.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro UltLt';
+    src: url('../assets/fonts/HelveticaNeueLTPro-UltLt.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-UltLt.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-UltLt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro Th';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Th.woff2') format('woff2'),
+        url('../assets/fonts/HelveticaNeueLTPro-Th.woff') format('woff'),
+        url('../assets/fonts/HelveticaNeueLTPro-Th.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Solare Black';
+    src: url('../assets/fonts/Solare-Black.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Solare BlackIntense';
+    src: url('../assets/fonts/Solare-BlackIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Solare Fine';
+    src: url('../assets/fonts/Solare-Fine.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare FineIntense';
+    src: url('../assets/fonts/Solare-FineIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare Medium';
+    src: url('../assets/fonts/Solare-Medium.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare MediumIntense';
+    src: url('../assets/fonts/Solare-MediumIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare Regular';
+    src: url('../assets/fonts/Solare-Regular.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare RegularIntense';
+    src: url('../assets/fonts/Solare-RegularIntense.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Solare VF';
+    src: url('../assets/fonts/SolareVF.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'SolareItalic Black';
+    src: url('../assets/fonts/SolareItalic-Black.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Fine';
+    src: url('../assets/fonts/SolareItalic-Fine.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Medium';
+    src: url('../assets/fonts/SolareItalic-Medium.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolareItalic Regular';
+    src: url('../assets/fonts/SolareItalic-Regular.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
