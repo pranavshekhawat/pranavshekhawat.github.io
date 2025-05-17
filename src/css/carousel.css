@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 .carousel_img{
     width: 100%;
@@ -23,30 +22,4 @@
     
     }
     
-=======
-
-.carousel_img{
-    width: 100%;
-    height:100%;
-    object-fit: cover;
-}
-
-/* specify the carousel height here */
-.carousel_image_container{
-    width: 100%;
-    overflow: hidden;
-    height: 100vh;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel_image_container{
-        width: 100%;
-        overflow: hidden;
-        height: 50vh;
-        text-align: center;
-    
-    }
-    
->>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
   }

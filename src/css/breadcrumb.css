@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .breadcrumb {
   display: grid;
   grid-template-columns: repeat(25, 1fr);
@@ -48,54 +47,3 @@
   cursor: pointer;
   color: var(--colour1);
 }
-=======
-.breadcrumb {
-  display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  height: 55px;
-  margin-bottom: 0;
-}
-
-.breadmain {
-  display: block;
-  grid-column-start: 2;
-  grid-column-end: 25;
-}
-
-.breaditem {
-  font-family: "Helvetica Neue LT Pro Roman";
-  font-size: 0.85rem;
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  display: block;
-}
-
-.breaditem ul {
-  list-style-type: none;
-  display: flex;
-  padding-left: 0;
-}
-
-.breaditem li::after {
-  content: ">";
-  margin: 0 8px 0 8px;
-}
-
-.breaditem li:last-child:after {
-  content: "";
-}
-
-.link1,
-.link2 {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-.link1:hover,
-.link2:hover {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--colour1);
-}
->>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5

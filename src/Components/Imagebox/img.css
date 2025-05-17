@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .imagetop_box {
   width: 100%;
   height: 50vw;
@@ -41,47 +40,3 @@
   object-fit: cover;
 }
 
-=======
-.imagetop_box {
-  width: 100%;
-  height: 50vw;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .imagetop_box {
-    width: 100%;
-    height: 100vw;
-    overflow: hidden;
-  }
-}
-
-.imagebottom_box {
-  width: 100%;
-  height: 40vw;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .imagebottom_box {
-    width: 100%;
-    height: 100vw;
-    overflow: hidden;
-  }
-}  
-
-.imagetop {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
-
-
-
-.imagebottom {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
->>>>>>> b4b4bc20d0426045ab9c3733a0f91ede447c11c5
