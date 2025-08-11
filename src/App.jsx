@@ -9,6 +9,7 @@ import Footer from './Footer';
 import Workpage from './Workpage';
 import Lifestyle from './Lifestyle';
 import Aceturtle from './Aceturtle';
+import Freeman from './Freeman';
 
 import ReactGA from 'react-ga';
 
@@ -37,6 +38,9 @@ function App() {
         {/* <Route path='/activity' element={<Activity/>}/> */}
 
         {/* <Route path='/about' element={<About/>}/> */}
+
+         <Route path='/freeman' element={<Freeman/>}/>
+
 
         {/* <Route path="/thetextilelibrary/*" element={<Navigate to="/thetextilelibrary" replace />} /> */}
 
