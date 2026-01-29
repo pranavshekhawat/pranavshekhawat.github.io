@@ -1,0 +1,435 @@
+/* Portfolio Title */
+body  {
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+/* Hide system cursor while in play mode */
+body.play-mode-cursor-hidden {
+  cursor: none !important;
+}
+
+.portfolio-title {
+  z-index: 100;
+  position: absolute;
+  top: 60px;
+  right: 50%;
+  left: 50%;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Helvetica Neue LT Pro Lt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* color: #0047AB; */
+  color: #F0EFEA ;
+  font-size: clamp(1rem, 8vw, 1.2rem);
+  letter-spacing: 1rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.2;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .45s cubic-bezier(.2,.8,.2,1), transform .45s cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+
+.portfolio-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* New layout and component styles moved from inline styles in Portfolio.jsx */
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
+  /* background-image removed — set via inline style in JSX */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  box-sizing: border-box;
+  overflow: hidden; /* crop clouds to background bounds */
+}
+
+.clouds-wrapper {
+  position: absolute;
+  left: 0;
+  /* anchor clouds to the bottom of the container so they appear with the lower part of the bg */
+  bottom: 40vh;
+  top: auto;
+  width: 100%;
+  height: 50vh; /* show clouds on lower portion */
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1; /* keep visible but initially translated off-screen */
+  transform: translateY(100vh); /* start translated down; will be animated up to 0 in JS */
+}
+
+.clouds {
+  width: 200%;
+  height: 100%;
+  /* background-image removed — set via inline style in JSX */
+  background-repeat: repeat-x;
+  /* background-size removed; controlled via inline style with CLOUD_SCALE */
+  background-position: 0% 50%;
+  transform: translate3d(0,0,0);
+}
+
+.portfolio-content {
+  width: 100%;
+  max-width: 1100px;
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+}
+
+.portfolio-welcome {
+  margin: 0;
+  font-size: 2.4rem;
+  opacity: 0; /* initial state for GSAP reveal */
+}
+
+.portfolio-button {
+  padding: 0.6rem 1rem;
+}
+
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.loader-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-circle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Start from top */
+}
+
+.loader-circle svg circle.loader-circle-bg {
+  fill: none;
+  stroke: rgba(240, 239, 234, 0.2);
+  stroke-width: 3;
+}
+
+.loader-circle svg circle.loader-circle-progress {
+  fill: none;
+  stroke: #F0EFEA;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-dasharray: 339.292; /* 2 * PI * 54 (radius) */
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.loader-circle span {
+  position: relative;
+  z-index: 1;
+  color: #F0EFEA;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "SolareItalic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright_text{
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-family: "Helvetica Neue LT Pro Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #F0EFEA ;
+opacity: 0;
+  font-size: clamp(0.86rem, 3vw, 0.86rem);
+  text-align: center;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.copyright_text::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(160px, 20vw, 500px);
+  height: clamp(160px, 20vw, 500px);
+  border-radius: 50%;
+  /* center the radial gradient to keep the blur perfectly centered */
+  background: radial-gradient(circle at 50% 50%, rgba(0,71,171,0.42) 0%, rgba(0,71,171,0.25) 28%, rgba(0,71,171,0.09) 55%, transparent 75%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: -1; /* keep behind the copyright text */
+}
+
+/* Social Media Icons */
+.social-icons {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.4rem, 2vw, 1.4rem);
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 100;
+  pointer-events: auto;
+  opacity: 0;
+}
+
+.social-icons::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(160px, 24vw, 500px);
+  height: clamp(160px, 24vw, 500px);
+  border-radius: 50%;
+  /* center the radial gradient to keep the blur perfectly centered */
+  background: radial-gradient(circle at 50% 50%, rgba(0,71,171,0.45) 0%, rgba(0,71,171,0.28) 25%, rgba(0,71,171,0.12) 50%, rgba(0,71,171,0.02) 70%, transparent 85%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: -1; /* keep behind the icons */
+}
+
+.social-icon {
+  display: inline-flex;
+  width: clamp(1rem, 5vw, 2.8rem);
+  border-radius: 50%;
+  color: #F0EFEA ;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 40%;
+  height: 40%;
+  fill: currentColor;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #F0EFEA ;
+
+}
+
+.social-icon:active {
+  transform: scale(0.95);
+}
+
+
+/* Prevent social icons from being scaled down by other hover/active rules while magnetic */
+.social-icon.magnetic,
+.social-icon.magnetic svg {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* If any global rule is shrinking inline SVGs, ensure social icons have a sane size */
+.social-icon svg {
+  width: 40%;
+  height: 40%;
+  display: block;
+  fill: currentColor;
+  min-width: initial;
+  min-height: initial;
+}
+
+/* social-specific tooltip (top-right) */
+.social-play-tooltip {
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+    color: #F0EFEA ;
+
+  font-family: "SolareItalic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  pointer-events: none;
+  opacity: 0;
+  transform: none;
+  transition: opacity 220ms ease, transform 160ms ease;
+  white-space: nowrap;
+}
+
+/* Tooltip for flower and social icons */
+.flower-play-tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 12000;
+  background: rgba(0,0,0,0.78);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 160ms ease, transform 160ms ease;
+  transform-origin: left top;
+  white-space: nowrap;
+  /* box-shadow: 0 6px 18px rgba(0,0,0,0.28); */
+}
+
+/* Plain (pointer-following) variant for flower/social tooltips — simple text without background */
+.flower-play-tooltip.plain {
+  position: fixed;
+  z-index: 11000;
+  left: 0;
+  top: 0;
+  background: transparent;
+  padding: 0;
+  color: #F0EFEA ;
+
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+    font-family: "SolareItalic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* .flower_icon_container {
+  position: absolute;
+   top: 60px;
+  left: 60px;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: auto;
+  
+} */
+
+.flower-icon {
+  z-index: 100;
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  display: inline-flex;
+  width: clamp(1rem, 5vw, 1.4rem);
+  height: clamp(1rem, 5vw, 1.4rem);
+  border-radius: 50%;
+  opacity: 0;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  /* continuous slow rotation */
+  animation: flower-rotate 6s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes flower-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.flower-icon svg:hover {
+  transform: scale(1.1) rotate(20deg);
+   
+
+}
+
+.flower-icon svg {
+  color: #F0EFEA ;
+ transition: all 0.5s ease-out;
+  fill: currentColor;
+}
+
+.flower-icon.playing {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  transform: none !important;
+}
+
+/* Hide content when playing */
+.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.4s ease !important;
+}
+
+/* Bird sprite animation */
+.bird-sprite {
+  will-change: transform, opacity;
+  transition: none;
+}
+
+.bird-sprite img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Play mode round cursor overlay */
+.round-play-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #F0EFEA;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12000;
+  pointer-events: none;
+  /* keep it simple: no inner dot, no glow, no pulse */
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+
+/* no inner point/dot */
+
+.round-play-cursor.is-clicking {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+}
+
+/* remove pulse animation for a steady white ring */
+
+
+/* .shadow-box-one {
+     position: absolute; 
+      background: #0047ABba;
+      border-top-left-radius: 100vh;
+      width: 50vh;
+    height: 25vh;
+bottom: 0;
+right: 0;
+ z-index: 1;
+transform: translate(50%, 0%);
+opacity: 0;
+}
+
+.shadow-box-two {
+     position: absolute;
+      background: #0047ABba;
+      border-top-right-radius: 100vh;
+      width: 50vh;
+    height: 25vh;
+bottom: 0;
+left: 0;
+ z-index: 1;
+transform: translate(-50%, 0%);
+opacity: 0;
+} */

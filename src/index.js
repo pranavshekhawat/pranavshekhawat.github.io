@@ -8,4 +8,6 @@ import {BrowserRouter} from 'react-router-dom';
 import ScrollToTop from './utils/ScrollToTop';
 import './css/accordion.css';
 
+
+
 ReactDOM.render( <BrowserRouter> <ScrollToTop/><App/></BrowserRouter> , document.getElementById('root') );

@@ -1,0 +1,1053 @@
+/* Flip Book Styles - Portfolio Background with Animated Blobs */
+
+:root {
+  --sync-duration: 3.2s;
+  --sync-ease: cubic-bezier(.22,.9,.28,1);
+}
+
+html, body {
+  /* overflow-x: auto !important; */
+  /* overflow-y: auto !important; */
+  height: 100%;
+  width: 100%;
+    margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.flipbook-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible !important;
+  background-color: #f0f0f0;
+}
+
+/* Background reveal: keep the background fixed and show the top half initially */
+.flipbook-bg-image {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  transition: background-position 1.1s cubic-bezier(.22,.9,.28,1);
+  will-change: background-position;
+}
+
+/* Full-screen overlay that hides page content at first and carries the cursor loader */
+.site-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 11000; /* above everything */
+  pointer-events: auto; /* capture pointer so underlying page doesn't react */
+  background: transparent; /* keep underlying background visible while blocking other content */
+}
+
+/* Circular loader that follows the pointer inside the overlay */
+.cursor-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  margin-left: -28px; /* center on pointer coordinates (JS positions by top/left) */
+  margin-top: -28px;
+  transform: translate3d(-9999px, -9999px, 0); /* offscreen until JS moves it */
+  transition: transform 80ms linear, opacity 200ms ease;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.cursor-loader svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cursor-loader circle {
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+  animation: loader-rotate 1.2s linear infinite;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 60;
+}
+
+@keyframes loader-rotate {
+  to { transform: rotate(360deg); }
+}
+
+/* main content reveal: initially hidden, will be animated in by GSAP timeline */
+.main-reveal {
+  position: relative;
+  z-index: 1000; /* above background but below overlay */
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(.22,.9,.28,1);
+}
+
+/* overlay hidden state (CSS fallback) */
+.site-overlay[aria-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* utility class to force background to bottom if needed */
+.flipbook-bg-image.revealed {
+  background-position: center bottom;
+}
+
+/* ensure page elements aren't interactable while overlay present */
+body.loading .main-reveal { pointer-events: none; }
+
+/* ===== ANIMATED GRADIENT BLOBS ===== */
+.gradient-blob {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(60px);
+  opacity: 0.8;
+  mix-blend-mode: normal;
+  z-index: 0;
+}
+
+/* Blob 1 - EXTREMELY LARGE - Pastel Pink */
+.blob-1 {
+  width: 700px;
+  height: 750px;
+  background: radial-gradient(circle at 30% 30%, #FF1493 0%, #FF69B4 25%, #FFB3D9 50%, #FFC0E0 75%, #FFFFFF 100%);
+  top: 10%;
+  left: 5%;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: float 28s ease-in-out infinite;
+}
+
+/* Blob 2 - EXTREMELY LARGE - Pastel Purple */
+.blob-2 {
+  width: 800px;
+  height: 750px;
+  background: radial-gradient(circle at 40% 40%, #7B68EE 0%, #9370DB 25%, #BA55D3 50%, #C9B1E8 75%, #FFFFFF 100%);
+  top: 5%;
+  right: 8%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: float 32s ease-in-out infinite reverse;
+  animation-delay: -8s;
+}
+
+/* Blob 3 - EXTREMELY LARGE - Pastel Cobalt Blue */
+.blob-3 {
+  width: 750px;
+  height: 800px;
+  background: radial-gradient(circle at 50% 50%, #0047AB 0%, #4169E1 25%, #6B9FD1 50%, #7AADD9 75%, #FFFFFF 100%);
+  bottom: 5%;
+  left: 10%;
+  border-radius: 70% 30% 40% 60% / 40% 60% 30% 70%;
+  animation: float 30s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+/* Blob 4 - VERY SMALL - Pastel Coral */
+.blob-4 {
+  width: 140px;
+  height: 160px;
+  background: radial-gradient(circle at 35% 35%, #FF7F50 0%, #FFB3A7 50%, #FFFFFF 100%);
+  top: 20%;
+  left: 60%;
+  border-radius: 40% 60% 30% 70% / 70% 40% 60% 30%;
+  animation: float 12s ease-in-out infinite reverse;
+  animation-delay: -2s;
+}
+
+/* Blob 5 - VERY SMALL - Pastel Mint */
+.blob-5 {
+  width: 130px;
+  height: 150px;
+  background: radial-gradient(circle at 45% 45%, #20B2AA 0%, #B3E5D9 50%, #FFFFFF 100%);
+  bottom: 15%;
+  right: 15%;
+  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+  animation: float 14s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Blob 6 - VERY SMALL - Pastel Lavender */
+.blob-6 {
+  width: 120px;
+  height: 140px;
+  background: radial-gradient(circle at 40% 40%, #8470D0 0%, #D9C9F0 50%, #FFFFFF 100%);
+  top: 60%;
+  right: 8%;
+  border-radius: 60% 40% 50% 50% / 50% 60% 30% 40%;
+  animation: float 11s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+/* Blob 7 - Hidden */
+.blob-7 {
+  display: none;
+}
+
+/* Blob 8 - Hidden */
+.blob-8 {
+  display: none;
+}
+
+/* Blob 9 - Hidden */
+.blob-9 {
+  display: none;
+}
+
+/* Blob 10 - Hidden */
+.blob-10 {
+  display: none;
+}
+
+/* Blob 11 - Hidden */
+.blob-11 {
+  display: none;
+}
+
+/* Blob 12 - Hidden */
+.blob-12 {
+  display: none;
+}
+
+/* Floating animation - smooth, slow, organic movement */
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  15% {
+    transform: translate(50px, -80px) rotate(45deg);
+  }
+  30% {
+    transform: translate(100px, -40px) rotate(90deg);
+  }
+  45% {
+    transform: translate(60px, 60px) rotate(135deg);
+  }
+  60% {
+    transform: translate(-40px, 80px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-70px, 20px) rotate(270deg);
+  }
+  90% {
+    transform: translate(-30px, -60px) rotate(315deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(360deg);
+  }
+}
+
+/* ===== PAPER TEXTURE OVERLAY ===== */
+.pixel-noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><defs><filter id="paper"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="6" result="noise" seed="2"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="0.5" xChannelSelector="R" yChannelSelector="G"/></filter></defs><rect width="100" height="100" fill="%23f5f5f5" opacity="0.02" filter="url(%23paper)"/><circle cx="15" cy="20" r="0.3" fill="%23cccccc" opacity="0.08"/><circle cx="45" cy="35" r="0.2" fill="%23cccccc" opacity="0.06"/><circle cx="70" cy="15" r="0.4" fill="%23cccccc" opacity="0.07"/><circle cx="25" cy="60" r="0.25" fill="%23cccccc" opacity="0.08"/><circle cx="85" cy="75" r="0.3" fill="%23cccccc" opacity="0.06"/><circle cx="50" cy="80" r="0.2" fill="%23cccccc" opacity="0.07"/><circle cx="10" cy="85" r="0.35" fill="%23cccccc" opacity="0.08"/><circle cx="60" cy="45" r="0.25" fill="%23cccccc" opacity="0.06"/><circle cx="90" cy="30" r="0.3" fill="%23cccccc" opacity="0.07"/><circle cx="35" cy="75" r="0.2" fill="%23cccccc" opacity="0.08"/><line x1="5" y1="10" x2="95" y2="15" stroke="%23dddddd" stroke-width="0.1" opacity="0.04"/><line x1="10" y1="50" x2="85" y2="55" stroke="%23dddddd" stroke-width="0.1" opacity="0.04"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><rect width="50" height="50" fill="%23ffffff" opacity="0.01"/><line x1="0" y1="0" x2="50" y2="50" stroke="%23e0e0e0" stroke-width="0.1" opacity="0.02"/><line x1="50" y1="0" x2="0" y2="50" stroke="%23e0e0e0" stroke-width="0.1" opacity="0.02"/></svg>');
+  background-repeat: repeat;
+  background-size: 100px 100px, 50px 50px;
+  background-position: 0 0, 0 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+/* ===== CONTENT AREA ===== */
+
+/* Portfolio Title */
+.portfolio-title {
+  z-index: 100;
+  position: absolute;
+  top: 60px;
+  right: 50%;
+  left: 50%;
+    align-items: flex-start;
+     display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Helvetica Neue LT Pro Lt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* color: #0047AB; */
+  color: #0746bbba ;
+  font-size: clamp(1rem, 8vw, 1.2rem);
+  letter-spacing: 1rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+/* Social Media Icons */
+.social-icons {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.4rem, 2vw, 1.4rem);
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.social-icon {
+  display: inline-flex;
+  width: clamp(1rem, 5vw, 2.8rem);
+  border-radius: 50%;
+  color: #0746bbba;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 40%;
+  height: 40%;
+  fill: currentColor;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #0047AB;
+}
+
+.social-icon:active {
+  transform: scale(0.95);
+}
+
+.email-icon svg {
+  transform: translateY(1px) scale(1.2);
+  width: 54%;
+  height: 54%;
+}
+
+.github-icon svg {
+  margin-top: 0.2rem;
+  width: 42%;
+  height: 42%;
+}
+
+/* Ensure magnetic clones preserve visual size and are interactive */
+.magnetic-clone {
+  pointer-events: auto !important; /* allow clicking the clone */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important; /* avoid inherited scaling */
+  width: auto !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  z-index: 100001 !important; /* ensure clone sits above tooltip */
+}
+
+.magnetic-clone:hover,
+.magnetic-clone:active {
+  transform: none !important;
+}
+
+/* Make sure the clone's SVG scales to the clone's explicit size */
+.magnetic-clone svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+/* Prevent social icons from being scaled down by other hover/active rules while magnetic */
+.social-icon.magnetic,
+.social-icon.magnetic svg {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* If any global rule is shrinking inline SVGs, ensure social icons have a sane size */
+.social-icon svg {
+  width: 40%;
+  height: 40%;
+  display: block;
+  fill: currentColor;
+  min-width: initial;
+  min-height: initial;
+}
+
+/* social-specific tooltip (top-right) */
+.social-play-tooltip {
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  color: #0047ABba;
+  font-family: "SolareItalic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+  pointer-events: none;
+  opacity: 0;
+  transform: none;
+  transition: opacity 220ms ease, transform 160ms ease;
+  white-space: nowrap;
+}
+
+/* ===== PROJECT LINK ICONS ===== */
+.project-links {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.8rem, 1vw, .8rem);
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10; /* ensure it's above images/animations */
+  pointer-events: auto;
+  border-radius: 12px;
+  background: transparent; /* removed subtle backing to avoid blur behind text */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.project-link {
+  left: 60px;
+  display: inline-flex;
+  align-items: right;
+  border-radius: 6px;
+  color: #0746bbba;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  transform: scale(1.05);
+  color: #0047AB;
+}
+
+.project-link:active {
+  transform: scale(0.98);
+}
+
+/* When underlying color is similar to cobalt, invert to white with subtle stroke so it stays visible */
+.project-link.invert {
+  color: #ffffff !important;
+  -webkit-text-stroke: 0.35px rgba(0,0,0,0.45);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+}
+
+/* keep accessible focus state */
+.project-link:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.9);
+  outline-offset: 4px;
+}
+
+.copyright_text{
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-family: "Helvetica Neue LT Pro Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0746bbba ;
+  font-size: clamp(0.86rem, 3vw, 0.86rem);
+  text-align: center;
+  z-index: 100;
+  pointer-events: auto;
+}
+.flower_icon_container {
+  position: absolute;
+  color: #0746bbba;
+   top: 60px;
+  left: 60px;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.flower-icon {
+  z-index: 100;
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  display: inline-flex;
+  width: clamp(1rem, 5vw, 1.4rem);
+  height: clamp(1rem, 5vw, 1.4rem);
+  border-radius: 50%;
+  color: #0746bbba;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  /* continuous slow rotation */
+  animation: flower-rotate 6s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes flower-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.flower-icon svg:hover {
+  transform: scale(1.1) rotate(20deg);
+  color: #0047AB;
+}
+
+.expand-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%) scale(0);
+  animation: expandOut 5s ease-out forwards;
+  pointer-events: none;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes expandOut {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(100);
+    opacity: 1;
+  }
+}
+.flower-icon svg {
+  color: #0746bbba;
+ transition: all 0.5s ease-out;
+  fill: currentColor;
+}
+
+.flower-icon.playing {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  transform: none !important;
+}
+
+.expand-circle.closing {
+  animation: expandIn 3s ease-out forwards;
+}
+
+@keyframes expandIn {
+  0% {
+    transform: translate(-50%, -50%) scale(100);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+}
+
+/* Magnetic flower label */
+.flower-play-label {
+  position: absolute;
+  left: 100%; /* position to bottom-right visually — we'll offset via transform */
+  top: 100%;
+  transform: translate(-10%, -10%) translateY(8px) translateX(8px) scale(0.92);
+  font-family: "SolareItalic Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 2.6vw, 1rem);
+  color: rgba(0,71,171,0.96);
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 260ms cubic-bezier(.22,.9,.28,1);
+  white-space: nowrap;
+}
+
+.flower-icon.magnetic {
+  transform-origin: center center;
+  transition: transform 180ms cubic-bezier(.22,.9,.28,1);
+}
+
+/* Floating tooltip for magnetic flower — plain text, no background, bottom-right of cursor */
+.flower-play-tooltip {
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  color: #0047ABba;
+  font-family: "SolareItalic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 2.4vw, 2.8rem);
+  pointer-events: none;
+  opacity: 0;
+  /* position via top-left offsets, do not center transform */
+  transform: none;
+  transition: opacity 220ms ease, transform 160ms ease;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flower-play-label, .flower-icon.magnetic { transition: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flower-play-tooltip, .flower-icon.magnetic { transition: none !important; }
+}
+
+.container-my {
+  /* ensure the content container is slightly taller than the viewport to allow extra scroll space */
+  min-height: calc(100vh + 300px);
+  padding-bottom: 8vh;
+  overflow-x: auto; /* allow native horizontal scrolling so link centering works reliably */
+  scroll-behavior: smooth; /* enable smooth native scrolling */
+  width: 100%;
+}
+
+.block {
+  /* position: absolute; */
+  position: relative; /* enable absolutely positioned children to center inside block */
+  /* avoid using vh for width (can squash images) - use a responsive width with a sane max */
+  max-width: 900px;
+  /* use vw for responsive width and a fixed sane max to avoid vh-driven squashing */
+  width: clamp(320px, 60vw, 900px);
+  margin: 16vh 16vh auto 80px;
+}
+
+.block-image{
+  /* consistent cropped box for all project images */
+  /* border-radius: 20px; */
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  /* increase the image box so images appear larger and less likely to be squeezed */
+  height: clamp(240px, 60vh, 600px);
+  overflow: hidden;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+/* ensure SVGs fill the .block-image and sit beneath interactive blobs */
+.block-image svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Cobalt tint overlay (default) and animated colorful overlay (hover) */
+.block-image::before,
+.block-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/* default cobalt tint: use mix-blend-mode: color to impose cobalt hue on the image's luminosity */
+.block-image::before {
+  background-color: #0047AB; /* cobalt blue used elsewhere */
+  mix-blend-mode: color; /* apply hue/saturation while preserving luminance */
+  opacity: 0.75; /* tune to taste */
+  z-index: 2;
+}
+
+/* animated colorful gradient that appears on hover */
+.block-image::after {
+  background: radial-gradient(circle at 20% 20%, rgba(255,105,180,0.35), rgba(255,179,217,0.25) 15%, transparent 25%),
+              radial-gradient(circle at 80% 30%, rgba(123,104,238,0.35), rgba(201,177,232,0.2) 18%, transparent 30%),
+              radial-gradient(circle at 50% 80%, rgba(0,71,171,0.25), rgba(106,169,209,0.25) 20%, transparent 35%);
+  background-blend-mode: screen, screen, screen;
+  background-size: 200% 200%;
+  opacity: 0;
+  mix-blend-mode: screen;
+  filter: blur(12px) saturate(1.2);
+  transform: scale(1.05);
+  z-index: 3;
+}
+
+/* subtle moving animation for the gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.block-image:hover::after {
+  opacity: 1;
+  animation: gradientMove 8s linear infinite;
+  transform: scale(1);
+}
+
+/* make the image itself high contrast grayscale so the overlaying colour looks posterised */
+.block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preserves aspect ratio and crops if needed */
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease-out, filter 0.4s ease;
+  /* push contrast up to force a near two-tone look */
+  filter: grayscale(1) contrast(300%) brightness(0.95);
+  z-index: 1;
+  position: relative;
+}
+
+/* on hover reveal color and animated gradient */
+.block-image:hover img {
+  filter: none; /* show original colors under the animated gradient */
+  transform: scale(1.02);
+}
+
+/* slightly reduce cobalt tint when gradient is active so colors show through */
+.block-image:hover::before {
+  opacity: 0.18;
+}
+
+/* Interactive blobs that move with pointer inside each image */
+.interactive-blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6; /* above svg */
+  overflow: hidden;
+}
+
+.interactive-blob {
+  position: absolute;
+  width: 300px; /* slightly larger for visibility */
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(36px) saturate(1.2);
+  opacity: 0.95;
+  mix-blend-mode: screen;
+  transform: translate3d(0,0,0);
+  transition: transform 160ms linear;
+}
+
+.interactive-blob[data-index="0"] { background: rgba(255,105,180,0.26); left: 10%; top: 10%; }
+.interactive-blob[data-index="1"] { background: rgba(123,104,238,0.26); left: 60%; top: 20%; }
+.interactive-blob[data-index="2"] { background: rgba(0,71,171,0.26); left: 30%; top: 60%; }
+
+.block h1 {
+  position: relative;
+  display: flex;
+  /* transform: translate(-50%, -50%); */
+  font-family: 'solareItalic medium';
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  /* background-color: blue; */
+  /* margin: 0; */
+    color: #0746bbba;
+}
+
+
+.block-spacer {
+  /* shrink to content so spacer doesn't push the first post away */
+  width: fit-content;
+  min-width: 60px; /* slightly smaller so it doesn't create excess gap */
+  padding: 0 8px; /* small horizontal breathing room */
+  height: clamp(240px, 60vh, 600px); /* match .block-image height so spacer visually represents the upcoming post */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* allow absolutely positioned child to center within */
+  margin: 0 6vh 0 12vw; /* reduce right margin to bring the scroll circle nearer the first post */
+}
+
+.block-spacer2 {
+  width: fit-content;
+  min-width: 60px;
+  height: clamp(240px, 60vh, 600px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 12vw 0 6vh; /* mirror leading spacer spacing */
+}
+
+/* scroll button stays absolutely centered within spacer */
+.scroll_circle_div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border removed to allow SVG stroke to show as the circle */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12; /* above image overlays */
+  background: rgba(255,255,255,0.02);
+  cursor: default; /* show native pointer */
+}
+
+/* make svg stroke color match design (legacy selector) */
+.scroll_circle svg .cls-1 {
+  fill: none;
+  stroke: rgba(0,71,171,0.95);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+/* separate styling for inner arrow and outer circle */
+.scroll_circle svg .cls-inner,
+.scroll_circle svg .cls-inner * {
+  stroke: rgba(0,71,171,0.95);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  fill: none;
+  transition: opacity 220ms ease, transform 260ms cubic-bezier(.22,.9,.28,1);
+}
+
+.scroll_circle svg .cls-outer {
+  stroke: rgba(0,71,171,0.95);
+  stroke-width: 2px;
+  fill: none;
+  transition: stroke 220ms ease;
+}
+
+/* Scroll circle wrapper — keep children non-interactive to preserve hover on wrapper */
+.scroll_circle {
+  margin: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none; /* let wrapper receive pointer events */
+  font-size: 1rem;
+  font-family: "SolareItalic Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,71,171,0.73);
+  background: transparent; /* keep transparent so only SVG stroke shows */
+  transition: transform 220ms ease, background 220ms ease, color 220ms ease;
+  position: relative;
+}
+
+/* center the label inside the circle, hidden by default */
+.scroll-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* start slightly right and slightly above so it can slide into the center from the right */
+  transform: translate(-50%, -50%) translateX(10px) translateY(4px) scale(0.95);
+  opacity: 0;
+  color: rgba(0,71,171,0.95);
+  font-weight: 700;
+    /* font-family: "Helvetica Neue LT Pro Lt", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "SolareItalic Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: opacity 240ms ease, transform 260ms cubic-bezier(.22,.9,.28,1);
+  pointer-events: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+}
+
+/* On hover: move the inner arrow left and fade it, while bringing the label from the right into center */
+/* .scroll_circle_div:hover .scroll_circle svg line,
+.scroll_circle_div:hover .scroll_circle svg path,
+.scroll_circle_div:focus-within .scroll_circle svg line,
+.scroll_circle_div:focus-within .scroll_circle svg path {
+  opacity: 0;
+  transform: translateX(-10px) scale(0.95);
+}
+
+.scroll_circle_div:hover .scroll-label,
+.scroll_circle_div:focus-within .scroll-label {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0) translateY(4px) scale(1);
+} */
+
+/* Custom circular cursor that shows the word OPEN */
+.custom-cursor-open {
+  position: fixed;
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 88px;
+  height: 88px;
+  border: #ffffff solid 1px;
+  border-radius: 50%;
+  color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  /* font-family: "Helvetica Neue LT Pro Lt", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+ font-family: "SolareItalic Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transform: translate(-50%, -50%) scale(0.6);
+
+  transition: transform 500ms cubic-bezier(.22,.9,.28,1), opacity 200ms ease;
+  opacity: 0;
+  pointer-events: none; /* never block pointer events */
+  /* box-shadow: 0 8px 24px rgba(0,0,0,0.18); */
+  will-change: transform, opacity;
+  animation: tapTap var(--sync-duration) var(--sync-ease) infinite;
+}
+
+.custom-cursor-open.show {
+  opacity: 1;
+  /* scale up to full size over ~1s (transition handles timing) */
+  transform: translate(-50%, -50%) scale(2);
+  will-change: transform;
+}
+
+.custom-cursor.open.show {
+  will-change: transform;
+}
+
+/* tap-tap animation for the OPEN cursor: two quick taps then rest */
+@keyframes tapTap {
+  0%   { transform: translate(-50%, -50%) scale(2); }
+  6%   { transform: translate(-50%, -50%) scale(1.78); }
+  12%  { transform: translate(-50%, -50%) scale(2); }
+  18%  { transform: translate(-50%, -50%) scale(1.8); }
+  24%  { transform: translate(-50%, -50%) scale(2); }
+  100% { transform: translate(-50%, -50%) scale(2); }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-open,
+  .custom-cursor,
+  .scroll_circle_div .scroll_circle svg,
+  .block-spacer2 .scroll_circle svg {
+    animation: none !important;
+  }
+}
+
+/* Slightly smaller on small screens */
+@media (max-width: 600px) {
+  .custom-cursor-open { width: 68px; height: 68px; font-size: 0.72rem; }
+}
+
+/* Floating plain text 'Scroll' label that follows the pointer when hovering the scroll circle */
+.hover-scroll-tooltip {
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  /* plain text only — no background or padding */
+  background: transparent;
+  padding: 0;
+  color: rgba(0,71,171,0.95);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  /* position by top-left, not centered */
+  transform: none;
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+  opacity: 1;
+}
+
+/* Hide any floating tooltip remnants just in case */
+.hover-scroll-tooltip { display: none !important; }
+
+/* target the arrow path and line inside the scroll svg as the inner arrow */
+.scroll_circle svg line,
+.scroll_circle svg path {
+  stroke: rgba(0,71,171,0.95);
+  stroke-width: 2px;
+  stroke-miterlimit: 10;
+  transition: opacity 220ms ease, transform 260ms cubic-bezier(.22,.9,.28,1);
+}
+
+/* outer circle stroke */
+.scroll_circle svg circle {
+  stroke: rgba(0,71,171,0.95);
+  stroke-width: 2px;
+  fill: none;
+}
+
+/* On hover: fade/slide the inner arrow out, reveal centered text */
+/* .scroll_circle_div:hover .scroll_circle svg line,
+.scroll_circle_div:hover .scroll_circle svg path,
+.scroll_circle_div:focus-within .scroll_circle svg line,
+.scroll_circle_div:focus-within .scroll_circle svg path {
+  opacity: 0;
+  transform: translateX(-10px) scale(0.95);
+}
+
+.scroll_circle_div:hover .scroll-label,
+.scroll_circle_div:focus-within .scroll-label {
+
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0) scale(1);
+} */
+
+/* ensure wrapper keeps default cursor and no hidden cursor behavior */
+.scroll_circle_div { cursor: default; }
+
+/* subtle repeated pulse that nudges the arrow in its pointing direction twice quickly then eases out */
+@keyframes arrowPulse {
+  0%   { transform: rotate(180deg) translateX(0); }
+  6%   { transform: rotate(180deg) translateX(10px); }
+  12%  { transform: rotate(180deg) translateX(0); }
+  18%  { transform: rotate(180deg) translateX(8px); }
+  24%  { transform: rotate(180deg) translateX(0); }
+  100% { transform: rotate(180deg) translateX(0); }
+}
+
+.scroll_circle_div .scroll_circle svg {
+  transform-origin: center center;
+  animation: arrowPulse var(--sync-duration) var(--sync-ease) infinite;
+  will-change: transform;
+}
+
+/* Pause the pulse when the user hovers so hover animations take over */
+.scroll_circle_div:hover .scroll_circle svg,
+.scroll_circle_div:focus-within .scroll_circle svg {
+  animation-play-state: paused;
+}
+
+/* Reverse-direction pulse for the trailing spacer: same timing but no rotation so it nudges right */
+@keyframes arrowPulseReverse {
+  0%   { transform: translateX(0); }
+  6%   { transform: translateX(10px); }
+  12%  { transform: translateX(0); }
+  18%  { transform: translateX(8px); }
+  24%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply reverse pulse to trailing spacer's SVG (overrides default arrowPulse which includes rotation) */
+.block-spacer2 .scroll_circle svg {
+  transform-origin: center center;
+  animation: arrowPulseReverse var(--sync-duration) var(--sync-ease) infinite;
+  will-change: transform;
+}
+
+/* Pause the reverse pulse on hover/focus similarly to the leading one */
+.block-spacer2:hover .scroll_circle svg,
+.block-spacer2:focus-within .scroll_circle svg {
+  animation-play-state: paused;
+}
+
+/* .magnetic-clone, .magnetic-clone * {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+.magnetic-clone svg:hover {
+  transform: none !important;
+} */

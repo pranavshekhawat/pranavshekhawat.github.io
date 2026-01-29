@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 
-import { doc, setDoc, updateDoc } from "firebase/firestore";
+import { doc, setDoc, updateDoc, getDoc } from "firebase/firestore";
 import "../css/auth.css";
 
 export const Auth = () => {
@@ -23,15 +23,19 @@ export const Auth = () => {
   const [userName, setUserName] = useState("");
   const [newUserName, setNewUserName] = useState("");
   const [editingUserName, setEditingUserName] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         setSignedIn(true);
-        setUserName(user.displayName || ""); // Set user name if available
+        setUserName(user.displayName || "");
+        // Set isAdmin based on UID
+        setIsAdmin(user.uid === "wGe22UwE1FQN4qPcEGaVkdG3qdD2");
       } else {
         setSignedIn(false);
         setUserName("");
+        setIsAdmin(false);
       }
     });
 
@@ -100,13 +104,9 @@ export const Auth = () => {
     setErrorMessage("");
 
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredential.user;
-      console.log(user);
+      // Using the imported login function
+      await signInWithEmailAndPassword(auth, email, password);
+      const user = auth.currentUser;
       setUserName(user.displayName || "");
       setSignedIn(true);
     } catch (error) {
@@ -149,12 +149,30 @@ export const Auth = () => {
       console.log(user);
 
       if (user.displayName) {
-        // Store user information in Firestore collection
         const usersRef = doc(db, "users", user.uid);
-        await setDoc(usersRef, {
-          userName: user.displayName,
-          userId: user.uid,
-        });
+        const userDoc = await getDoc(usersRef);
+        const isAdminValue = user.uid === "wGe22UwE1FQN4qPcEGaVkdG3qdD2";
+        console.log("User uid:", user.uid);
+        console.log("isAdminValue:", isAdminValue);
+        if (userDoc.exists()) {
+          console.log("Existing document data:", userDoc.data());
+          // Update existing document without changing isAdmin
+          await updateDoc(usersRef, {
+            userName: user.displayName,
+            userId: user.uid,
+          });
+          const updatedDoc = await getDoc(usersRef);
+          console.log("Updated document data:", updatedDoc.data());
+        } else {
+          // Create new document with isAdmin set
+          await setDoc(usersRef, {
+            userName: user.displayName,
+            userId: user.uid,
+            isAdmin: isAdminValue,
+          });
+          const newDoc = await getDoc(usersRef);
+          console.log("New document data:", newDoc.data());
+        }
       }
 
       setSignedIn(true);
@@ -172,11 +190,13 @@ export const Auth = () => {
     setErrorMessage("");
 
     try {
+      // Using the imported logout function
       await signOut(auth);
       console.log("Signed Out");
       setSignedIn(false);
       setUserName("");
       setAuthOption("login");
+      setIsAdmin(false);
     } catch (error) {
       const errorMessage = "Failed to sign out. Please try again.";
       console.log(errorMessage);

@@ -1,0 +1,564 @@
+/**
+ * Soap Lab Design System
+ * Consistent colors, typography, spacing, and components
+ */
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  /* Primary Colors - Warm Artisanal Theme */
+  --lab-primary: #5c6bc0;
+  --lab-primary-dark: #3949ab;
+  --lab-primary-light: #7986cb;
+  
+  /* Accent Colors */
+  --lab-accent: #ffb74d;
+  --lab-accent-dark: #ff9800;
+  --lab-accent-light: #ffe0b2;
+  
+  /* Semantic Colors */
+  --lab-success: #66bb6a;
+  --lab-success-dark: #43a047;
+  --lab-warning: #ffa726;
+  --lab-warning-dark: #fb8c00;
+  --lab-error: #ef5350;
+  --lab-error-dark: #e53935;
+  --lab-info: #42a5f5;
+  
+  /* Neutrals */
+  --lab-bg: #f8f9fa;
+  --lab-bg-card: #ffffff;
+  --lab-bg-elevated: #ffffff;
+  --lab-border: #e0e0e0;
+  --lab-border-light: #f0f0f0;
+  
+  /* Text Colors */
+  --lab-text: #212121;
+  --lab-text-secondary: #666666;
+  --lab-text-muted: #9e9e9e;
+  --lab-text-inverse: #ffffff;
+  
+  /* Shadows */
+  --lab-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --lab-shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --lab-shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --lab-shadow-glow: 0 0 20px rgba(92, 107, 192, 0.3);
+  
+  /* Spacing Scale */
+  --lab-space-xs: 4px;
+  --lab-space-sm: 8px;
+  --lab-space-md: 16px;
+  --lab-space-lg: 24px;
+  --lab-space-xl: 32px;
+  --lab-space-2xl: 48px;
+  
+  /* Border Radius */
+  --lab-radius-sm: 6px;
+  --lab-radius-md: 10px;
+  --lab-radius-lg: 16px;
+  --lab-radius-xl: 24px;
+  --lab-radius-full: 9999px;
+  
+  /* Typography */
+  --lab-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --lab-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Font Sizes */
+  --lab-text-xs: 0.75rem;
+  --lab-text-sm: 0.875rem;
+  --lab-text-base: 1rem;
+  --lab-text-lg: 1.125rem;
+  --lab-text-xl: 1.25rem;
+  --lab-text-2xl: 1.5rem;
+  --lab-text-3xl: 2rem;
+  
+  /* Transitions */
+  --lab-transition-fast: 150ms ease;
+  --lab-transition-normal: 250ms ease;
+  --lab-transition-slow: 400ms ease;
+  
+  /* Z-Index Scale */
+  --lab-z-dropdown: 100;
+  --lab-z-sticky: 200;
+  --lab-z-modal: 1000;
+  --lab-z-tooltip: 1100;
+}
+
+/* ========== DARK MODE ========== */
+[data-theme="dark"] {
+  --lab-primary: #7c8ddb;
+  --lab-primary-dark: #5c6bc0;
+  --lab-primary-light: #9fa8da;
+  
+  --lab-bg: #121212;
+  --lab-bg-card: #1e1e1e;
+  --lab-bg-elevated: #2d2d2d;
+  --lab-border: #333333;
+  --lab-border-light: #2a2a2a;
+  
+  --lab-text: #e8e8e8;
+  --lab-text-secondary: #b0b0b0;
+  --lab-text-muted: #757575;
+  
+  --lab-shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --lab-shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --lab-shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ========== GLOBAL STYLES ========== */
+.lab-container {
+  font-family: var(--lab-font-family);
+  background: var(--lab-bg);
+  color: var(--lab-text);
+  min-height: 100vh;
+}
+
+.lab-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--lab-space-lg);
+}
+
+/* ========== TYPOGRAPHY ========== */
+.lab-h1 {
+  font-size: var(--lab-text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--lab-text);
+  margin: 0 0 var(--lab-space-sm);
+}
+
+.lab-h2 {
+  font-size: var(--lab-text-2xl);
+  font-weight: 600;
+  color: var(--lab-text);
+  margin: 0 0 var(--lab-space-sm);
+}
+
+.lab-h3 {
+  font-size: var(--lab-text-xl);
+  font-weight: 600;
+  color: var(--lab-text);
+  margin: 0 0 var(--lab-space-xs);
+}
+
+.lab-subtitle {
+  font-size: var(--lab-text-base);
+  color: var(--lab-text-secondary);
+  margin: 0;
+}
+
+/* ========== CARDS ========== */
+.lab-card {
+  background: var(--lab-bg-card);
+  border: 1px solid var(--lab-border-light);
+  border-radius: var(--lab-radius-lg);
+  box-shadow: var(--lab-shadow-sm);
+  transition: all var(--lab-transition-normal);
+}
+
+.lab-card:hover {
+  box-shadow: var(--lab-shadow-md);
+  transform: translateY(-2px);
+}
+
+.lab-card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--lab-radius-lg);
+  box-shadow: var(--lab-shadow-md);
+}
+
+[data-theme="dark"] .lab-card-glass {
+  background: rgba(45, 45, 45, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========== STAT CARDS ========== */
+.lab-stat-card {
+  padding: var(--lab-space-lg);
+  border-radius: var(--lab-radius-lg);
+  color: var(--lab-text-inverse);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--lab-transition-normal);
+}
+
+.lab-stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lab-stat-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--lab-shadow-lg);
+}
+
+.lab-stat-card .stat-label {
+  font-size: var(--lab-text-sm);
+  opacity: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lab-stat-card .stat-value {
+  font-size: var(--lab-text-3xl);
+  font-weight: 800;
+  margin-top: var(--lab-space-xs);
+}
+
+.lab-stat-card .stat-trend {
+  font-size: var(--lab-text-sm);
+  margin-top: var(--lab-space-xs);
+  opacity: 0.85;
+}
+
+/* Stat Card Colors */
+.lab-stat-primary {
+  background: linear-gradient(135deg, var(--lab-primary) 0%, var(--lab-primary-dark) 100%);
+}
+
+.lab-stat-success {
+  background: linear-gradient(135deg, var(--lab-success) 0%, var(--lab-success-dark) 100%);
+}
+
+.lab-stat-warning {
+  background: linear-gradient(135deg, var(--lab-warning) 0%, var(--lab-warning-dark) 100%);
+}
+
+.lab-stat-accent {
+  background: linear-gradient(135deg, var(--lab-accent) 0%, var(--lab-accent-dark) 100%);
+}
+
+.lab-stat-info {
+  background: linear-gradient(135deg, var(--lab-info) 0%, #1976d2 100%);
+}
+
+/* ========== BUTTONS ========== */
+.lab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lab-space-sm);
+  padding: var(--lab-space-sm) var(--lab-space-md);
+  font-family: var(--lab-font-family);
+  font-size: var(--lab-text-sm);
+  font-weight: 600;
+  border-radius: var(--lab-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--lab-transition-fast);
+  text-decoration: none;
+}
+
+.lab-btn:hover {
+  transform: translateY(-1px);
+}
+
+.lab-btn:active {
+  transform: translateY(0);
+}
+
+.lab-btn-primary {
+  background: var(--lab-primary);
+  color: var(--lab-text-inverse);
+}
+
+.lab-btn-primary:hover {
+  background: var(--lab-primary-dark);
+  box-shadow: var(--lab-shadow-md);
+}
+
+.lab-btn-secondary {
+  background: var(--lab-bg-elevated);
+  color: var(--lab-text);
+  border: 1px solid var(--lab-border);
+}
+
+.lab-btn-secondary:hover {
+  background: var(--lab-border-light);
+}
+
+.lab-btn-success {
+  background: var(--lab-success);
+  color: var(--lab-text-inverse);
+}
+
+.lab-btn-success:hover {
+  background: var(--lab-success-dark);
+}
+
+/* ========== INPUTS ========== */
+.lab-input {
+  padding: var(--lab-space-sm) var(--lab-space-md);
+  font-family: var(--lab-font-family);
+  font-size: var(--lab-text-base);
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius-md);
+  background: var(--lab-bg-card);
+  color: var(--lab-text);
+  transition: all var(--lab-transition-fast);
+  width: 100%;
+}
+
+.lab-input:focus {
+  outline: none;
+  border-color: var(--lab-primary);
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.2);
+}
+
+.lab-input::placeholder {
+  color: var(--lab-text-muted);
+}
+
+.lab-label {
+  display: block;
+  font-size: var(--lab-text-sm);
+  font-weight: 500;
+  color: var(--lab-text-secondary);
+  margin-bottom: var(--lab-space-xs);
+}
+
+/* ========== ALERTS ========== */
+.lab-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--lab-space-md);
+  padding: var(--lab-space-md);
+  border-radius: var(--lab-radius-md);
+  font-size: var(--lab-text-sm);
+}
+
+.lab-alert-warning {
+  background: var(--lab-accent-light);
+  border: 1px solid var(--lab-accent);
+  color: #7c4700;
+}
+
+.lab-alert-error {
+  background: #ffebee;
+  border: 1px solid var(--lab-error);
+  color: #b71c1c;
+}
+
+.lab-alert-success {
+  background: #e8f5e9;
+  border: 1px solid var(--lab-success);
+  color: #1b5e20;
+}
+
+.lab-alert-info {
+  background: #e3f2fd;
+  border: 1px solid var(--lab-info);
+  color: #0d47a1;
+}
+
+/* ========== BADGES ========== */
+.lab-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: var(--lab-text-xs);
+  font-weight: 600;
+  border-radius: var(--lab-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lab-badge-primary {
+  background: rgba(92, 107, 192, 0.15);
+  color: var(--lab-primary-dark);
+}
+
+.lab-badge-success {
+  background: rgba(102, 187, 106, 0.15);
+  color: var(--lab-success-dark);
+}
+
+.lab-badge-warning {
+  background: rgba(255, 167, 38, 0.15);
+  color: var(--lab-warning-dark);
+}
+
+.lab-badge-error {
+  background: rgba(239, 83, 80, 0.15);
+  color: var(--lab-error-dark);
+}
+
+/* ========== GRID LAYOUTS ========== */
+.lab-grid {
+  display: grid;
+  gap: var(--lab-space-md);
+}
+
+.lab-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lab-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lab-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.lab-grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .lab-grid-2,
+  .lab-grid-3,
+  .lab-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== SECTION HEADERS ========== */
+.lab-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--lab-space-md);
+  padding-bottom: var(--lab-space-sm);
+  border-bottom: 2px solid var(--lab-border-light);
+}
+
+.lab-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--lab-space-sm);
+  font-size: var(--lab-text-lg);
+  font-weight: 600;
+  color: var(--lab-text);
+}
+
+.lab-section-title .icon {
+  font-size: 1.2em;
+}
+
+/* ========== PROGRESS RING ========== */
+.lab-progress-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-progress-ring svg {
+  transform: rotate(-90deg);
+}
+
+.lab-progress-ring .progress-bg {
+  stroke: var(--lab-border-light);
+}
+
+.lab-progress-ring .progress-fill {
+  stroke: var(--lab-primary);
+  stroke-linecap: round;
+  transition: stroke-dashoffset var(--lab-transition-slow);
+}
+
+.lab-progress-ring .progress-text {
+  position: absolute;
+  font-size: var(--lab-text-lg);
+  font-weight: 700;
+  color: var(--lab-text);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes lab-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lab-slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes lab-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.lab-animate-in {
+  animation: lab-fadeIn var(--lab-transition-normal) ease-out;
+}
+
+.lab-animate-slide {
+  animation: lab-slideIn var(--lab-transition-normal) ease-out;
+}
+
+.lab-animate-pulse {
+  animation: lab-pulse 2s ease-in-out infinite;
+}
+
+/* ========== SKELETON LOADER ========== */
+.lab-skeleton {
+  background: linear-gradient(90deg, var(--lab-border-light) 25%, var(--lab-bg) 50%, var(--lab-border-light) 75%);
+  background-size: 200% 100%;
+  animation: lab-skeleton-loading 1.5s infinite;
+  border-radius: var(--lab-radius-sm);
+}
+
+@keyframes lab-skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ========== TOOLTIPS ========== */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  padding: 6px 10px;
+  background: var(--lab-text);
+  color: var(--lab-text-inverse);
+  font-size: var(--lab-text-xs);
+  border-radius: var(--lab-radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--lab-transition-fast);
+  z-index: var(--lab-z-tooltip);
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* ========== SCROLLBAR ========== */
+.lab-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.lab-scrollbar::-webkit-scrollbar-track {
+  background: var(--lab-bg);
+  border-radius: 4px;
+}
+
+.lab-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--lab-border);
+  border-radius: 4px;
+}
+
+.lab-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--lab-text-muted);
+}

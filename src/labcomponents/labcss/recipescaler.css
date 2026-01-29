@@ -1,0 +1,379 @@
+/* Recipe Scaler Styles */
+
+.scaler-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: auto;
+}
+
+.scaler-modal {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scaler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scaler-header h3 {
+  margin: 0;
+  color: #e8e8e8;
+  font-size: 1.3rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* Scale Modes */
+.scale-modes {
+  display: flex;
+  gap: 8px;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mode-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 110px;
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, #4a90a4, #357a8c);
+  border-color: #4a90a4;
+  color: #fff;
+}
+
+/* Inputs */
+.scale-inputs {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4a90a4;
+}
+
+.input-group .hint {
+  display: block;
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.quick-multipliers {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quick-multipliers button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  cursor: pointer;
+}
+
+.quick-multipliers button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Mold Inputs */
+.mold-inputs .input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.mold-volume {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 6px;
+  color: #8bc34a;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.bar-weight-input {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scale Factor Display */
+.scale-factor-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.scale-factor-display .label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.scale-factor-display .factor {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.scale-factor-display .factor.increase {
+  color: #4caf50;
+}
+
+.scale-factor-display .factor.decrease {
+  color: #ff9800;
+}
+
+/* Preview */
+.scale-preview {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.scale-preview h4 {
+  margin: 0 0 15px;
+  color: #e8e8e8;
+  font-size: 1rem;
+}
+
+.preview-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.summary-item span:first-child {
+  color: #888;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.summary-item span:last-child {
+  color: #e8e8e8;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.oils-preview, .additives-preview {
+  margin-top: 15px;
+}
+
+.oils-preview h5, .additives-preview h5 {
+  margin: 0 0 10px;
+  color: #aaa;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.oils-list, .additives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.oil-row, .additive-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.oil-name {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.oil-weight {
+  color: #4a90a4;
+  font-weight: 600;
+}
+
+/* Actions */
+.scaler-actions {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cancel-btn, .apply-btn, .print-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.apply-btn {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.print-btn {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+}
+
+.print-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .scaler-modal {
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .mold-inputs .input-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .preview-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .scaler-actions {
+    flex-direction: column;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .scaler-overlay {
+    position: static;
+    background: white;
+  }
+  
+  .scaler-modal {
+    background: white;
+    max-height: none;
+    border: none;
+    color: black;
+  }
+  
+  .scaler-header, .scale-modes, .scale-inputs, .scale-factor-display, .scaler-actions {
+    display: none !important;
+  }
+  
+  .scale-preview {
+    background: white;
+    padding: 0;
+  }
+  
+  .scale-preview h4 {
+    color: black;
+  }
+  
+  .summary-item, .oil-row, .additive-row {
+    background: #f5f5f5;
+    color: black;
+  }
+  
+  .summary-item span, .oil-name, .oil-weight {
+    color: black;
+  }
+}

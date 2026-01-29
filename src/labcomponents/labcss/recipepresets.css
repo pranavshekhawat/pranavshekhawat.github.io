@@ -1,0 +1,275 @@
+/* Recipe Presets Panel Styles */
+
+.recipe-presets-panel {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.presets-header {
+  margin-bottom: 15px;
+}
+
+.presets-header h4 {
+  margin: 0 0 5px;
+  color: #e8e8e8;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.presets-header .subtitle {
+  margin: 0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e8e8e8;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #4a90a4, #357a8c);
+  border-color: #4a90a4;
+  color: #fff;
+}
+
+/* Presets List */
+.presets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.presets-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.presets-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.presets-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Preset Card */
+.preset-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.preset-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.preset-card.expanded {
+  border-color: rgba(74, 144, 164, 0.4);
+  background: rgba(74, 144, 164, 0.08);
+}
+
+.preset-header {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.preset-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.preset-name {
+  color: #e8e8e8;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.preset-desc {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.preset-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.oil-count, .superfat {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #aaa;
+}
+
+.superfat {
+  color: #8bc34a;
+}
+
+/* Preset Details */
+.preset-details {
+  padding: 0 15px 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.oils-list {
+  padding: 12px 0;
+}
+
+.oils-list h5 {
+  margin: 0 0 10px;
+  color: #aaa;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.oil-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.oil-item .oil-name {
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.oil-item .oil-pct {
+  color: #4a90a4;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.preset-info {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.info-row .label {
+  color: #888;
+}
+
+.info-row .value {
+  color: #ddd;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.preset-notes {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 193, 7, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #ffc107;
+  font-size: 0.85rem;
+  color: #ddd;
+  margin: 10px 0;
+}
+
+.note-icon {
+  flex-shrink: 0;
+}
+
+.preset-actions {
+  padding-top: 12px;
+}
+
+.use-preset-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.use-preset-btn:hover {
+  background: linear-gradient(135deg, #5cbf60, #43a047);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.no-presets {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .recipe-presets-panel {
+    padding: 15px;
+  }
+  
+  .preset-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .preset-meta {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .category-filter {
+    justify-content: center;
+  }
+}

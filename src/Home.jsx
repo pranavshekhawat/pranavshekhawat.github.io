@@ -12,6 +12,7 @@ import Contact from './Contact';
 import  { Auth  } from './utils/auth';
 // import Imagetop from './Components/Imagebox/Imgtop';
 // import Img from "./Components/gallerygrid/Img";
+import Footer from './Footer';
 
 
 // jhbhdvasjv
@@ -94,7 +95,7 @@ function Home() {
             <span id="signin" className="bookmark_positioner_nav"></span>
             <Headingbar heading="Sign In"></Headingbar>
             <Auth/>
-
+            <Footer></Footer>
         </>
     )
 }
