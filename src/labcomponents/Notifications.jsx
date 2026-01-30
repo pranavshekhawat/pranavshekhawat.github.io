@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, query, orderBy } from 'firebase/firestore';
+import { subscribeToUserCollection, addUserDoc, updateUserDoc, deleteUserDoc } from '../utils/userDataHelper';
 import { num } from './utils/costCalculations';
 import LabNavbar from './LabNavbar';
 
@@ -63,18 +62,29 @@ function Notifications() {
   useEffect(() => {
     const unsubs = [];
 
-    unsubs.push(onSnapshot(collection(db, 'ingredients'), (snap) => {
-      setIngredients(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
+    try {
+      unsubs.push(subscribeToUserCollection('ingredients', (data) => {
+        setIngredients(data);
+      }));
 
-    unsubs.push(onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+      }));
 
-    unsubs.push(onSnapshot(query(collection(db, 'reminders'), orderBy('dueDate', 'asc')), (snap) => {
-      setCustomReminders(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+      unsubs.push(subscribeToUserCollection('reminders', (data) => {
+        // Sort by dueDate
+        const sorted = [...data].sort((a, b) => {
+          if (!a.dueDate) return 1;
+          if (!b.dueDate) return -1;
+          return new Date(a.dueDate) - new Date(b.dueDate);
+        });
+        setCustomReminders(sorted);
+        setLoading(false);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
       setLoading(false);
-    }));
+    }
 
     return () => unsubs.forEach(u => u());
   }, []);
@@ -220,9 +230,8 @@ function Notifications() {
     }
 
     try {
-      await addDoc(collection(db, 'reminders'), {
+      await addUserDoc('reminders', {
         ...newReminder,
-        createdAt: new Date().toISOString(),
         completed: false,
       });
       setNewReminder({ title: '', description: '', dueDate: '', priority: 'medium' });
@@ -235,7 +244,7 @@ function Notifications() {
   // Mark reminder complete
   const completeReminder = async (reminderId) => {
     try {
-      await updateDoc(doc(db, 'reminders', reminderId), { completed: true });
+      await updateUserDoc('reminders', reminderId, { completed: true });
     } catch (error) {
       console.error('Error completing reminder:', error);
     }
@@ -245,7 +254,7 @@ function Notifications() {
   const deleteReminder = async (reminderId) => {
     if (window.confirm('Delete this reminder?')) {
       try {
-        await deleteDoc(doc(db, 'reminders', reminderId));
+        await deleteUserDoc('reminders', reminderId);
       } catch (error) {
         console.error('Error deleting reminder:', error);
       }

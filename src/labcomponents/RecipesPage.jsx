@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, deleteDoc, doc, query, orderBy, updateDoc, addDoc } from 'firebase/firestore';
+import { 
+  subscribeToUserCollection, 
+  deleteUserDoc, 
+  updateUserDoc, 
+  addUserDoc,
+  orderBy 
+} from '../utils/userDataHelper';
 import { useNavigate } from 'react-router-dom';
 import LabNavbar from './LabNavbar';
 
@@ -441,21 +446,28 @@ function RecipesPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const q = query(collection(db, 'recipes'), orderBy('createdAt', 'desc'));
-    const unsub = onSnapshot(q, (snapshot) => {
-      const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setRecipes(data);
-      setLoading(false);
-    }, (err) => {
+    let unsub = () => {};
+    try {
+      unsub = subscribeToUserCollection('recipes', (data) => {
+        // Sort by createdAt descending
+        const sorted = data.sort((a, b) => {
+          const aDate = a.createdAt?.toDate?.() || new Date(a.createdAt) || new Date(0);
+          const bDate = b.createdAt?.toDate?.() || new Date(b.createdAt) || new Date(0);
+          return bDate - aDate;
+        });
+        setRecipes(sorted);
+        setLoading(false);
+      });
+    } catch (err) {
       console.error('Failed to load recipes:', err);
       setLoading(false);
-    });
+    }
     return () => unsub();
   }, []);
 
   const handleDelete = async (recipe) => {
     try {
-      await deleteDoc(doc(db, 'recipes', recipe.id));
+      await deleteUserDoc('recipes', recipe.id);
     } catch (err) {
       console.error('Delete failed:', err);
       alert('Failed to delete recipe');
@@ -469,7 +481,7 @@ function RecipesPage() {
 
   const handleToggleFavorite = async (recipe) => {
     try {
-      await updateDoc(doc(db, 'recipes', recipe.id), { favorite: !recipe.favorite });
+      await updateUserDoc('recipes', recipe.id, { favorite: !recipe.favorite });
     } catch (err) {
       console.error('Toggle favorite failed:', err);
     }
@@ -477,7 +489,7 @@ function RecipesPage() {
 
   const handleUpdateTags = async (recipe, newTags) => {
     try {
-      await updateDoc(doc(db, 'recipes', recipe.id), { tags: newTags });
+      await updateUserDoc('recipes', recipe.id, { tags: newTags });
     } catch (err) {
       console.error('Update tags failed:', err);
     }
@@ -517,7 +529,7 @@ function RecipesPage() {
         createdAt: new Date().toISOString(),
       };
       delete scaledRecipe.id;
-      await addDoc(collection(db, 'recipes'), scaledRecipe);
+      await addUserDoc('recipes', scaledRecipe);
       alert(`Scaled recipe "${scaledRecipe.name}" created!`);
     } catch (err) {
       console.error('Scale recipe failed:', err);
@@ -527,7 +539,7 @@ function RecipesPage() {
 
   const handleUpdateCollection = async (recipe, collectionId) => {
     try {
-      await updateDoc(doc(db, 'recipes', recipe.id), { collection: collectionId });
+      await updateUserDoc('recipes', recipe.id, { collection: collectionId });
     } catch (err) {
       console.error('Update collection failed:', err);
     }
@@ -537,7 +549,7 @@ function RecipesPage() {
     try {
       // Toggle off if clicking same rating
       const newRating = recipe.rating === rating ? 0 : rating;
-      await updateDoc(doc(db, 'recipes', recipe.id), { rating: newRating });
+      await updateUserDoc('recipes', recipe.id, { rating: newRating });
     } catch (err) {
       console.error('Update rating failed:', err);
     }
@@ -545,7 +557,7 @@ function RecipesPage() {
 
   const handleUpdateNotes = async (recipe, notes) => {
     try {
-      await updateDoc(doc(db, 'recipes', recipe.id), { notes: notes });
+      await updateUserDoc('recipes', recipe.id, { notes: notes });
     } catch (err) {
       console.error('Update notes failed:', err);
     }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc } from 'firebase/firestore';
+import { subscribeToUserCollection, addUserDoc } from '../utils/userDataHelper';
 import { useNavigate, useLocation } from 'react-router-dom';
 import LabNavbar from './LabNavbar';
 import { num } from './utils/costCalculations';
@@ -40,15 +39,19 @@ function QuickBatch() {
   useEffect(() => {
     const unsubs = [];
     
-    unsubs.push(onSnapshot(collection(db, 'recipes'), (snap) => {
-      const data = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-      setRecipes(data);
+    try {
+      unsubs.push(subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+        setLoading(false);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('ingredients', (data) => {
+        setIngredients(data);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
       setLoading(false);
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'ingredients'), (snap) => {
-      setIngredients(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
+    }
 
     return () => unsubs.forEach(u => u());
   }, []);
@@ -148,7 +151,7 @@ function QuickBatch() {
         journal: [],
       };
       
-      await addDoc(collection(db, 'batches'), batch);
+      await addUserDoc('batches', batch);
       
       // TODO: Deduct stock if autoDeductStock is enabled
       // This would require updating ingredient quantities

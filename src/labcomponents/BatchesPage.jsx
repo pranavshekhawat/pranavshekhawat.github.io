@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc, updateDoc, deleteDoc, doc, query, orderBy } from 'firebase/firestore';
+import { 
+  subscribeToUserCollection, 
+  addUserDoc, 
+  updateUserDoc, 
+  deleteUserDoc 
+} from '../utils/userDataHelper';
 import LabNavbar from './LabNavbar';
 
 // Import centralized utilities
@@ -495,28 +499,42 @@ function BatchesPage() {
 
   // Load data
   useEffect(() => {
-    const unsubBatches = onSnapshot(query(collection(db, 'batches'), orderBy('createdAt', 'desc')), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-      setLoading(false);
-    }, () => setLoading(false));
+    let unsubBatches = () => {};
+    let unsubRecipes = () => {};
+    
+    try {
+      unsubBatches = subscribeToUserCollection('batches', (data) => {
+        // Sort by createdAt descending
+        const sorted = data.sort((a, b) => {
+          const aDate = a.createdAt?.toDate?.() || new Date(a.createdAt) || new Date(0);
+          const bDate = b.createdAt?.toDate?.() || new Date(b.createdAt) || new Date(0);
+          return bDate - aDate;
+        });
+        setBatches(sorted);
+        setLoading(false);
+      });
 
-    const unsubRecipes = onSnapshot(collection(db, 'recipes'), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
+      unsubRecipes = subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+      });
+    } catch (err) {
+      console.error('Error loading data:', err);
+      setLoading(false);
+    }
 
     return () => { unsubBatches(); unsubRecipes(); };
   }, []);
 
   const handleCreateBatch = async (batch) => {
-    await addDoc(collection(db, 'batches'), batch);
+    await addUserDoc('batches', batch);
   };
 
   const handleUpdateBatch = async (id, updates) => {
-    await updateDoc(doc(db, 'batches', id), updates);
+    await updateUserDoc('batches', id, updates);
   };
 
   const handleDeleteBatch = async (id) => {
-    await deleteDoc(doc(db, 'batches', id));
+    await deleteUserDoc('batches', id);
   };
 
   // Filter batches

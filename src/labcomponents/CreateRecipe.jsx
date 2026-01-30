@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../utils/firebase-config";
-import { collection, addDoc, onSnapshot, query, orderBy, limit } from "firebase/firestore";
+import { subscribeToUserCollection, addUserDoc } from "../utils/userDataHelper";
 
 // Import centralized utilities
 import { SAP_VALUES, getSapValue } from "./utils/sapValues";
@@ -61,10 +60,20 @@ export default function CreateRecipe({ ingredients, onRecipeUpdate, selectedReci
 
   // Fetch recent recipes for quick access
   useEffect(() => {
-    const q = query(collection(db, "recipes"), orderBy("createdAt", "desc"), limit(5));
-    const unsub = onSnapshot(q, (snap) => {
-      setRecentRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
+    let unsub = () => {};
+    try {
+      unsub = subscribeToUserCollection('recipes', (data) => {
+        // Sort by createdAt descending and take first 5
+        const sorted = data.sort((a, b) => {
+          const aDate = a.createdAt?.toDate?.() || new Date(a.createdAt) || new Date(0);
+          const bDate = b.createdAt?.toDate?.() || new Date(b.createdAt) || new Date(0);
+          return bDate - aDate;
+        });
+        setRecentRecipes(sorted.slice(0, 5));
+      });
+    } catch (error) {
+      console.error('Error loading recent recipes:', error);
+    }
     return () => unsub();
   }, []);
 
@@ -393,11 +402,10 @@ export default function CreateRecipe({ ingredients, onRecipeUpdate, selectedReci
           computedSellingPerBar: Number(computedSellingPerBar.toFixed(2)),
         },
         name: recipe.name && String(recipe.name).trim() !== "" ? recipe.name : `Recipe - ${new Date().toLocaleString()}`,
-        createdAt: new Date().toISOString(),
         notes: recipe.notes || "",
       };
 
-      await addDoc(collection(db, "recipes"), recipeToSave);
+      await addUserDoc('recipes', recipeToSave);
       alert("Recipe saved successfully!");
     } catch (error) {
       console.error("Error saving recipe:", error);

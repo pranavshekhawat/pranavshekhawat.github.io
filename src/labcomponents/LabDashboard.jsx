@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { subscribeToUserCollection } from '../utils/userDataHelper';
 import { Link } from 'react-router-dom';
 import { num } from './utils/costCalculations';
 import LabNavbar from './LabNavbar';
@@ -22,22 +21,27 @@ function LabDashboard() {
   useEffect(() => {
     const unsubs = [];
     
-    unsubs.push(onSnapshot(collection(db, 'ingredients'), (snap) => {
-      setIngredients(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'recipes'), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+    try {
+      unsubs.push(subscribeToUserCollection('ingredients', (data) => {
+        setIngredients(data);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+        setLoading(false);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('sales', (data) => {
+        setSales(data);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
       setLoading(false);
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'sales'), (snap) => {
-      setSales(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
+    }
 
     return () => unsubs.forEach(u => u());
   }, []);

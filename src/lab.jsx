@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { db } from "./utils/firebase-config";
-import { collection, onSnapshot, addDoc } from "firebase/firestore";
+import { subscribeToUserCollection, addUserDoc } from "./utils/userDataHelper";
 
 import CreateRecipe from "./labcomponents/CreateRecipe";
 import LabNavbar from "./labcomponents/LabNavbar";
@@ -117,24 +116,26 @@ function Lab() {
     validation: [],
   });
 
-  // Fetch ingredients from Firebase on mount (no auth required)
+  // Fetch ingredients from user's collection on mount
   useEffect(() => {
-    const ingredientsRef = collection(db, "ingredients");
+    let unsubscribe = () => {};
     
-    const unsubscribe = onSnapshot(
-      ingredientsRef,
-      (snapshot) => {
-        const loadedIngredients = snapshot.docs.map((docSnap) => ({
-          ...docSnap.data(),
-          firebaseId: docSnap.id,
-        }));
-        setIngredients(loadedIngredients);
-        console.log("Loaded ingredients:", loadedIngredients);
-      },
-      (error) => {
-        console.error("Error fetching ingredients:", error);
-      }
-    );
+    try {
+      unsubscribe = subscribeToUserCollection(
+        'ingredients',
+        (loadedIngredients) => {
+          // Map 'id' to 'firebaseId' for compatibility
+          const mappedIngredients = loadedIngredients.map(ing => ({
+            ...ing,
+            firebaseId: ing.id,
+          }));
+          setIngredients(mappedIngredients);
+          console.log("Loaded ingredients:", mappedIngredients);
+        }
+      );
+    } catch (error) {
+      console.error("Error setting up ingredients subscription:", error);
+    }
 
     return () => unsubscribe();
   }, []);
@@ -507,8 +508,8 @@ function Lab() {
 
   const saveGeneratedRecipe = async (r) => {
     try {
-      const toSave = { ...r, createdAt: new Date().toISOString(), notes: 'Generated recipe' };
-      await addDoc(collection(db, 'recipes'), toSave);
+      const toSave = { ...r, notes: 'Generated recipe' };
+      await addUserDoc('recipes', toSave);
       alert('Generated recipe saved');
     } catch (err) {
       console.error('Save generated failed', err);

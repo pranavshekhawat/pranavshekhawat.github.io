@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc, updateDoc, deleteDoc, doc, query, orderBy, where } from 'firebase/firestore';
+import { 
+  subscribeToUserCollection, 
+  addUserDoc, 
+  deleteUserDoc 
+} from '../utils/userDataHelper';
 import { num } from './utils/costCalculations';
 import LabNavbar from './LabNavbar';
 
@@ -349,18 +352,29 @@ function SalesDashboard() {
 
   // Load data
   useEffect(() => {
-    const unsubSales = onSnapshot(query(collection(db, 'sales'), orderBy('date', 'desc')), (snap) => {
-      setSales(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+    let unsubSales = () => {};
+    let unsubRecipes = () => {};
+    let unsubBatches = () => {};
+    
+    try {
+      unsubSales = subscribeToUserCollection('sales', (data) => {
+        // Sort by date descending
+        const sorted = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setSales(sorted);
+        setLoading(false);
+      });
+
+      unsubRecipes = subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+      });
+
+      unsubBatches = subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+      });
+    } catch (err) {
+      console.error('Error loading data:', err);
       setLoading(false);
-    }, () => setLoading(false));
-
-    const unsubRecipes = onSnapshot(collection(db, 'recipes'), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-
-    const unsubBatches = onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
+    }
 
     return () => {
       unsubSales();
@@ -436,7 +450,7 @@ function SalesDashboard() {
   // Add sale
   const handleAddSale = async (sale) => {
     try {
-      await addDoc(collection(db, 'sales'), sale);
+      await addUserDoc('sales', sale);
     } catch (err) {
       console.error('Failed to add sale:', err);
       alert('Failed to record sale');
@@ -447,7 +461,7 @@ function SalesDashboard() {
   const handleDeleteSale = async (id) => {
     if (!window.confirm('Delete this sale record?')) return;
     try {
-      await deleteDoc(doc(db, 'sales', id));
+      await deleteUserDoc('sales', id);
     } catch (err) {
       console.error('Failed to delete sale:', err);
     }

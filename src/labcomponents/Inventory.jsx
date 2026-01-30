@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { db } from "../utils/firebase-config";
-import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { 
+  subscribeToUserCollection, 
+  addUserDoc, 
+  updateUserDoc, 
+  deleteUserDoc 
+} from "../utils/userDataHelper";
 import AddIngredient from "./AddIngredient";
 import LabNavbar from "./LabNavbar";
 
@@ -28,22 +32,26 @@ export default function Inventory() {
   const [editForm, setEditForm] = useState({});
   const [ingredientImages, setIngredientImages] = useState({});
 
-  // Fetch ingredients from Firebase on mount
+  // Fetch ingredients from user's collection on mount
   useEffect(() => {
-    const ingredientsRef = collection(db, "ingredients");
-    const unsubscribe = onSnapshot(
-      ingredientsRef,
-      (snapshot) => {
-        const loadedIngredients = snapshot.docs.map((docSnap) => ({
-          ...docSnap.data(),
-          firebaseId: docSnap.id,
-        }));
-        setIngredients(loadedIngredients);
-      },
-      (error) => {
-        console.error("Error fetching ingredients:", error);
-      }
-    );
+    let unsubscribe = () => {};
+    
+    try {
+      unsubscribe = subscribeToUserCollection(
+        'ingredients',
+        (loadedIngredients) => {
+          // Map 'id' to 'firebaseId' for compatibility
+          const mappedIngredients = loadedIngredients.map(ing => ({
+            ...ing,
+            firebaseId: ing.id,
+          }));
+          setIngredients(mappedIngredients);
+        }
+      );
+    } catch (error) {
+      console.error("Error setting up ingredients subscription:", error);
+    }
+    
     return () => unsubscribe();
   }, []);
 
@@ -112,8 +120,7 @@ export default function Inventory() {
       normalized.traceSpeed = TRACE_SPEEDS.includes(ts) ? ts : "medium";
     }
     try {
-      const ingredientsRef = collection(db, "ingredients");
-      await addDoc(ingredientsRef, normalized);
+      await addUserDoc('ingredients', normalized);
     } catch (error) {
       console.error('Error adding ingredient:', error);
       alert('Failed to save ingredient');
@@ -129,8 +136,7 @@ export default function Inventory() {
     try {
       const ingredient = ingredients[idx];
       if (ingredient.firebaseId) {
-        const ingredientRef = doc(db, "ingredients", ingredient.firebaseId);
-        await updateDoc(ingredientRef, editForm);
+        await updateUserDoc('ingredients', ingredient.firebaseId, editForm);
       }
       setEditingIdx(null);
       setEditForm({});
@@ -150,8 +156,7 @@ export default function Inventory() {
       try {
         const ingredient = ingredients[idx];
         if (ingredient.firebaseId) {
-          const ingredientRef = doc(db, "ingredients", ingredient.firebaseId);
-          await deleteDoc(ingredientRef);
+          await deleteUserDoc('ingredients', ingredient.firebaseId);
         }
       } catch (error) {
         console.error('Error deleting ingredient:', error);

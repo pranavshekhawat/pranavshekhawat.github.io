@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc } from 'firebase/firestore';
+import { subscribeToUserCollection, addUserDoc } from '../utils/userDataHelper';
 import { useNavigate } from 'react-router-dom';
 import LabNavbar from './LabNavbar';
 
@@ -470,10 +469,16 @@ export default function RecipeTemplates() {
 
   // Load ingredients for SAP lookup and inventory check
   useEffect(() => {
-    const unsub = onSnapshot(collection(db, 'ingredients'), (snapshot) => {
-      const data = snapshot.docs.map(doc => ({ id: doc.id, firebaseId: doc.id, ...doc.data() }));
-      setIngredients(data);
-    });
+    let unsub = () => {};
+    try {
+      unsub = subscribeToUserCollection('ingredients', (data) => {
+        // Add firebaseId to match expected structure
+        const withFirebaseId = data.map(item => ({ ...item, firebaseId: item.id }));
+        setIngredients(withFirebaseId);
+      });
+    } catch (error) {
+      console.error('Error loading ingredients:', error);
+    }
     return () => unsub();
   }, []);
 
@@ -587,7 +592,7 @@ export default function RecipeTemplates() {
         version: 1,
       };
 
-      await addDoc(collection(db, 'recipes'), recipeObj);
+      await addUserDoc('recipes', recipeObj);
       alert(`Recipe "${recipeObj.name}" created from template!`);
       navigate('/lab/recipes');
     } catch (err) {

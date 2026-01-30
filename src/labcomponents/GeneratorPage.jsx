@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc } from 'firebase/firestore';
+import { subscribeToUserCollection, addUserDoc } from '../utils/userDataHelper';
 import { Link, useNavigate } from 'react-router-dom';
 import { getSapValue } from './utils/sapValues';
 import { num } from './utils/costCalculations';
@@ -33,10 +32,16 @@ function GeneratorPage() {
 
   // Load ingredients from YOUR inventory
   useEffect(() => {
-    const unsub = onSnapshot(collection(db, 'ingredients'), (snapshot) => {
-      const data = snapshot.docs.map(doc => ({ id: doc.id, firebaseId: doc.id, ...doc.data() }));
-      setIngredients(data);
-    });
+    let unsub = () => {};
+    try {
+      unsub = subscribeToUserCollection('ingredients', (data) => {
+        // Add firebaseId to match expected structure
+        const withFirebaseId = data.map(item => ({ ...item, firebaseId: item.id }));
+        setIngredients(withFirebaseId);
+      });
+    } catch (error) {
+      console.error('Error loading ingredients:', error);
+    }
     return () => unsub();
   }, []);
 
@@ -483,7 +488,7 @@ function GeneratorPage() {
   // Save recipe
   const saveRecipe = async (recipe) => {
     try {
-      await addDoc(collection(db, 'recipes'), {
+      await addUserDoc('recipes', {
         ...recipe,
         savedAt: new Date().toISOString(),
         source: 'generator',

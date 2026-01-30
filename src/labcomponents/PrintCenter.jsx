@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { subscribeToUserCollection } from '../utils/userDataHelper';
 import LabNavbar from './LabNavbar';
 
 /**
@@ -892,16 +891,27 @@ function PrintCenter() {
 
   // Load data
   useEffect(() => {
-    const unsubRecipes = onSnapshot(query(collection(db, 'recipes'), orderBy('createdAt', 'desc')), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    const unsubIngredients = onSnapshot(collection(db, 'ingredients'), (snap) => {
-      setIngredients(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    const unsubBatches = onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    return () => { unsubRecipes(); unsubIngredients(); unsubBatches(); };
+    const unsubs = [];
+    try {
+      unsubs.push(subscribeToUserCollection('recipes', (data) => {
+        // Sort by createdAt descending
+        const sorted = [...data].sort((a, b) => {
+          if (!a.createdAt) return 1;
+          if (!b.createdAt) return -1;
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        setRecipes(sorted);
+      }));
+      unsubs.push(subscribeToUserCollection('ingredients', (data) => {
+        setIngredients(data);
+      }));
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+    return () => unsubs.forEach(u => u());
   }, []);
 
   const printOptions = [

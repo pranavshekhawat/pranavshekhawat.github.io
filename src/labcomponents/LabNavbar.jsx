@@ -1,36 +1,47 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { subscribeToUserCollection } from '../utils/userDataHelper';
+import { useAuth } from '../contexts/AuthContext';
 import './labcss/labtheme.css';
 
 export default function LabNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [ingredients, setIngredients] = useState([]);
   const [batches, setBatches] = useState([]);
   const [notifications, setNotifications] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
   const dropdownRef = useRef(null);
+  const profileRef = useRef(null);
+  
+  const { user, userProfile, logOut } = useAuth();
 
-  // Load data for alert calculations
+  // Load data for alert calculations (only when user is authenticated)
   useEffect(() => {
+    if (!user) return; // Don't subscribe if not logged in
+    
     const unsubs = [];
     
-    unsubs.push(onSnapshot(collection(db, 'ingredients'), (snap) => {
-      setIngredients(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
-    
-    unsubs.push(onSnapshot(collection(db, 'notifications'), (snap) => {
-      setNotifications(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    }));
+    try {
+      unsubs.push(subscribeToUserCollection('ingredients', (data) => {
+        setIngredients(data);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+      }));
+      
+      unsubs.push(subscribeToUserCollection('notifications', (data) => {
+        setNotifications(data);
+      }));
+    } catch (error) {
+      console.error('Error subscribing to user data:', error);
+    }
 
-    return () => unsubs.forEach(u => u());
-  }, []);
+    return () => unsubs.forEach(u => u && u());
+  }, [user]);
 
   // Calculate total alerts count
   const alertCount = useMemo(() => {
@@ -64,6 +75,27 @@ export default function LabNavbar() {
     
     return count;
   }, [ingredients, batches, notifications]);
+
+  // Handle logout
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate('/login');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  // Close profile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setShowProfileMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   
   // Grouped navigation structure
   const navGroups = [
@@ -161,7 +193,7 @@ export default function LabNavbar() {
             <span className="logo-text">Soap Lab</span>
           </Link>
           
-          {/* Right side: Alert bell + Mobile menu button */}
+          {/* Right side: Alert bell + Profile + Mobile menu button */}
           <div className="navbar-right-section">
             {/* Alert Bell - always visible */}
             <Link to="/lab/notifications" className="navbar-alert-btn" title="Alerts & Notifications">
@@ -170,6 +202,47 @@ export default function LabNavbar() {
                 <span className="alert-badge">{alertCount > 99 ? '99+' : alertCount}</span>
               )}
             </Link>
+            
+            {/* User Profile Menu */}
+            <div className="navbar-profile" ref={profileRef}>
+              <button 
+                className="profile-btn"
+                onClick={() => setShowProfileMenu(!showProfileMenu)}
+                title={user?.displayName || user?.email}
+              >
+                {user?.photoURL ? (
+                  <img src={user.photoURL} alt="" className="profile-avatar" />
+                ) : (
+                  <div className="profile-avatar-placeholder">
+                    {(user?.displayName || user?.email || 'U')[0].toUpperCase()}
+                  </div>
+                )}
+              </button>
+              
+              {showProfileMenu && (
+                <div className="profile-dropdown">
+                  <div className="profile-header">
+                    <div className="profile-name">{user?.displayName || 'User'}</div>
+                    <div className="profile-email">{user?.email}</div>
+                    <div className="profile-plan">
+                      <span className={`plan-badge ${userProfile?.plan || 'free'}`}>
+                        {(userProfile?.plan || 'free').toUpperCase()}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="profile-divider"></div>
+                  <Link to="/pricing" className="profile-item" onClick={() => setShowProfileMenu(false)}>
+                    <span>💎</span> Upgrade Plan
+                  </Link>
+                  <Link to="/lab/backup" className="profile-item" onClick={() => setShowProfileMenu(false)}>
+                    <span>💾</span> Backup & Export
+                  </Link>
+                  <button className="profile-item logout" onClick={handleLogout}>
+                    <span>🚪</span> Log out
+                  </button>
+                </div>
+              )}
+            </div>
             
             {/* Mobile menu button */}
             <button 
@@ -390,6 +463,148 @@ export default function LabNavbar() {
         @keyframes badgePulse {
           0%, 100% { transform: scale(1); }
           50% { transform: scale(1.1); }
+        }
+        
+        /* Profile Menu */
+        .navbar-profile {
+          position: relative;
+        }
+        
+        .profile-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          background: rgba(255,255,255,0.15);
+          border: 2px solid rgba(255,255,255,0.3);
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          padding: 0;
+          overflow: hidden;
+        }
+        
+        .profile-btn:hover {
+          background: rgba(255,255,255,0.25);
+          border-color: rgba(255,255,255,0.5);
+        }
+        
+        .profile-avatar {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        .profile-avatar-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: white;
+          background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%);
+        }
+        
+        .profile-dropdown {
+          position: absolute;
+          top: calc(100% + 12px);
+          right: 0;
+          width: 240px;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+          padding: 8px;
+          z-index: 200;
+          animation: dropdownFadeIn 0.2s ease;
+        }
+        
+        .profile-header {
+          padding: 12px;
+          text-align: center;
+        }
+        
+        .profile-name {
+          font-weight: 600;
+          color: #333;
+          font-size: 1rem;
+        }
+        
+        .profile-email {
+          font-size: 0.8rem;
+          color: #666;
+          margin-top: 2px;
+          word-break: break-all;
+        }
+        
+        .profile-plan {
+          margin-top: 8px;
+        }
+        
+        .plan-badge {
+          display: inline-block;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+        
+        .plan-badge.free {
+          background: #e0e0e0;
+          color: #666;
+        }
+        
+        .plan-badge.starter {
+          background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+          color: white;
+        }
+        
+        .plan-badge.pro {
+          background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%);
+          color: white;
+        }
+        
+        .plan-badge.business {
+          background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+          color: #333;
+        }
+        
+        .profile-divider {
+          height: 1px;
+          background: #e0e0e0;
+          margin: 4px 0;
+        }
+        
+        .profile-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          padding: 10px 12px;
+          border: none;
+          background: none;
+          color: #333;
+          font-size: 0.9rem;
+          text-decoration: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          text-align: left;
+        }
+        
+        .profile-item:hover {
+          background: #f5f5f5;
+        }
+        
+        .profile-item.logout {
+          color: #e53935;
+        }
+        
+        .profile-item.logout:hover {
+          background: #ffebee;
         }
         
         /* Mobile menu button */

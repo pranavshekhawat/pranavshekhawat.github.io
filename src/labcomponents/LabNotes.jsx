@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, addDoc, updateDoc, deleteDoc, doc, query, orderBy } from 'firebase/firestore';
+import { subscribeToUserCollection, addUserDoc, updateUserDoc, deleteUserDoc } from '../utils/userDataHelper';
 import LabNavbar from './LabNavbar';
 
 /**
@@ -46,13 +45,22 @@ function LabNotes() {
 
   // Load notes
   useEffect(() => {
-    const unsub = onSnapshot(
-      query(collection(db, 'notes'), orderBy('createdAt', 'desc')),
-      (snap) => {
-        setNotes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+    let unsub = () => {};
+    try {
+      unsub = subscribeToUserCollection('notes', (data) => {
+        // Sort by createdAt descending
+        const sorted = [...data].sort((a, b) => {
+          if (!a.createdAt) return 1;
+          if (!b.createdAt) return -1;
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        setNotes(sorted);
         setLoading(false);
-      }
-    );
+      });
+    } catch (error) {
+      console.error('Error loading notes:', error);
+      setLoading(false);
+    }
     return () => unsub();
   }, []);
 
@@ -91,10 +99,8 @@ function LabNotes() {
     }
 
     try {
-      await addDoc(collection(db, 'notes'), {
+      await addUserDoc('notes', {
         ...newNote,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
       });
       setNewNote({ title: '', content: '', category: 'general', tags: [], pinned: false });
       setEditMode(false);
@@ -109,9 +115,8 @@ function LabNotes() {
     if (!selectedNote?.id) return;
 
     try {
-      await updateDoc(doc(db, 'notes', selectedNote.id), {
+      await updateUserDoc('notes', selectedNote.id, {
         ...newNote,
-        updatedAt: new Date().toISOString(),
       });
       setEditMode(false);
       setSelectedNote({ ...selectedNote, ...newNote });
@@ -124,7 +129,7 @@ function LabNotes() {
   const deleteNote = async (noteId) => {
     if (window.confirm('Delete this note permanently?')) {
       try {
-        await deleteDoc(doc(db, 'notes', noteId));
+        await deleteUserDoc('notes', noteId);
         if (selectedNote?.id === noteId) {
           setSelectedNote(null);
         }
@@ -137,7 +142,7 @@ function LabNotes() {
   // Toggle pin
   const togglePin = async (note) => {
     try {
-      await updateDoc(doc(db, 'notes', note.id), { pinned: !note.pinned });
+      await updateUserDoc('notes', note.id, { pinned: !note.pinned });
     } catch (error) {
       console.error('Failed to toggle pin:', error);
     }

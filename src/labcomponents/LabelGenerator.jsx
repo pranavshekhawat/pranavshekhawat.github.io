@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot } from 'firebase/firestore';
+import { subscribeToUserCollection } from '../utils/userDataHelper';
 import { getHindiName, RECIPE_NAME_SUGGESTIONS } from './utils/hindiNames';
 import LabNavbar from './LabNavbar';
 
@@ -311,16 +310,18 @@ function LabelGenerator() {
 
   // Load data
   useEffect(() => {
-    const unsubRecipes = onSnapshot(collection(db, 'recipes'), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    const unsubBatches = onSnapshot(collection(db, 'batches'), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    return () => {
-      unsubRecipes();
-      unsubBatches();
-    };
+    const unsubs = [];
+    try {
+      unsubs.push(subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+      }));
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        setBatches(data);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+    return () => unsubs.forEach(u => u());
   }, []);
 
   // Auto-fill from batch

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../utils/firebase-config';
-import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { subscribeToUserCollection } from '../utils/userDataHelper';
 import LabNavbar from './LabNavbar';
 
 /**
@@ -28,13 +27,24 @@ function CalendarPage() {
   const [view, setView] = useState('month'); // month or timeline
 
   useEffect(() => {
-    const unsubBatches = onSnapshot(query(collection(db, 'batches'), orderBy('createdAt', 'desc')), (snap) => {
-      setBatches(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    const unsubRecipes = onSnapshot(collection(db, 'recipes'), (snap) => {
-      setRecipes(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    });
-    return () => { unsubBatches(); unsubRecipes(); };
+    const unsubs = [];
+    try {
+      unsubs.push(subscribeToUserCollection('batches', (data) => {
+        // Sort by createdAt descending
+        const sorted = [...data].sort((a, b) => {
+          if (!a.createdAt) return 1;
+          if (!b.createdAt) return -1;
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        setBatches(sorted);
+      }));
+      unsubs.push(subscribeToUserCollection('recipes', (data) => {
+        setRecipes(data);
+      }));
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+    return () => unsubs.forEach(u => u());
   }, []);
 
   const year = currentDate.getFullYear();
